@@ -1,10 +1,10 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title:       hydro|ecology
+email:       michael.koohafkan@gmail.com
+author:      Michael Koohafkan
+description: "Michael Koohafkan's research blog"
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://hydroecology.net/"
 date_format: "%b %-d, %Y"
 
 # Google services
@@ -17,7 +17,7 @@ google_tag_manager:
 bing_verification:
 
 # Optional features
-animated:             false
+animated:             true
 show_related_posts:   false
 show_post_footers:    false
 show_social_icons:    false
@@ -28,7 +28,7 @@ enable_anchorjs: false
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname:
+disqus_shortname: mkoohafkan
 
 # Facebook Comments plugin
 # (leave blank to disable Facebook Comments, otherwise set it to true)
@@ -37,27 +37,28 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username: mkoohafkan
 bitbucket_username:
-stackoverflow_id:
+stackoverflow_id: 2375551/mikeck
 twitter_username:
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username:
+linkedin_username: mkoohafkan
 angellist_username:
 medium_id:
 bitcoin_url:
 paypal_url:
 flattr_button:
+academia_username: MichaelKoohafkan
 
 # Post sharing icons
-show_sharing_icons: false
+show_sharing_icons: true
 # Change to 'true' to enable individual icons
-share_facebook: false
+share_facebook: true
 share_twitter: false
-share_googleplus: false
-share_linkedin: false
+share_googleplus: true
+share_linkedin: true
 share_digg: false
 share_tumblr: false
 share_reddit: false
@@ -101,8 +102,8 @@ text:
 markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    pretty
-paginate:     4
+permalink:    :title/
+paginate:     3
 sass:
   compressed: true
 gems:
