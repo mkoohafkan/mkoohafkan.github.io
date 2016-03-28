@@ -34,6 +34,9 @@
     {% if site.medium_id %}
       <a class="fa fa-medium" href="https://medium.com/@{{ site.medium_id }}"></a>
     {% endif %}
+    {% if site.academia_username %}    
+      <a class="fa fa-graduation-cap" href="https://ucdavis.academia.edu/{{ site.academia_username }}"></a>
+    {% endif %}
   </div>
   <div class="right">
     {% if site.bitcoin_url %}
