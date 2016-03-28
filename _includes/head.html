@@ -87,4 +87,14 @@
        ga('send', 'pageview');
     </script>
     {% endif %}
+    
+    <!-- Flexslider carousel -->
+    {% if page.carousel %}
+      <link rel="stylesheet" href="/css/flexslider.css" media="screen" type="text/css">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+      <script src="/assets/carousel/jquery.flexslider-min.js"></script>
+      <script src="/assets/carousel/app.js"></script>
+      <script src="/assets/carousel/modernizr.js"></script>
+    {% endif %}    
+
 </head>
