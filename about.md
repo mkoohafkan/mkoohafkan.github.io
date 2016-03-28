@@ -23,8 +23,9 @@ to understand the morphodynamics of inter-channel emergent sandbars in the
 Missouri River. I have also collaborated with the Sonoma County Water Agency to 
 explore the hydrologic controls on salmonid habitat quality in the 
 [Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary/), and 
-with the American Bird Conservancy on the development of an agent-based model
-of Interior Least Tern breeding behavior. 
+with the [American Bird Conservancy](https://abcbirds.org/) on the development 
+of an [agent-based model](http://www.leasttern.org/) of Interior Least Tern 
+breeding behavior. 
 
 #### Publications
 
