@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body class="{% if site.animated %}animated fade-in-down{% endif %}">
+  <div class="site-wrap center">
+    {% include header.html %}
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <header class="post-header">
+    <h1 class="h2">{{ page.title }}</h1>
+  </header>
+
+      <div class="measure">
+
+        {{ content }}
+
+        <div id="search-container">
+          <input type="text" id="search-input" placeholder="search...">
+          <ul id="results-container"></ul>
+        </div>
+
+        <!-- Script pointing to jekyll-search.js -->
+        <script src="{{ site.baseurl }}/assets/simple-jekyll-search/jekyll-search.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+          SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '{{ site.baseurl }}/search.json',
+            searchResultTemplate: '<li><a href="{url}" title="{summary}">{title}</a></li>',
+            noResultsText: 'No results found',
+            fuzzy: true,
+          })
+        </script>
+      
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+</body>
+</html>

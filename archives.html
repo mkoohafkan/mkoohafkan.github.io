@@ -1,0 +1,26 @@
+---
+layout: page
+title: Archives
+permalink: /archives/
+---
+
+<p>Looking for something in particular? Use the tag cloud to explore the 
+archives, or try the <a href="{{ base.url }}/search/">search page</a>.</p>
+
+{% assign PARENTPAGE = "" %}
+{% include category-cloud.html %}
+
+<div id="archives">
+{% for category in site.categories %}
+  <div class="archive-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <a name="{{ category_name | slugize }}"></a>
+    <h4 id="#{{ category_name | slugize }}">{{ category_name }}</h4>
+    {% for post in site.categories[category_name] %}
+    <article class="archive-item">
+      <p><a href="{{ root_url }}{{ post.url }}" title="{{ post.summary}}">{{post.title}}</a> <small>({{post.date | date: "%-d %b %Y" }})</small></p>
+    </article>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
