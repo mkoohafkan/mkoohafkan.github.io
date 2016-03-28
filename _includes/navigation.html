@@ -1,15 +1,15 @@
 {% for page in site.pages %}
     {% if page.tags contains "about" %}
-        <a href="{{ page.url }}">{{ page.title }}</a>
+        <a href="{{ page.url }}">{{ page.shorttitle }}</a>
     {% endif %}
 {% endfor %}
 {% for page in site.pages %}
     {% if page.tags contains "contact" %}
-        <a href="{{ page.url }}">{{ page.title }}</a>
+        <a href="{{ page.url }}">{{ page.shorttitle }}</a>
     {% endif %}
 {% endfor %}
 {% for page in site.pages %}
     {% if page.tags contains "archives" %}
-        <a href="{{ page.url }}">{{ page.title }}</a>
+        <a href="{{ page.url }}">{{ page.shorttitle }}</a>
     {% endif %}
 {% endfor %}
