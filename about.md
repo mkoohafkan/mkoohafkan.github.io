@@ -30,7 +30,7 @@ breeding behavior.
 
 #### Publications
 
-<span class="red">Koohafkan, M.C.</span> and B.A. Younis. 2015. "Open-Channel Computation with R." The R Journal, 7(2):249-262. URL: https://journal.r-project.org/archive/2015-2/koohafkan-younis.pdf
+<span class="red">Koohafkan, M.C.</span> and B.A. Younis. 2015. "Open-Channel Computation with R." The R Journal, 7(2):249-262. [link](https://journal.r-project.org/archive/2015-2/koohafkan-younis.pdf)
 
 Lott, C.A., S.F. Railsback, C.F. Sheppard, and <span class="red">M.C. Koohafkan</span>. 2013. "Developing and Testing TernCOLONY 1.0: An Individual-based Model of Least Tern Reproduction." ERDC/EL CR-13-2, U.S. Army Engineer Research and Development Center, Vicksburg, MS. Dated June 2013, 192 pp.
 
