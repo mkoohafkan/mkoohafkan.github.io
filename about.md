@@ -20,7 +20,8 @@ transport and geomorphologic processes in large sand-bedded rivers;
 specifically, I collaborate with the 
 [USACE Hydrologic Engineering Center](http://www.hec.usace.army.mil/)
 to understand the morphodynamics of inter-channel emergent sandbars in the 
-Missouri River. I have also collaborated with the Sonoma County Water Agency to 
+Missouri River. I have also collaborated with NOAA's 
+[Habitat Blueprint](http://www.habitat.noaa.gov/habitatblueprint/) to 
 explore the hydrologic controls on salmonid habitat quality in the 
 [Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary/), and 
 with the [American Bird Conservancy](https://abcbirds.org/) on the development 
