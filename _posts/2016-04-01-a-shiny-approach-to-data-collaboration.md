@@ -51,27 +51,24 @@ allows programmers to develop interactive apps. Making an app doesn't require
 any knowledge of HTML, CSS or Javascript; pages are constructed using R 
 functions and a wide variety of 
 [templates and examples](http://shiny.rstudio.com/gallery/) are available. 
-Furthermore, you don't technically need to configure a 
-[shiny server](https://www.rstudio.com/products/shiny/download-server/) or 
+Furthermore, you don't technically need to 
+[configure a server](https://www.rstudio.com/products/shiny/download-server/) or 
 [pay for hosting](http://www.shinyapps.io/); you can simply distribute your web 
 app as a package and launch it from R. 
-Since I'm working with a small(ish) group, web hosting wasn't necessary; I 
-opted to build a package that launches the web app through a simple function 
-call. I've included a screenshot of one of the app panes below, but you can 
-try it out yourself; the 
+Since I'm working with a small(ish) group, I opted to build a package that 
+launches the web app through a simple function call. I've included a screenshot 
+of one of the app panes below, but you can also try it out yourself; the 
 [package is available on Github](https://github.com/mkoohafkan/habitatblueprint) 
-and can be downloaded directly via `devtools::install_github`. After loading 
+and can be accessed directly via `devtools::install_github`. After loading 
 the package, launch the web app in your default browser with a call to 
-`HabitatBrowser()`.
+`HabitatBrowser()`. Providing my results as an interactive app accomplishes 
+two things: first, it frees up time that would ordinarily be spent organizing 
+plots and developing a lengthly report (that probably would not ever be read) 
+for more productive tasks, such as new visualizations and analyses; and second, 
+it allows the technical group to access and explore the data both individually 
+and as a group, stimulating discussion. 
 
 ![Blueprint Browser](/images/2016-03-28-blueprint-browser.png)
-
-Providing my results as an interactive app accomplishes two things: first, it 
-frees up time that would ordinarily be spent organizing plots and developing a 
-lengthly report (that probably would not ever be read) for more productive 
-tasks, such as new visualizations and analyses; and second, it allows 
-the technical group to access and explore the data both individually and as a 
-group to stimulate discussion. 
 
 The web app is still under active development, and things are likely to keep
 changing as the working group explores the data and tweaks their habitat
