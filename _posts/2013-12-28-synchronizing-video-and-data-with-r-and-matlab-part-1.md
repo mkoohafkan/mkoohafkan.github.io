@@ -3,7 +3,7 @@ layout:     post
 title:      Synchronizing video and data with R and Matlab, part 1&#58; abusing ggplot
 date:       2013-12-28 12:00:00
 summary:    Here's one strategy for creating animated plots that uses both R and Matlab. I'll show you how to use ggplot2 to create the animation frames.
-categories: codemonkey animation  ggplot2 R
+categories: codemonkey animation  ggplot2 r
 redirect_from:
   - /codemonkey/animation/ggplot2/r/2013/12/28/synchronizing-video-and-data-with-r-and-matlab-part-1/
 ---

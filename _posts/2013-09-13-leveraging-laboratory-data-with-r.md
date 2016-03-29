@@ -3,7 +3,7 @@ layout:     post
 title:      Leveraging laboratory data with R
 date:       2013-09-13 12:00:00
 summary:    While Excel is handy for doing simple stuff with data, eventually there comes a time where you need more.
-categories: codemonkey dataphile sensors R
+categories: codemonkey dataphile sensors r
 redirect_from:
   - /codemonkey/dataphile/sensors/r/2013/09/13/leveraging-laboratory-data-with-r/
 ---
