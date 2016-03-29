@@ -3,7 +3,7 @@ layout:     post
 title:      Measuring leaf area with Matlab
 date:       2013-07-19 12:00:00
 summary:    Measuring the surface area of a leaf is quite simple with Matlab.
-categories: codemonkey image-analysis Matlab
+categories: codemonkey image-analysis matlab
 redirect_from:
   - /codemonkey/image-analysis/matlab/2013/07/19/measuring-leaf-area-with-matlab/
 ---

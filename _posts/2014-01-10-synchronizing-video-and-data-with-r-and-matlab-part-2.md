@@ -3,7 +3,7 @@ layout:     post
 title:      Synchronizing video and data with R and Matlab, part 2&#58; video I&#47;O with Matlab
 date:       2014-01-10 12:00:00
 summary:    Here's one strategy for creating animated plots that uses both R and Matlab. I'll go over how to work with videos in Matlab and merge images for use as video frames.
-categories: codemonkey animation  Matlab
+categories: codemonkey animation matlab
 redirect_from:
   - /codemonkey/animation/matlab/2014/01/10/synchronizing-video-and-data-with-r-and-matlab-part-2/
 ---

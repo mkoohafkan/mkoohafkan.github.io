@@ -3,7 +3,7 @@ layout:     post
 title:      Building ArcGIS models the hard way
 date:       2015-07-07 12:00:00
 summary:    ArcGIS can be finicky. Model Builder even more so.
-categories: codemonkey gis ArcGIS
+categories: codemonkey gis arcgis
 redirect_from:
   - /codemonkey/gis/arcgis/2015/07/07/building-arcgis-models-the-hard-way/
 ---
