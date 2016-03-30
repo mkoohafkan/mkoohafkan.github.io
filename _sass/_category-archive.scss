@@ -15,8 +15,12 @@
     a:active {
       color: #444;
       opacity: 1;
-      border-bottom: 2px solid #444;
-      background-image: none;    
+    background-image: linear-gradient(to top,
+      rgba(0,0,0,0) 13%,
+      rgba(#444,.8) 13%,
+      rgba(#444,.8) 18%,
+      rgba(0,0,0,0) 17%
+  );
     }
   }
 }
