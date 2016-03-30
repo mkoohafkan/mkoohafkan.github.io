@@ -5,6 +5,19 @@
   li {
     display: inline-block;
     margin: 0 12px 12px 0; 
+    a {
+      color: #666;
+      background-image: none;    
+
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      color: #444;
+      opacity: 1;
+      border-bottom: 2px solid #444;
+      background-image: none;    
+    }
   }
 }
 #archives {
@@ -16,4 +29,15 @@
 }
 .archive-item {
   margin-left: 5px;
+  a {
+    color: #333;
+    background-image: none;
+    font-weight: 300;
+  }
+  a:hover,
+  a:focus,
+  a:active{
+    opacity: 0.88;
+    background-image: none;    
+  } 
 }

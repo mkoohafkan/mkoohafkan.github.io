@@ -1,6 +1,12 @@
 a {
   color: $link-color;
   text-shadow: white 1px 0px 0px, white -1px 0px 0px;
+  background-image: linear-gradient(to top,
+    rgba(0,0,0,0) 13%,
+    rgba($link-color,.8) 13%,
+    rgba($link-color,.8) 18%,
+    rgba(0,0,0,0) 17%
+  );
 }
 
 a:hover,
@@ -10,20 +16,6 @@ a:active {
   color: $link-hover-color;
   text-decoration: none;
   text-shadow: white 1px 0px 0px, white -1px 0px 0px;
-}
-
-p a {
-  background-image: linear-gradient(to top,
-    rgba(0,0,0,0) 13%,
-    rgba($link-color,.8) 13%,
-    rgba($link-color,.8) 18%,
-    rgba(0,0,0,0) 17%
-  );
-}
-
-p a:hover,
-p a:focus,
-p a:active {
   background-image: linear-gradient(to top,
     rgba(0,0,0,0) 13%,
     rgba($link-hover-color,.8) 13%,
