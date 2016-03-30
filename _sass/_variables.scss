@@ -54,7 +54,7 @@ $darken-4: rgba(#000,.5) !default;
 
 // Body
 $body-color: $dark-gray;
-$body-bg-color: #f7f7ff;
+$body-bg-color: #f7f9ff;
 
 // Links
 $link-color: $blue;
@@ -117,7 +117,7 @@ $hljs-change: $dark-blue;
 $hljs-chunk: $light-gray;
 
 // Footer
-$footer-border-top: thin solid #f3f3f3;
+$footer-border-top: thin solid #f0f0ff;
 $footer-padding: $space-3;
 $footer-color: #7a7a7a;
 $footer-bg-color: darken($body-bg-color, 1%);
@@ -126,4 +126,3 @@ $footer-font-size: .75rem;
 
 // Pagination
 $pagination-bg-color: darken($body-bg-color, 2%);
-$pagination-hover-bg-color: darken($body-bg-color, 1.5%);
