@@ -96,8 +96,9 @@ $form-field-padding-y: .5rem;
 $form-field-padding-x: .5rem;
 
 // Code
+$code-bg-color: lighten(#deebf7, 2.5%);
 $pre-border-radius: 0;
-$pre-background-color: darken($body-bg-color, 0.5%);
+$pre-background-color: $code-bg-color;
 $hljs-comment: $mid-gray;
 $hljs-keyword: $dark-blue;
 $hljs-name: $dark-gray;
