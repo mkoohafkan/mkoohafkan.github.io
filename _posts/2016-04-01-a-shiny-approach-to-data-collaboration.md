@@ -57,7 +57,7 @@ Furthermore, you don't technically need to
 [pay for hosting](http://www.shinyapps.io/); you can simply distribute your web 
 app as a package and launch it from R. 
 Since I'm working with a small(ish) group, I opted to build a package that 
-launches the web app through a simple function call. I've included a screenshot 
+launches the web app through a simple function call. I've included screenshots 
 of one of the app panes below, but you can also try it out yourself; the 
 [package is available on Github](https://github.com/mkoohafkan/habitatblueprint) 
 and can be accessed directly via `devtools::install_github`. After loading 
