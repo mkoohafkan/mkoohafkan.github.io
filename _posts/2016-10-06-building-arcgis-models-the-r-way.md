@@ -32,7 +32,7 @@ messy in Model Builder because of the multiple calls to `Add Field` and
 `Calculate Field`, and the parameter exposure needed in order to maintain
 sensible field names. Doing it in `ArcPy` is much easier:
 
-```Python
+```python
 def wadissolve(inlayer, outlayer, wafield, dissolvefield):
   # create the temporary field
   tempfield = wafield + '_PROD'
