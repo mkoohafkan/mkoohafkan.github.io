@@ -74,7 +74,7 @@ simplest approach was to use a virtual Python environment from which to
 access ArcPy. The 
 [PythonInR](https://cran.r-project.org/web/packages/PythonInR) 
 package does this, and it does it well---automatically creating the 
-function interfaces required wit the `pyImport` function so that it 
+function interfaces required with the `pyImport` function so that it 
 behaves just like a normal R function (except the arguments are not 
 exposed,everything takes `...`). There can be a little bit of weirdness
 with return values (e.g. the text 'true' instead of the logical value 
@@ -85,13 +85,11 @@ return value.
 
 I used PythonInR to build the package 
 [arcpyr](https://github.com/mkoohafkan/arcpyr), which provides a pretty
-straightforward interface to ArcPy. It's not perfect; I had to 
-create a few functions to handle the basic workspace settings and do
-Map Algebra, but otherwise it's all there. Instead of checking extension
-licenses like RPyGeo, the user runs initialization functions 
-(`arcpy.initialize`, `sa.initialize` for Spatial Analyst extension) to
-load the various tools. Once that's done, using ArcPy reads like any 
-other R code:
+straightforward interface to ArcPy. It's not a complete solution; it 
+provides access to ArcPy functions, but it can't do a lot of the 
+object-based stuff. I create a few functions to provide RasterCalculator 
+function. but for examples like the one above, using ArcPy reads like 
+any other R code:
 
 ```r
 wadissolve = function(inlayer, outlayer, wafield, dissolvefield){
@@ -116,8 +114,9 @@ wadissolve = function(inlayer, outlayer, wafield, dissolvefield){
 
 Having an R interface for ArcPy means I don't have to juggle Python and
 R together to do my analysis, Making it way easier to maintain my 
-codebase and rerun my analyses when needed. The one complaint I 
-have is that loading the ArcPy functions using PythonInR clutters up 
-the global R environment; I've now started a 
-[new implementation](https://github.com/mkoohafkan/arcpyr6) 
-of the package using R6 classes that should provide a cleaner interface.
+codebase and rerun my analyses when needed. Of course, if I really needed
+to I could also use PythonInR to run entire python scripts as well. One
+thing that got on my nerves was that loading the ArcPy functions using 
+PythonInR cluttered up the global R environment; I've now started a 
+[new implementation](https://github.com/mkoohafkan/arcpyrenv) 
+of the package that should provide a cleaner interface.
