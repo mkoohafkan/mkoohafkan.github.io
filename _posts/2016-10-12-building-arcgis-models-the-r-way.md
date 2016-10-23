@@ -15,7 +15,7 @@ to do relatively simple tasks, but it can be pretty
 and requires some weird workarounds for things that should be simple. 
 
 I frequently find myself faced with tasks that require complex chaining 
-of ArcGIS functions. Consider, for example, and applying area-weighted 
+of ArcGIS functions. Consider, for example, applying area-weighted 
 averaging as a dissolve statistic (which absolutely should be a standard 
 method for the `Dissolve` tool, but isn't). In order to accomplish this, 
 you need to 
