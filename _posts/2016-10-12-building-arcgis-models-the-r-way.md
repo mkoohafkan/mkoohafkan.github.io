@@ -80,16 +80,16 @@ exposed,everything takes `...`). There can be a little bit of weirdness
 with return values (e.g. the text 'true' instead of the logical value 
 TRUE) but this really isn't an issue for ArcPy, which generally returns 
 the output file path as a string. The output file path is almost always
-an input argument ass well, so you usually don't need to access the 
+an input argument as well, so you usually don't need to access the 
 return value.
 
 I used PythonInR to build the package 
 [arcpyr](https://github.com/mkoohafkan/arcpyr), which provides a pretty
 straightforward interface to ArcPy. It's not a complete solution; it 
 provides access to ArcPy functions, but it can't do a lot of the 
-object-oriented stuff. I create a few functions to provide RasterCalculator 
-function. but for examples like the one above, using ArcPy reads like 
-any other R code:
+object-oriented stuff. I created a few functions to provide raster 
+calculator and access some of the environment settings. But for examples 
+like the one above, using ArcPy reads like any other R code:
 
 ```r
 wadissolve = function(inlayer, outlayer, wafield, dissolvefield){
@@ -116,8 +116,8 @@ Having an R interface for ArcPy means I don't have to juggle Python and
 R together to do my analysis, Making it way easier to maintain my 
 codebase and rerun my analyses when needed. Of course, I could also 
 use PythonInR to run entire python scripts if I needed to leverage
-the object-oriented aspects of ArcPy. One
-thing that got on my nerves was that loading the ArcPy functions using 
-PythonInR cluttered up the global R environment; I've now started a 
-[new implementation](https://github.com/mkoohafkan/arcpyrenv) 
-of the package that should provide a cleaner interface.
+the object-oriented aspects of ArcPy. One thing that got on my nerves 
+was that loading the ArcPy functions using `PythonInR::pyImport` 
+cluttered up the global R environment; I've now started a 
+[new implementation](https://github.com/mkoohafkan/arcpyr/tree/arcpy-env) 
+of the package that provides a cleaner interface.
