@@ -18,12 +18,12 @@ I frequently find myself faced with tasks that require complex chaining
 of ArcGIS functions. Consider, for example, applying area-weighted 
 averaging as a dissolve statistic (which absolutely should be a standard 
 method for the `Dissolve` tool, but isn't). In order to accomplish this, 
-you need to 
+you need to:
 
   1. Create a new field which is the product of the shape area 
-     and the field you want to calculate the area-weighted average for
+     and the field you want to calculate the area-weighted average for;
   2. Dissolve your feature class with the SUM statistic for your new 
-     field
+     field; and
   3. Create a new field which is the SUM statistic divided by the 
      dissolved shape area.
 
