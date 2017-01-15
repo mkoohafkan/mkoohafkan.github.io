@@ -99,5 +99,14 @@
       <script src="/assets/carousel/app.js"></script>
       <script src="/assets/carousel/modernizr.js"></script>
     {% endif %}    
-
+    
+    <!-- Github comments -->
+    {% if site.github_comments %}
+      {% if page.page.commentIssueId %}
+        <link rel="stylesheet" href="/css/github-comments.css" media="screen" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="http://www.datejs.com/build/date.js"></script>
+        <script src="/assets/github-comments/parsecomments.js">
+      {% endif %}
+    {% endif %}
 </head>
