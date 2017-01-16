@@ -4,6 +4,7 @@ title:      The fog box
 date:       2013-05-23 12:00:00
 summary:    The fog box is our laboratory setup for comparing measurements from our leaf wetness sensors to what we might expect to actually accumulate on plants.
 categories: labrat fog sensors
+commentIssueId: 8
 carousel: true
 redirect_from:
   - /labrat/fog/sensors/2013/05/23/the-fog-box/

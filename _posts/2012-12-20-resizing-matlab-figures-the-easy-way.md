@@ -4,6 +4,7 @@ title:      Resizing Matlab figures the easy way
 date:       2012-12-20 12:00:00
 summary:    There are a lot of reasons why you might want to programmatically define the properties of a figure. It turns out you can do this with Matlab pretty easily.
 categories: codemonkey matlab visualization
+commentIssueId: 4
 redirect_from:
   - /codemonkey/matlab/visualization/2012/12/20/resizing-matlab-figures-the-easy-way/
 ---

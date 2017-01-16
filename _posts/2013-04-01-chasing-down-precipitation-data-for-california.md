@@ -4,6 +4,7 @@ title:      Chasing down precipitation data for California
 date:       2013-04-01 12:00:00
 summary:    Precipitation data for California is scattered across a number of different services.
 categories: dataphile gis
+commentIssueId: 7
 redirect_from:
   - /dataphile/gis/2013/04/01/chasing-down-precipitation-data-for-california/
 ---

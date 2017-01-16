@@ -4,6 +4,7 @@ title:      Digging into GRASS with Python
 date:       2013-08-10 12:00:00
 summary:    Using code to leverage GIS tools is tricky, but rewarding.
 categories: codemonkey gis python
+commentIssueId: 11
 redirect_from:
   - /codemonkey/gis/python/2013/08/10/digging-into-GRASS-with-python/
 ---

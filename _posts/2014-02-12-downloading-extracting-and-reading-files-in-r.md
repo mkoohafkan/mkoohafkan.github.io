@@ -4,6 +4,7 @@ title:      Downloading, extracting and reading files in R
 date:       2014-02-12 12:00:00
 summary:    R provides some simple tools for downloading files, unzipping archives and reading in data.
 categories: codemonkey file-management r
+commentIssueId: 16
 redirect_from:
   - /codemonkey/web/r/2014/02/12/downloading-extracting-and-reading-files-in-r/
   - /codemonkey/file-management/r/2014/02/12/downloading-extracting-and-reading-files-in-r/

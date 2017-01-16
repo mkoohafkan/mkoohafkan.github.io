@@ -4,6 +4,7 @@ title:      Iterating through lists of lists (of lists of lists of...) with R
 date:       2015-09-04 12:00:00
 summary:    When you're doing big data analysis with R, you're probably working with nested lists. Here's one way to climb back up the rabbit hole.
 categories: codemonkey file-management recursion r
+commentIssueId: 20
 ---
 
 A friend of mine has been doing a lot of work analyzing hydrologic time series 

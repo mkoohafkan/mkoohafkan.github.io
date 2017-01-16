@@ -4,6 +4,7 @@ title:      Know your variograms&#58; working with the automap package
 date:       2012-12-28 12:00:00
 summary:    Developing the semivariogram is perhaps the most important step in the kriging process, and a cavalier attitude can result in funny-looking maps and some raised eyebrows.
 categories: codemonkey geostatistics r automap
+commentIssueId: 5
 redirect_from:
   - /codemonkey/geostatistics/r/automap/2012/12/28/know-your-variograms/
 ---

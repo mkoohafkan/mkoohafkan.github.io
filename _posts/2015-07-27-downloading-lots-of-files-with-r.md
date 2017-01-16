@@ -4,6 +4,7 @@ title:      Downloading lots of files off a (password-protected) website with R
 date:       2015-07-27 12:00:00
 summary:    Scraping the web is pretty easy with R&#8212;even when accessing a password-protected site.
 categories: codemonkey regexpr file-management rcurl r
+commentIssueId: 19
 ---
 
 I've been working on the Russian River Estuary this summer, taking the boat out

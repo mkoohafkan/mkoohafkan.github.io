@@ -4,6 +4,7 @@ title:      Fun with agent-based modeling
 date:       2013-02-28 12:00:00
 summary:    Models are tools we use to explore systems of interest. Agent-based models are applicable to problems where individuals, and individual variation, is important.
 categories: infomaniac
+commentIssueId: 6
 redirect_from:
   - /infomaniac/2013/02/28/fun-with-agent-based-modeling/
 ---

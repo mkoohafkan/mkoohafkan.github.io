@@ -4,6 +4,7 @@ title:      A shiny approach to stakeholder engagement
 date:       2016-03-28 23:25:00
 summary:    Facilitating the exploration of large volumes of data is tricky enough amongst scientists in the same field, let alone non-research stakeholders and the public. I used shiny to develop a web app that allows my collaborators to explore my findings with minimal hand-holding.
 categories: dataphile visualization r shiny
+commentIssueId: 21
 carousel: true
 ---
 

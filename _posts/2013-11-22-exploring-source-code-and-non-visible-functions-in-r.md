@@ -4,6 +4,7 @@ title:      Exploring source code and non-visible functions in R
 date:       2013-11-22 12:00:00
 summary:    Viewing an R function's source code is usually straightforward, but sometimes a few extra steps are needed.
 categories: codemonkey r
+commentIssueId: 13
 redirect_from:
   - /codemonkey/r/2013/11/22/exploring-source-code-and-non-visible-functions-in-r/
 ---

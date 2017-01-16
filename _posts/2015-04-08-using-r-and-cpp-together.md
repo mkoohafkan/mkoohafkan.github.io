@@ -4,6 +4,7 @@ title:      Using R and C++ together
 date:       2015-04-08 12:00:00
 summary:    Taking advantage of compiled code in R has never been easier, but you still need to pay attention to syntax.
 categories: codemonkey rcpp r
+commentIssueId: 17
 redirect_from:
   - /codemonkey/rcpp/r/2015/04/08/using-r-and-cpp-together/
 ---

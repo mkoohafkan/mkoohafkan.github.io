@@ -4,6 +4,7 @@ title:      Building ArcGIS models the R way
 date:       2016-10-12 08:00:00
 summary:    My pathological obsession with R led me to develop an interface for ArcPy.
 categories: codemonkey r pythoninr arcpy arcgis
+commentIssueId: 22
 ---
 
 I do a lot of GIS work, and ArcGIS is my tool of choice---mostly because 

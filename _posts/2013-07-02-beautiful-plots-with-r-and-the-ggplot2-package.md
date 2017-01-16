@@ -4,6 +4,7 @@ title:      Beautiful plots with R and the ggplot2 package
 date:       2013-07-02 12:00:00
 summary:    While there's a bit of a learning curve, once you get the hang of plotting with ggplot2 you'll never look back.
 categories: codemonkey visualization ggplot2 r
+commentIssueId: 9
 redirect_from:
   - /codemonkey/visualization/ggplot2/r/2013/07/02/beautiful-plots-with-r-and-the-ggplot2-package/
 ---
