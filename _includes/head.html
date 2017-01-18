@@ -90,11 +90,15 @@
        ga('send', 'pageview');
     </script>
     {% endif %}
+
+    <!-- jQuery -->
+    {% if page.carousel or page.commentIssueId %}
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    {% endif %}
     
     <!-- Flexslider carousel -->
     {% if page.carousel %}
       <link rel="stylesheet" href="/css/flexslider.css" media="screen" type="text/css">
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
       <script src="/assets/carousel/jquery.flexslider-min.js"></script>
       <script src="/assets/carousel/modernizr.js"></script>
       <script type="text/javascript">

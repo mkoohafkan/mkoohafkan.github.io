@@ -34,10 +34,8 @@ layout: default
   {% include post_footer.html %}
 {% endif %}
 
-{% if site.github_comments %}
-  {% if page.commentIssueId %}
-    {% include post_comments.html %}
-  {% endif %}
+{% if site.github_comments and page.commentIssueId %}
+  {% include post_comments.html %}
 {% endif %}
 
 {% if site.disqus_shortname %}
