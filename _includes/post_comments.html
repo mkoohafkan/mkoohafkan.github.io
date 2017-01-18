@@ -24,6 +24,7 @@
   $.ajax("https://api.github.com/repos/mkoohafkan/mkoohafkan.github.io/issues/{{ page.commentIssueId }}/comments", {
     headers: {Accept: "application/vnd.github.full+json"},
     dataType: "json",
+    async: false,
     success: function(msg){
       loadComments(msg);
    }
