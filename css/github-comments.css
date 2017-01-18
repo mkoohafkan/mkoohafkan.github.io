@@ -72,6 +72,7 @@
 
 .comment .commentheader a:link {
   text-decoration: none;
+  background-image: none;
 }
 
 .comment .commentheader a:hover {
