@@ -57,6 +57,7 @@
 }
 
 .comment .commentheader a:link {
+  color: black;
   text-decoration: none;
   background-image: none;
 }
