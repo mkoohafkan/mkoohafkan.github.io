@@ -13,8 +13,8 @@
   }
 
 .comment .commentheader {
-  background-image: -webkit-linear-gradient(#f7f9ff,#666);
-  background-image: -moz-linear-gradient(#f7f9ff,#666);
+  background-image: -webkit-linear-gradient(#F8F8F8,#E1E1E1);
+  background-image: -moz-linear-gradient(#F8F8F8,#E1E1E1);
   float: left;
   height: 33px;
   line-height: 33px;
