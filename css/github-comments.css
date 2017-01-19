@@ -10,16 +10,13 @@
     padding: 0px;
     width: 100%;
     font-size: 85%;
+    margin-bottom: 0.75em;
+    border-bottom: thin solid #f0f0ff;
+
   }
 
 .comment .commentheader {
-  border-bottom-color: #CACACA;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  color: black;
-  background-image: -webkit-linear-gradient(#F8F8F8,#E1E1E1);
-  background-image: -moz-linear-gradient(#F8F8F8,#E1E1E1);
-  color: black;
+  color: transparent;
   display: block;
   float: left;
   height: 33px;
@@ -80,7 +77,7 @@
   color: black;
   display: inline;
   float: none;
-  font-weight: bold;
+  font-weight: normal;
   height: 0px;
   line-height: 16px;
   margin-left: 5px;
