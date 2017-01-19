@@ -1,6 +1,6 @@
 .comment {
     background-color: transparent;
-    border-color: #CACACA;
+    border-color: #f0f0ff;
     border-style: solid;
     border-width: 1px;
     color: black;
@@ -13,14 +13,8 @@
   }
 
 .comment .commentheader {
-  border-bottom-color: #CACACA;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  color: black;
   background-image: -webkit-linear-gradient(#F8F8F8,#E1E1E1);
   background-image: -moz-linear-gradient(#F8F8F8,#E1E1E1);
-  color: black;
-  display: block;
   float: left;
   height: 33px;
   line-height: 33px;
@@ -47,9 +41,6 @@
   display: inline-block;
   float: none;
   font-size: 1px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
   height: 20px;
   line-height: 1px;
   margin-left: 5px;
@@ -77,10 +68,8 @@
 
 .comment .commentheader .commentuser {
   background-color: transparent;
-  color: black;
   display: inline;
   float: none;
-  font-weight: normal;
   height: 0px;
   line-height: 16px;
   margin-left: 5px;
@@ -114,7 +103,6 @@
 .comment .commentbody {
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: transparent;
   background-image: none;
   background-origin: padding-box;
   color: #333;
