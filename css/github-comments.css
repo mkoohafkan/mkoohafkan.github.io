@@ -1,7 +1,6 @@
 .comment {
     background-color: transparent;
-    border-color: #CACACA;
-    border-style: solid;
+    border-style: hidden;
     border-width: 1px;
     color: black;
     display: block;
