@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Using Github to blog host comments&#58; a working example
+title:      Using GitHub to blog host comments&#58; a working example
 date:       2017-01-19 19:00:00
 summary:    Some smart people figured out how to use the GitHub issue tracker for hosting blog comments, but their example is outdated and missing some steps. Here's how I got it working.
 categories: codemonkey jekyll javascript
