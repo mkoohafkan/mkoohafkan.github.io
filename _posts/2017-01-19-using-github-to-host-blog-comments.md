@@ -15,7 +15,8 @@ I recently came across
 [this blog](http://ivanzuzak.info/2011/02/18/github-hosted-comments-for-github-hosted-blogs.html), 
 which provides instructions on how to query GitHub issues and load them
 into a page. It might not be the right solution for everyone---you need
-to hve a GitHub account to comment on issues---but it seemed perfect for
+a GitHub account to comment on issues, which some would-be commenters 
+might not have---but it seemed perfect for
 me. I excitedly copied the code into my repository, disabled 
 Disqus, and committed the changes (since I haven't set up Ruby or a 
 Jekyll environment on computer, all of my testing happens live). 
