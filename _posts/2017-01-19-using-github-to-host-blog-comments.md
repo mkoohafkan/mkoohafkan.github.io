@@ -43,11 +43,12 @@ post front-matter (I also added a site-level flag in case I want to
 disable the system in the future). Within the comments template, you 
 need to use Javascript to pull the issue comments using the GitHub API.
 However, the API has changed significantly, so I had to modify the 
-script to use the right element names:
+script to use the right element names. Also, apparently datejs went 
+extinct some time ago, so I replaced the datejs code with the standard
+Javascript date functionality.
 
 {% highlight javascript %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://www.datejs.com/build/date.js"></script>
 <script type="text/javascript">
   function loadComments(data) {
     for (var i=0; i<data.length; i++) {
@@ -56,8 +57,8 @@ script to use the right element names:
       var clink = data[i].html_url;
       var cbody = data[i].body;
       var cavatarlink = data[i].user.avatar_url;      
-      var cdate = Date.parse(data[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
-      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+      var cdate = new Date(data[i].created_at);
+      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate.toLocaleDateString("en") + " " + cdate.toLocaleTimeString("en") + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
     }
   }
   $.ajax("https://api.github.com/repos/{{ site.githubUser}}/{{ site.githubRepo }}/issues/{{ page.commentIssueId }}/comments", {
