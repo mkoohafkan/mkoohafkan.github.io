@@ -28,9 +28,12 @@ but I'll re-explain the process with my updates.
 The first two steps are the same: you need to manually create an issue 
 in your blog repository's issue tracker for each blog post you publish,
 and you need to add the issue number to your post's YAML front matter.
-To give you some examples, [here]() is the issue I created for this post,
-and [here]() is the markdown file of this post with the issue number 
-included in the front matter.
+To give you some examples, 
+[here](https://github.com/mkoohafkan/mkoohafkan.github.io/issues/23)
+is the issue I created for this post, and 
+[here](https://github.com/mkoohafkan/mkoohafkan.github.io/blob/master/_posts/2017-01-19-using-github-to-host-blog-comments.md) 
+is the markdown file of this post with the issue number included in the 
+front matter.
 
 Here's where things start to change. You need to create a liquid 
 template for the comments section of your post, which I did by creating
