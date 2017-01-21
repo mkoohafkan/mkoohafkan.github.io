@@ -13,7 +13,7 @@
       var cuser = data[i].user.login;
       var cuserlink = data[i].user.html_url;
       var clink = data[i].html_url;
-      var cbody = data[i].body;
+      var cbody = data[i].body_html;
       var cavatarlink = data[i].user.avatar_url;      
       var cdate = new Date(data[i].created_at);
       $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate.toLocaleDateString("en") + " " + cdate.toLocaleTimeString("en") + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
