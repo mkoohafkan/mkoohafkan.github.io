@@ -119,7 +119,6 @@
   position: static;
   width: 96%;
   word-wrap: break-word;
-  font-size: 80%;
 }
 
 .comment .commentbody p {
@@ -127,6 +126,7 @@
   margin-top: 0.5em;
   margin-left: 0em;
   margin-right: 0em;
+  font-size: 80%;
 }
 
 .comment .commentbody pre {
@@ -137,6 +137,7 @@
 
 .comment .commentbody pre code {
   border: 0px solid #ddd;
+  font-size: 80%;
 }
 
 .comment .commentbody code {
