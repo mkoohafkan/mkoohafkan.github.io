@@ -9,7 +9,6 @@
     margin-top: 10px;
     padding: 0px;
     width: 100%;
-    font-size: 85%;
   }
 
 .comment .commentheader {
@@ -82,6 +81,7 @@
   text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
   white-space: nowrap;
   width: 0px;
+  font-size: 90%;
 }
 
 .comment .commentheader .commentdate {
@@ -99,6 +99,7 @@
   text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
   white-space: nowrap;
   width: 20em;
+  font-size: 90%;
 }
 
 .comment .commentbody {
@@ -118,6 +119,7 @@
   position: static;
   width: 96%;
   word-wrap: break-word;
+  font-size: 80%;
 }
 
 .comment .commentbody p {
