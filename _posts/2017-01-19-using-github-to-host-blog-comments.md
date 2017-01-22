@@ -56,14 +56,14 @@ Javascript date functionality.
       var cuser = data[i].user.login;
       var cuserlink = data[i].user.html_url;
       var clink = data[i].html_url;
-      var cbody = data[i].body;
+      var cbody = data[i].body_html;
       var cavatarlink = data[i].user.avatar_url;      
       var cdate = new Date(data[i].created_at);
-      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate.toLocaleDateString("en") + " " + cdate.toLocaleTimeString("en") + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="30" height="30">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate.toLocaleDateString("en") + " " + cdate.toLocaleTimeString("en") + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
     }
   }
-  $.ajax("https://api.github.com/repos/{{ site.githubUser}}/{{ site.githubRepo }}/issues/{{ page.commentIssueId }}/comments", {
-    headers: {Accept: "application/vnd.github.full+json"},
+  $.ajax("https://api.github.com/repos/mkoohafkan/mkoohafkan.github.io/issues/{{ page.commentIssueId }}/comments", {
+    headers: {Accept: "application/vnd.github.v3.html+json"},
     dataType: "json",
     success: function(msg){
       loadComments(msg);
@@ -72,6 +72,12 @@ Javascript date functionality.
 </script>
 {% endhighlight %}
 
+The `headers` specification is important. You can request the comment in
+either markdown format or html format depending on the 
+[media](https://developer.github.com/v3/media/) type you request. In my 
+case, I'm pulling the comments into an html file, so I request the 
+`html` media type and extract the `body_html` element.
+
 You can see the template complete with Javascript code 
 [here](https://github.com/mkoohafkan/mkoohafkan.github.io/blob/master/_includes/post_comments.html). 
 Note that you also need JQuery for this work (as shown in the code 
@@ -79,16 +85,17 @@ sample above); my blog already loads JQuery because I use
 [flexslider](https://github.com/woocommerce/FlexSlider), 
 so I just modified my head template to load JQuery if either flexslider 
 is used or an issue number is specified (in fact, flexslider broke when 
-I thought I didn't care about loading JQuery twice).
+I thought I didn't care about loading JQuery twice). Another 
 
 The other blog then goes into instructions on how enable CORS for a 
 GitHub-hosted blog, and how to register and OAuth application for your
-blog. I did this when I was still trying to get things working, but I'm
-pretty sure this step is no longer required.
+blog. I did this when I was still trying to get things working, but you 
+don't actually need to do this anymore.
 
 Finally, add some css styling to make your comments look good. The css
-provided by the original blog does work right out of the box, but I 
-[modified it a bit](https://github.com/mkoohafkan/mkoohafkan.github.io/blob/master/css/github-comments.css) 
+provided by the original blog does work right out of the box, but my 
+blog template uses SASS so I ported it over to scss and
+[modified it a bit](https://github.com/mkoohafkan/mkoohafkan.github.io/blob/master/_sass/_github-comments.scss) 
 to keep the look more consistent with my blog. It's still not what I 
 want it to be, but I'm pretty terrible at CSS so I haven't really dug 
 into it yet.
