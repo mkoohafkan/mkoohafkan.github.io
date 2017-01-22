@@ -122,11 +122,9 @@
   word-wrap: break-word;
 }
 
-.comment .commentbody p, ol, ul, li, code, pre, pre code {
-  font-size: 85%!important;
+.comment .commentbody p, blockquote, ol, ul, li, code, pre, pre code {
+  -webkit-transform:scale(0.85);
+  -moz-transform:scale(0.85);
+  -ms-transform:scale(0.85);
+  transform:scale(0.85);
 }
-.comment .commentbody blockquote {
-  font-size: 90%!important;
-  padding: $space-2;
-}
-
