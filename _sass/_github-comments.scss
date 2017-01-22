@@ -1,0 +1,124 @@
+.comment {
+    background-color: transparent;
+    border: $footer-border-top;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0px;
+    width: 100%;
+  }
+
+.comment .commentheader {
+  background-image: -webkit-linear-gradient(darken($body-bg-color, 1%),darken($body-bg-color, 2%));
+  background-image: -moz-linear-gradient(darken($body-bg-color, 1%),darken($body-bg-color, 2%));
+  float: left;
+  height: 33px;
+  line-height: 33px;
+  margin: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0px;
+  text-overflow: ellipsis;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.comment .commentheader .commentgravatar {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: white;
+  background-image: none;
+  background-origin: padding-box;
+  border-color: #C8C8C8;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  display: inline-block;
+  float: none;
+  font-size: 1px;
+  height: 20px;
+  line-height: 1px;
+  margin-left: 5px;
+  margin-right: 3px;
+  margin-top: -2px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 1px;
+  text-overflow: clip;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 20px;
+}
+
+.comment .commentheader a:link {
+  text-decoration: none;
+  background-image: none;
+}
+
+.comment .commentheader a:hover {
+  border-bottom:1px solid;
+}
+
+
+.comment .commentheader .commentuser {
+  color: black;
+  background-color: transparent;
+  display: inline;
+  float: none;
+  height: 0px;
+  line-height: 16px;
+  margin-left: 5px;
+  margin-right: 10px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0px;
+  text-overflow: clip;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  white-space: nowrap;
+  width: 0px;
+  font-size: 90%;
+}
+
+.comment .commentheader .commentdate {
+  background-color: transparent;
+  color: #777;
+  display: inline;
+  float: none;
+  height: 0px;
+  line-height: 33px;
+  margin: 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0px;
+  text-overflow: clip;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  white-space: nowrap;
+  width: 20em;
+  font-size: 90%;
+
+}
+
+.comment .commentbody {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-image: none;
+  background-origin: padding-box;
+  color: #333;
+  display: block;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 40px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0em;
+  position: static;
+  width: 96%;
+  word-wrap: break-word;
+  font-size: 85%;
+}
