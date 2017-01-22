@@ -120,5 +120,8 @@
   position: static;
   width: 96%;
   word-wrap: break-word;
+}
+
+.comment .commentbody p, blockquote, ul, ol, li, pre, code, pre code {
   font-size: 80%!important;
 }
