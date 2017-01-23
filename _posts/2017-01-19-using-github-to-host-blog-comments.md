@@ -36,13 +36,12 @@ is the issue I created for this post, and
 is the markdown file of this post with the issue number included in the 
 front matter.
 
-Here's where things start to change. You need to create a template for 
-the comments section of your post, which I put in my 
-[includes](https://jekyllrb.com/docs/includes/) folder. 
-I then added a flag to my post layout to include the comments template 
-if an issue number is specified in the post front-matter (I also added a 
-site-level flag in case I want to disable the system in the future). 
-Within the comments template, you 
+Here's where things start to change. You need to create a liquid 
+template for the comments section of your post, which I did by creating
+a template  in my `includes` folder. I then added a flag to my post
+layout to include the comments template if an issueid is present in the
+post front-matter (I also added a site-level flag in case I want to 
+disable the system in the future). Within the comments template, you 
 need to use Javascript to pull the issue comments using the GitHub API.
 However, the API has changed significantly, so I had to modify the 
 script to use the right element names. Also, apparently datejs went 
@@ -77,7 +76,7 @@ The `headers` specification is important. You can request the comment in
 either markdown format or html format depending on the 
 [media](https://developer.github.com/v3/media/) type you request. In my 
 case, I'm pulling the comments into an html file, so I request the 
-`html` media type and extract the `body_html` element. 
+`html` media type and extract the `body_html` element.
 
 You can see the template complete with Javascript code 
 [here](https://github.com/mkoohafkan/mkoohafkan.github.io/blob/master/_includes/post_comments.html). 
@@ -86,7 +85,7 @@ sample above); my blog already loads JQuery because I use
 [flexslider](https://github.com/woocommerce/FlexSlider), 
 so I just modified my head template to load JQuery if either flexslider 
 is used or an issue number is specified (in fact, flexslider broke when 
-I thought I didn't care about loading JQuery twice). 
+I thought I didn't care about loading JQuery twice).  
 
 The other blog then goes into instructions on how enable CORS for a 
 GitHub-hosted blog, and how to register and OAuth application for your
@@ -95,15 +94,15 @@ don't actually need to do this anymore.
 
 Finally, add some css styling to make your comments look good. The css
 provided by the original blog does work right out of the box, but my 
-blog uses SASS so I ported it over to scss and
+blog template uses SASS so I ported it over to scss and
 [modified it a bit](https://github.com/mkoohafkan/mkoohafkan.github.io/blob/master/_sass/_github-comments.scss) 
-to match my blog theme better. It's still not what I want it to be, but 
-I'm pretty terrible at CSS so I may never get it quite right.
+to keep the look more consistent with my blog. It's still not what I 
+want it to be, but I'm pretty terrible at CSS so I haven't really dug 
+into it yet.
 
-You can see the results below! In the future, I'm planning to 
-extend this system to use comment 
-[reactions](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments) 
-to moderate which comments get published to the blog. However, the 
+And you can see the results below! In the future, I'm planning to 
+extend this by using comment reactions as a way of moderating which 
+comments get published to the blog. However, the 
 [reactions API](https://developer.github.com/v3/reactions/)
 is still in preview mode, so I'm not going to try anything until it
 stabilizes.
