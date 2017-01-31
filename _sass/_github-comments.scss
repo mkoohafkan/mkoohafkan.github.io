@@ -122,7 +122,14 @@
   word-wrap: break-word;
 }
 
-.comment .commentbody p, blockquote, ol, ul, li, code, pre, pre code {
+.comment .commentbody p, 
+.comment .commentbody blockquote, 
+.comment .commentbody ol, 
+.comment .commentbody ul, 
+.comment .commentbody li, 
+.comment .commentbody code, 
+.comment .commentbody pre, 
+.comment .commentbody pre code {
   -webkit-transform:scale(0.85);
   -moz-transform:scale(0.85);
   -ms-transform:scale(0.85);
