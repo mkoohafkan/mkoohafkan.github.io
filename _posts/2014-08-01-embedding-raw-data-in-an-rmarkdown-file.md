@@ -3,6 +3,7 @@ layout:     post
 title:      Embedding raw data in an R Markdown file
 date:       2014-08-01 12:00:00
 summary:    A few simple techniques can really make your R Markdown documents stand on their own.
+commentIssueId: 24
 categories: codemonkey markdown file-management r
 redirect_from:
   - /codemonkey/markdown/file-management/r/2014/08/01/embedding-raw-data-in-an-rmarkdown-file/
