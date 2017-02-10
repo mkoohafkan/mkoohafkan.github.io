@@ -15,25 +15,25 @@ As you may have realized by now, I've got my fingers in a number of pies. This p
 <div class="flexslider">
   <ul class="slides">
     <li>
-      <img src="/images/2013-05-23-fog-box-027.png" />
+      <img src="/images/2013-05-23-fog-box-027.jpg" />
     </li>
     <li>
-      <img src="/images/2013-05-23-fog-box-028.png" />
+      <img src="/images/2013-05-23-fog-box-028.jpg" />
     </li>
     <li>
-      <img src="/images/2013-05-23-fog-box-009.png" />
+      <img src="/images/2013-05-23-fog-box-009.jpg" />
     </li>
     <li>
-      <img src="/images/2013-05-23-fog-box-007.png" />
+      <img src="/images/2013-05-23-fog-box-007.jpg" />
     </li>
     <li>
-      <img src="/images/2013-05-23-fog-box-025.png" />
+      <img src="/images/2013-05-23-fog-box-025.jpg" />
     </li>
     <li>
-      <img src="/images/2013-05-23-fog-box-016.png" />
+      <img src="/images/2013-05-23-fog-box-016.jpg" />
     </li>
     <li>
-      <img src="/images/2013-05-23-fog-box-026.png" />
+      <img src="/images/2013-05-23-fog-box-026.jpg" />
     </li>
   </ul>
 </div>
