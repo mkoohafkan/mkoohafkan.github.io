@@ -47,7 +47,8 @@ need to use Javascript to pull the issue comments using the GitHub API.
 However, the API has changed significantly, so I had to modify the 
 script to use the right element names. Also, apparently `datejs` went 
 extinct some time ago, so I substituted the standard
-Javascript date functionality.
+Javascript date functionality. I've included the code below, with extra white
+space and line breaks to make it more readable.  
 
 {% highlight javascript %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -60,10 +61,27 @@ Javascript date functionality.
       var cbody = data[i].body_html;
       var cavatarlink = data[i].user.avatar_url;      
       var cdate = new Date(data[i].created_at);
-      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="30" height="30">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate.toLocaleDateString("en") + " " + cdate.toLocaleTimeString("en") + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+      $("#comments").append(
+         "<div class='comment'>" + 
+            "<div class='commentheader'>" + 
+              "<div class='commentgravatar'>" + 
+                '<img src="' + cavatarlink + '" alt="" width="30" height="30">' + 
+              "</div>" + 
+              "<a class='commentuser' href=\""+ cuserlink + "\">" + 
+                cuser + 
+              "</a>" + 
+              "<a class='commentdate' href=\"" + clink + "\">" + 
+                cdate.toLocaleDateString("en") +  
+              "</a>" +
+            "</div>" + 
+            "<div class='commentbody'>" + 
+              cbody + 
+            "</div>" + 
+          "</div>"
+      );
     }
   }
-  $.ajax("https://api.github.com/repos/mkoohafkan/mkoohafkan.github.io/issues/{{ page.commentIssueId }}/comments", {
+  $.ajax("https://api.github.com/repos/mkoohafkan/mkoohafkan.github.io/issues/{{page.commentIssueId}}/comments", {
     headers: {Accept: "application/vnd.github.v3.html+json"},
     dataType: "json",
     success: function(msg){
@@ -94,11 +112,8 @@ blog. I did this when I was still trying to get things working, but you
 don't actually need to do this anymore.
 
 Finally, add some css styling to make your comments look good. The css
-provided by the original blog does work right out of the box, but my 
-blog uses SASS so I ported it over to scss and
-[modified it a bit](https://github.com/mkoohafkan/mkoohafkan.github.io/blob/master/_sass/_github-comments.scss) 
-to match my blog theme better. It's still not what I want it to be, but 
-I'm pretty terrible at CSS so I may never get it quite right.
+provided by the original blog does work right out of the box, but I used
+my existing SASS styles to match my blog theme better. 
 
 You can see the results below! In the future, I'm planning to 
 extend this system to use comment 
