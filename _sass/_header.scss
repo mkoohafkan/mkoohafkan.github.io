@@ -4,10 +4,15 @@
 }
 
 .site-header a {
-  color: #333;
+  color: $header-color;
+  text-shadow: $header-shadow 1px 0px 0px, $header-shadow -1px 0px 0px;
   font-size: $h3;
   font-weight: 300;
   background-image: none;
+}
+
+.site-header a small em {
+  text-shadow: none;
 }
 
 .site-header .site-title {
@@ -19,7 +24,6 @@
 }
 
 .site-header nav a {
-  color: #666;
 }
 
 .site-header nav a:hover,

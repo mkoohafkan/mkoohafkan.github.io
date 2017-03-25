@@ -1,6 +1,6 @@
 a {
   color: $link-color;
-  text-shadow: white 1px 0px 0px, white -1px 0px 0px;
+  text-shadow: $link-shadow 1px 0px 0px, $link-shadow -1px 0px 0px;
   background-image: linear-gradient(to top,
     rgba(0,0,0,0) 13%,
     rgba($link-color,.8) 13%,
@@ -15,7 +15,7 @@ a:active {
   border: 0;
   color: $link-hover-color;
   text-decoration: none;
-  text-shadow: white 1px 0px 0px, white -1px 0px 0px;
+  text-shadow: $link-shadow 1px 0px 0px, $link-shadow -1px 0px 0px;
   background-image: linear-gradient(to top,
     rgba(0,0,0,0) 13%,
     rgba($link-hover-color,.8) 13%,
@@ -50,4 +50,8 @@ button,
     color: $link-hover-color;
     text-shadow: none;
     background-image: none;
+}
+
+.share-links a  {
+  background-image: none;
 }

@@ -5,7 +5,6 @@
 
 .posts .post {
   margin-bottom: 0.75em;
-  border-bottom: thin solid #f0f0ff;
 }
 
 .posts .post:last-child {
@@ -14,10 +13,23 @@
   padding-bottom: 0;
 }
 
-.post-link .post-title {
+.post-summary,
+.post-content {
+  padding: 0.75em;
+  background-color: $white;
+}
+
+.post-header {
+  color: $post-header-color;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-bottom: 0.25em;
+}
+
+.post-title {
   margin-top: 0;
   font-weight: 600;
-  color: #333;
+  color: $post-header-color;
 }
 
 .post-footer {

@@ -7,7 +7,6 @@ shorttitle: About
 ---
 
 ![Michael Koohafkan](/images/michaelkoohafkan.png)
-
 <div class="clearfix"></div>
 {% include social_links.html %}
 

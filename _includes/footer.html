@@ -1,9 +1,11 @@
-<footer class="center">
-  <div class="measure">
-    {% assign PARENTPAGE = "/archives/" %}
-    {% include category-cloud.html %}
-  </div>
-</footer>
+{% if site.show_tag_cloud %}
+  <footer class="center">
+    <div class="measure">
+      {% assign PARENTPAGE = "/archives/" %}
+      {% include category-cloud.html %}
+    </div>
+  </footer>
+{% endif %}
 {% if site.enable_anchorjs %}<!-- AnchorJS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.0.0/anchor.min.js"></script>
 <script>
