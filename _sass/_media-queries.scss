@@ -1,6 +1,18 @@
+@media screen and (min-width: $viewport-tiny) {
+  .site {
+    background: url("/images/header-small.jpg") 50% 50% / cover no-repeat;
+    background-attachment: fixed;
+  }
+}
+
 @media screen and (min-width: $viewport-small) {
   html {
     font-size: 16px;
+  }
+
+  .site {
+    background: url("/images/header-small.jpg") 50% 50% / cover no-repeat;
+    background-attachment: fixed;
   }
 
   h1,
@@ -48,11 +60,21 @@
   html {
     font-size: 18px;
   }
+  
+  .site {
+    background: url("/images/header-medium.jpg") 50% 50% / cover no-repeat;
+    background-attachment: fixed;
+  }
 }
 
 @media screen and (min-width: $viewport-large) {
   html {
     font-size: 20px;
+  }
+
+  .site {
+    background: url("/images/header-large.jpg") 50% 50% / cover no-repeat;
+    background-attachment: fixed;
   }
 }
 
@@ -60,5 +82,10 @@
   em img {
     max-width: $measure-width + 14;
     margin-left: -7em;
+  }
+
+  .site {
+    background: url("/images/header-large.jpg") 50% 50% / cover no-repeat;
+    background-attachment: fixed;
   }
 }

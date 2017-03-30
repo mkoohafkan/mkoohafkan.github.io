@@ -10,8 +10,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background: url("/images/header.jpg") 50% 50% / cover no-repeat;
-  background-attachment: fixed;
+}
+
+.site:empty{
 }
 
 .site-wrap {
