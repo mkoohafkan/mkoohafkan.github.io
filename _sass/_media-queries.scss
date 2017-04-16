@@ -65,21 +65,13 @@
 
 @media screen and (min-device-width: $viewport-tiny) {
   .site {
-    background: url("/images/header-small.jpg") 25% 25% / cover no-repeat;
-    background-attachment: fixed;
-  }
-}
-
-@media screen and (min-device-width: $viewport-small) {
-  .site {
-    background: url("/images/header-small.jpg") 25% 25% / cover no-repeat;
-    background-attachment: fixed;
+    background-color: #bbd0f7;
   }
 }
 
 @media screen and (min-device-width: $viewport-medium) {
   .site {
-    background: url("/images/header-medium.jpg") 25% 25% / cover no-repeat;
+    background: url("/images/header-medium.jpg") 50% 50% / cover no-repeat;
     background-attachment: fixed;
   }
 }
