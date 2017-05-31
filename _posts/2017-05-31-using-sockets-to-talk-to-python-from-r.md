@@ -42,32 +42,35 @@ thing. I spent a lot of time reading the Python socket
 [documentation](https://docs.python.org/3/library/socket.html) and
 [help](https://docs.python.org/2/howto/sockets.html). The big takeaway for me
 was that a socket connection is for one-time use only, so the best way to 
-indicate that you're finished sending data is to close the socket. I also 
-decided to stick with blocking sockets, because I want the Python code to
+indicate that you're finished sending data is to close the socket. 
+
+I decided to stick with blocking sockets, because I want the Python code to
 operate like a part of the R script and not force the user to script for
-asynchronous serever connections (keep it simple!). One 
-requirement for me was that the code had to work with both Python v2 and v3,
-so I had to wary of my imports and code formatting (mostly with respect to 
+asynchronous serever connections (keep it simple!). One requirement for me 
+was that the code had to work with both Python v2 and v3, so I had to be wary 
+of module imports and code formatting (mostly with respect to 
 print statements and [io](https://docs.python.org/3/library/io.html) vs
 [StringIO](https://docs.python.org/2/library/stringio.html)). I ended up completely 
 rewriting the Python server script from runr, reworked it multiple times and 
 eventually came up with something almost identical to the original 
 [server script](https://github.com/yihui/runr/blob/master/inst/lang/python_socket.py). 
-The bigger differences are on the R side of things; I don't
-support multiple independent Python environments in the same R session 
-(similar to PythonInR) and I don't wrap everything up in an object, opting
-instead for a collection of functions for starting/stopping the Python server
-and getting/setting variables.
 
-The getting/setting variables bit is not trivial. Python objects and R objects
-are not equivalent, many structures like lists and vectors are similar 
-(but not identical), and determining the variable type from a text string takes
+
+The bigger differences are on the R side of things; I don't
+support multiple independent Python environments in the same R session
+(but maybe I should?) and I don't wrap everything up in an object, opting
+instead for a collection of functions for starting/stopping the Python server
+and getting/setting variables. The getting/setting variables bit is not trivial;
+Python objects and R objects are not equivalent, some structures like lists and
+vectors are similar but not identical, and determining the variable type from
+a text string takes
 extra effort. I didn't want to force the user to write their own code for parsing
 results, but I didn't want to it either! The solution turned out to be incredibly 
 simple: just use [JSON](https://www.json.org). Both Python and R support JSON via the 
 [json](https://docs.python.org/3/library/json.html) module for Python and the 
 [jsonlite](https://cran.r-project.org/package=jsonlite) package for R. My variable getting 
-and setting functions read/write JSON formats, so all the variable typing is done 
+and setting functions read/write JSON formats using `json.dumps` on the Python side and
+`toJSON`/`fromJSON` on the R side, so all the variable typing is done 
 for me. If needed, users can define their own functions for encoding specific Python 
 objects into JSON format.
 
