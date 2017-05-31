@@ -21,7 +21,7 @@ developer anytime soon.
 On first glance, it looks like there are plenty of options to connect to
 Python from R. In addition to the PythonInR package, there is the 
 [RPython](https://cran.r-project.org/package=rPython) package and Yihui's 
-[runr](https://github.com/yihui/runr) package. However, RPython hsn't 
+[runr](https://github.com/yihui/runr) package. However, RPython hasn't 
 really been tested on Windows and needs to be compiled with Python, so it
 won't work with a pre-existing Python environment like the one provided by 
 ArcGIS. The runr package looks promising, but it hasn't been updated in
@@ -33,7 +33,7 @@ for going the other way; Python has [rpy2](https://rpy2.bitbucket.io),
 [pyrserve](https://pypi.python.org/pypi/pyRserve) and
 [pyper](https://pypi.python.org/pypi/PypeR/1.1.0). Surely I can figure out a way.
 
-Usin socket connections seemed to be the simplest solution. The runr
+Using socket connections seemed to be the simplest solution. The runr
 package uses sockets to pass messages between R and Python and a 
 temporary file to write code and Python outputs. I decided to model
 my package after runr because a) the code was readable and b) the server
@@ -46,7 +46,7 @@ indicate that you're finished sending data is to close the socket.
 
 I decided to stick with blocking sockets, because I want the Python code to
 operate like a part of the R script and not force the user to script for
-asynchronous serever connections (keep it simple!). One requirement for me 
+asynchronous server connections (keep it simple!). One requirement for me 
 was that the code had to work with both Python v2 and v3, so I had to be wary 
 of module imports and code formatting (mostly with respect to 
 print statements and [io](https://docs.python.org/3/library/io.html) vs
