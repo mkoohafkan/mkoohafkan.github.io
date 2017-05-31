@@ -30,7 +30,7 @@ environment.
 
 Linking to Python from R can't be THAT hard, right? There are lots of options
 for going the other way; Python has [rpy2](https://rpy2.bitbucket.io), 
-[pyrserve](https://pypi.python.org/pypi/pyRserve) and  
+[pyrserve](https://pypi.python.org/pypi/pyRserve) and
 [pyper](https://pypi.python.org/pypi/PypeR/1.1.0). Surely I can figure out a way.
 
 Usin socket connections seemed to be the simplest solution. The runr
