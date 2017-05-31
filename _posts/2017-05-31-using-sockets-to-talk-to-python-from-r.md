@@ -7,10 +7,10 @@ categories: codemonkey r python json
 commentIssueId: 27
 ---
 
-A while back I developed the `arcpyr` package, which allows users to call 
-ArcGIS tools from R. The package relies on the 
-[PythonInR](cran.r-project.org/package=PythonInR) package to 
-access the `arcpy` Python module. It works just fine... mostly. I've found 
+A while back I developed the [arcpyr](github.com/mkoohafkan/arcpyr) 
+package, which allows users to call ArcGIS tools from R. The package relies 
+on the [PythonInR](cran.r-project.org/package=PythonInR) package to 
+access the arcpy Python module. It works just fine... mostly. I've found 
 that I actually need to use one of the non-exported functions in order to
 reliably connect to the ArcGIS Python environment (which means my package 
 won't pass CRAN checks) and I can't get it to work at all with the latest
