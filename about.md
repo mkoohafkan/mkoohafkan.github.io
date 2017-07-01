@@ -15,7 +15,7 @@ doctoral program in late 2014 following completion of a Masters of Science in
 [Environmental Engineering](http://efmh.berkeley.edu) at University of 
 California Berkeley, where I studied the role of fog in the hydrology of 
 coastal watersheds in California. My doctoral research is focused on sediment 
-transport and geomorphologic processes in large sand-bedded rivers; 
+transport and geomorphologic processes in large braided sandbed rivers; 
 specifically, I collaborate with the 
 [USACE Hydrologic Engineering Center](http://www.hec.usace.army.mil/)
 to understand the morphodynamics of emergent sandbars in the 
