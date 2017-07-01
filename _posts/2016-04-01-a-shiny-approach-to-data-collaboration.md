@@ -2,7 +2,7 @@
 layout:     post
 title:      A shiny approach to stakeholder engagement
 date:       2016-03-28 23:25:00
-summary:    I used shiny to develop a web app that allows my non-scientist collaborators to explore my findings with minimal hand-holding.
+summary:    I used Shiny to develop a web app that allows my non-scientist collaborators to explore my findings with minimal hand-holding.
 categories: dataphile visualization r shiny
 commentIssueId: 21
 carousel: true

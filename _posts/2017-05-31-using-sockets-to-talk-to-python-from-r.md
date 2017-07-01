@@ -77,6 +77,8 @@ typing is done for me. If needed, users can define their own functions for
 encoding specific Python objects into JSON format.
 
 I wrapped all this functionality into a package that I'm currently calling 
-**pysockr**. It's [available on GitHub](https://github.com/mkoohafkan/pysockr) and ready for
-testing; install it with [devtools](https://cran.r-project.org/package=devtools), play around, 
-and let me know what you think!
+**pysockr**. 
+It's [available on GitHub](https://github.com/mkoohafkan/pysockr) 
+and ready for testing; install it with 
+[devtools](https://cran.r-project.org/package=devtools), 
+play around, and let me know what you think!

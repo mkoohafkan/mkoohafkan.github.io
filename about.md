@@ -6,7 +6,7 @@ tags: about
 shorttitle: About
 ---
 
-![Michael Koohafkan](/images/michaelkoohafkan.png)
+![Michael Koohafkan](/images/mk2.jpg)
 <div class="clearfix"></div>
 {% include social_links.html %}
 
@@ -18,10 +18,10 @@ coastal watersheds in California. My doctoral research is focused on sediment
 transport and geomorphologic processes in large sand-bedded rivers; 
 specifically, I collaborate with the 
 [USACE Hydrologic Engineering Center](http://www.hec.usace.army.mil/)
-to understand the morphodynamics of inter-channel emergent sandbars in the 
+to understand the morphodynamics of emergent sandbars in the 
 Missouri River. I have also collaborated with NOAA's 
 [Habitat Blueprint](http://www.habitat.noaa.gov/habitatblueprint/) to 
-explore the hydrologic controls on salmonid habitat quality in the 
+explore hydrologic controls on salmonid habitat quality in the 
 [Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary/), and 
 with the [American Bird Conservancy](https://abcbirds.org/) on the development 
 of an [agent-based model](http://www.leasttern.org/) of Interior Least Tern 
