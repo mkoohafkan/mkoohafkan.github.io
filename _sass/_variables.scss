@@ -64,8 +64,17 @@ $very-dark-seablue: #1A5276 !default;
 $very-dark-blue: #21618C !default;
 $very-dark-seagreen: #0E6655 !default;
 $very-dark-green: #196F3D !default;
-$very-dark-yellow: #9C640C !default;
+$very-dark-yellow: #604C00 !default;
 $very-dark-orange: #873600 !default;
+
+$darken-red: rgba(#7B241C,.9375) !default;
+$darken-purple: rgba(#633974,.9375) !default;
+$darken-seablue: rgba(#1A5276,.9375) !default;
+$darken-blue: rgba(#21618C,.9375) !default;
+$darken-seagreen: rgba(#0E6655,.9375) !default;
+$darken-green: rgba(#196F3D,.9375) !default;
+$darken-yellow: rgba(#604C00,.9375) !default;
+$darken-orange: rgba(#873600,.9375) !default;
 
 // site header
 $header-color: $black;
