@@ -1,14 +1,14 @@
 ---
 layout:     post
 title:      Using Github reactions to moderate comments
-date:       2017-09-15 22:00:00
+date:       2017-09-01 14:00:00
 summary:    I turned Github reactions into a way to moderate which comments get posted to my blog. 
 categories: codemonkey github jekyll javascript
 commentIssueId: 29
 ---
 
 A while ago I described a way to 
-[turn Github issues into blog comment threads](). I've been using it
+[turn Github issues into blog comment threads]({% post_url 2017-01-19-using-github-to-host-blog-comments %}). I've been using it
 without issue, but it's fairly barebones; I never tried implementing
 a text box and submit button via the blog post (users had to go to
 the Github issue page) and it requires that you manually create 
