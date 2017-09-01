@@ -38,7 +38,7 @@ The snippet below scans through the comments of a given issue
 and pulls only those that got a `+1` reaction from me. The reactions 
 API doesn't specify the reaction of each user to each comment when 
 [listing all comments on an issue](https://developer.github.com/v3/issues/comments/#list-comments-on-an-issue),
-so you actually need to indivudally query
+so you actually need to individually query
 [reactions to each comment](https://developer.github.com/v3/reactions/#list-reactions-for-an-issue-comment). 
 I made heavy use of 
 [this medium post](https://medium.com/@sungyeol.choi/making-multiple-ajax-calls-and-deciphering-when-apply-array-b35d1b4b1f50)
