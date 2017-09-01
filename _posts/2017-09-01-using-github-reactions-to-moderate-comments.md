@@ -35,10 +35,15 @@ comments would only get posted if I (Github username `mkoohafkan`)
 gave the comment a `+1` reaction.
 
 The snippet below scans through the comments of a given issue
-and pulls only those that got a `+1` reaction from me. I made
-heavy use of 
+and pulls only those that got a `+1` reaction from me. The reactions 
+API doesn't specify the reaction of each user to each comment when 
+[listing all comments on an issue](https://developer.github.com/v3/issues/comments/#list-comments-on-an-issue),
+so you actually need to indivudally query
+[reactions to each comment](https://developer.github.com/v3/reactions/#list-reactions-for-an-issue-comment). 
+I made heavy use of 
 [this medium post](https://medium.com/@sungyeol.choi/making-multiple-ajax-calls-and-deciphering-when-apply-array-b35d1b4b1f50)
-to handle multiple asynchronous AJAX requests. It might not be the 
+to handle multiple asynchronous AJAX requests and prevent the page from
+locking up while querying and loading comments. It might not be the 
 most efficient code, but it works. Test it out by pasting the 
 code chunk below into an HTML file and opening it in a browser.
 
