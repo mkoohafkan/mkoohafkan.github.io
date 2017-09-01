@@ -137,8 +137,8 @@ code chunk below into an HTML file and opening it in a browser.
 </html>
 ```
 
-You'll see that the first comment I left on this post doesn't get
-loaded by the HTML file, but the second one does; this is because I
+You'll see that the first comment I left on this post gets loaded 
+by the HTML file, but the second one does not; this is because I
 only gave a `+1` to the second comment. You could easily modify the 
 code to check for `-1` and reverse the true/false values of the 
 `results.push` statements to implement a comment blacklisting 
