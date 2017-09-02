@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reproducing the R Journal Publication • rivr</title>
-<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script><script src="../pkgdown.js"></script><!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -78,7 +78,7 @@
 <p>The .Rnw file used to generate the full publication is hosted on the <a href="https://github.com/mkoohafkan/rivr/tree/master/inst/pub">package development repository</a>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## ---- load-libs -------------------------------------------------------
 <span class="kw">library</span>(knitr)
-opts_chunk$<span class="kw">set</span>(<span class="dt">fig.width =</span> <span class="dv">6</span>, <span class="dt">fig.height =</span> <span class="dv">4</span>, <span class="dt">fig.path =</span> <span class="st">"fig/"</span>, 
+opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">fig.width =</span> <span class="dv">6</span>, <span class="dt">fig.height =</span> <span class="dv">4</span>, <span class="dt">fig.path =</span> <span class="st">"fig/"</span>, 
   <span class="dt">warning =</span> <span class="ot">FALSE</span>, <span class="dt">message =</span> <span class="ot">FALSE</span>, <span class="dt">error =</span> <span class="ot">FALSE</span>, <span class="dt">results =</span> <span class="st">"asis"</span>, 
   <span class="dt">out.width =</span> <span class="st">'</span><span class="ch">\\</span><span class="st">textwidth'</span>, <span class="dt">cache =</span> <span class="ot">TRUE</span>, <span class="dt">cache.path =</span> <span class="st">"cache/"</span>)
 <span class="kw">library</span>(rivr)
@@ -89,7 +89,7 @@ opts_chunk$<span class="kw">set</span>(<span class="dt">fig.width =</span> <span
 <span class="kw">library</span>(xtable)
 
 ## ---- startparams -----------------------------------------------------
-plotopts =<span class="st"> </span><span class="kw">list</span>(<span class="kw">theme_bw</span>(), <span class="kw">xlab</span>(<span class="kw">expression</span>(Distance~from~control~section~<span class="er">~</span>(ft))))
+plotopts =<span class="st"> </span><span class="kw">list</span>(<span class="kw">theme_bw</span>(), <span class="kw">xlab</span>(<span class="kw">expression</span>(Distance<span class="op">~</span>from<span class="op">~</span>control<span class="op">~</span>section<span class="op">~</span><span class="er">~</span>(ft))))
 g =<span class="st"> </span><span class="fl">32.2</span>
 Cm =<span class="st"> </span><span class="fl">1.486</span>
 slope =<span class="st"> </span><span class="fl">0.001</span>
@@ -98,9 +98,9 @@ flow =<span class="st"> </span><span class="dv">250</span>
 width =<span class="st"> </span><span class="dv">100</span>
 sideslope =<span class="st"> </span><span class="dv">0</span>
 <span class="co"># calculate control depth as 1ft above the normal depth</span>
-depth.m1 =<span class="st"> </span><span class="kw">round</span>(<span class="dv">1</span> +<span class="st"> </span><span class="kw"><a href="../reference/normal_depth.html">normal_depth</a></span>(slope, mannings, flow, <span class="dv">2</span>, Cm, 
+depth.m1 =<span class="st"> </span><span class="kw">round</span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span><span class="kw"><a href="../reference/normal_depth.html">normal_depth</a></span>(slope, mannings, flow, <span class="dv">2</span>, Cm, 
   width, sideslope), <span class="dv">2</span>) 
-depth.m2 =<span class="st"> </span><span class="kw">round</span>(<span class="fl">1.1</span>*<span class="kw"><a href="../reference/critical_depth.html">critical_depth</a></span>(flow, <span class="dv">1</span>, g, width, sideslope), <span class="dv">2</span>)
+depth.m2 =<span class="st"> </span><span class="kw">round</span>(<span class="fl">1.1</span><span class="op">*</span><span class="kw"><a href="../reference/critical_depth.html">critical_depth</a></span>(flow, <span class="dv">1</span>, g, width, sideslope), <span class="dv">2</span>)
 rivdist =<span class="st"> </span><span class="dv">3000</span>
 
 ## ---- restest ---------------------------------------------------------
@@ -108,7 +108,7 @@ rivdist =<span class="st"> </span><span class="dv">3000</span>
 stepsizes =<span class="st"> </span><span class="kw">c</span>(<span class="dv">500</span>, <span class="dv">100</span>, <span class="dv">50</span>, <span class="dv">10</span>, <span class="dv">1</span>)
 resolution.test.m1 =<span class="st"> </span><span class="kw">list</span>()
 resolution.test.m2 =<span class="st"> </span><span class="kw">list</span>()
-for(r in stepsizes){
+<span class="cf">for</span>(r <span class="cf">in</span> stepsizes){
   resolution.test.m1[[<span class="kw">paste0</span>(<span class="st">'dx='</span>, r)]] =<span class="st"> </span><span class="kw"><a href="../reference/compute_profile.html">compute_profile</a></span>(slope, mannings, 
     flow, depth.m1, Cm, g, width, sideslope, <span class="dt">stepdist =</span> r, 
     <span class="dt">totaldist =</span> rivdist)
@@ -117,7 +117,7 @@ for(r in stepsizes){
     <span class="dt">totaldist =</span> rivdist)
 }
 resolution.plot =<span class="st"> </span><span class="ot">NULL</span>
-for(lbl in <span class="kw">names</span>(resolution.test.m1)){
+<span class="cf">for</span>(lbl <span class="cf">in</span> <span class="kw">names</span>(resolution.test.m1)){
   f1 =<span class="st"> </span>resolution.test.m1[[lbl]]
   f2 =<span class="st"> </span>resolution.test.m2[[lbl]]
   f1[<span class="st">'type'</span>] =<span class="st"> 'M1'</span>
@@ -127,33 +127,33 @@ for(lbl in <span class="kw">names</span>(resolution.test.m1)){
   f[<span class="st">'res'</span>] =<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">substr</span>(lbl, <span class="dv">4</span>, 10L))
   resolution.plot =<span class="st"> </span><span class="kw">rbind</span>(resolution.plot, f)
 }
-resolution.plot[<span class="st">'res'</span>] =<span class="st"> </span><span class="kw">factor</span>(resolution.plot$res, <span class="dt">levels =</span> <span class="kw">rev</span>(<span class="kw">sort</span>(stepsizes)))  
-resolution.plot[<span class="st">'run'</span>] =<span class="st"> </span><span class="kw">factor</span>(resolution.plot$run, 
+resolution.plot[<span class="st">'res'</span>] =<span class="st"> </span><span class="kw">factor</span>(resolution.plot<span class="op">$</span>res, <span class="dt">levels =</span> <span class="kw">rev</span>(<span class="kw">sort</span>(stepsizes)))  
+resolution.plot[<span class="st">'run'</span>] =<span class="st"> </span><span class="kw">factor</span>(resolution.plot<span class="op">$</span>run, 
   <span class="dt">levels =</span> <span class="kw">names</span>(resolution.test.m1))
-resolution.plot[<span class="st">'type'</span>] =<span class="st"> </span><span class="kw">factor</span>(resolution.plot$type, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">'M1'</span>, <span class="st">'M2'</span>))
+resolution.plot[<span class="st">'type'</span>] =<span class="st"> </span><span class="kw">factor</span>(resolution.plot<span class="op">$</span>type, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">'M1'</span>, <span class="st">'M2'</span>))
 stepsize =<span class="st"> </span><span class="dv">10</span>
 
 ## ----resfig ----------------------------------------------------------
-<span class="kw">ggplot</span>(resolution.plot, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y +<span class="st"> </span>z)) +<span class="st"> </span>plotopts +<span class="st"> </span>
-<span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">color =</span> res, <span class="dt">linetype =</span> res), <span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>
-<span class="kw">facet_wrap</span>(~type) +<span class="st"> </span><span class="kw">ylab</span>(<span class="kw">expression</span>(River~stage~<span class="er">~</span>(ft))) +<span class="st"> </span>
-<span class="kw">scale_linetype_manual</span>(<span class="st">"resolution (ft)"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(resolution.plot$res), 
-  <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, <span class="st">"longdash"</span>, <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) +<span class="st">  </span>
-<span class="kw">scale_color_manual</span>(<span class="st">"resolution (ft)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span>:<span class="dv">7</span>], 
-  <span class="dt">labels =</span> <span class="kw">levels</span>(resolution.plot$res))
+<span class="kw">ggplot</span>(resolution.plot, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y <span class="op">+</span><span class="st"> </span>z)) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span><span class="st"> </span>
+<span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">color =</span> res, <span class="dt">linetype =</span> res), <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>
+<span class="kw">facet_wrap</span>(<span class="op">~</span>type) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="kw">expression</span>(River<span class="op">~</span>stage<span class="op">~</span><span class="er">~</span>(ft))) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_linetype_manual</span>(<span class="st">"resolution (ft)"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(resolution.plot<span class="op">$</span>res), 
+  <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, <span class="st">"longdash"</span>, <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) <span class="op">+</span><span class="st">  </span>
+<span class="kw">scale_color_manual</span>(<span class="st">"resolution (ft)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>], 
+  <span class="dt">labels =</span> <span class="kw">levels</span>(resolution.plot<span class="op">$</span>res))
 
 ## ----roughness -------------------------------------------------------
 roughness.test.m1 =<span class="st"> </span><span class="kw">list</span>()
 roughness.test.m2 =<span class="st"> </span><span class="kw">list</span>()
-roughnesses =<span class="st"> </span><span class="fl">0.045</span>*<span class="kw">seq</span>(<span class="fl">0.5</span>, <span class="fl">1.5</span>, <span class="dt">length =</span> <span class="dv">5</span>)
-for(n in roughnesses){
+roughnesses =<span class="st"> </span><span class="fl">0.045</span><span class="op">*</span><span class="kw">seq</span>(<span class="fl">0.5</span>, <span class="fl">1.5</span>, <span class="dt">length =</span> <span class="dv">5</span>)
+<span class="cf">for</span>(n <span class="cf">in</span> roughnesses){
   roughness.test.m1[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]] =<span class="st"> </span><span class="kw"><a href="../reference/compute_profile.html">compute_profile</a></span>(slope, n, flow, 
     depth.m1, Cm, g, width, sideslope, <span class="dt">stepdist=</span>stepsize, <span class="dt">totaldist=</span>rivdist)
   roughness.test.m2[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]] =<span class="st"> </span><span class="kw"><a href="../reference/compute_profile.html">compute_profile</a></span>(slope, n, flow, 
     depth.m2, Cm, g, width, sideslope, <span class="dt">stepdist=</span>stepsize, <span class="dt">totaldist=</span>rivdist)
 }
 roughness.plot =<span class="st"> </span><span class="ot">NULL</span>
-for(lbl in <span class="kw">names</span>(roughness.test.m1)){
+<span class="cf">for</span>(lbl <span class="cf">in</span> <span class="kw">names</span>(roughness.test.m1)){
   f1 =<span class="st"> </span>roughness.test.m1[[lbl]]
   f2 =<span class="st"> </span>roughness.test.m2[[lbl]]
   f1[<span class="st">'type'</span>] =<span class="st"> 'M1'</span>
@@ -163,37 +163,37 @@ for(lbl in <span class="kw">names</span>(roughness.test.m1)){
   f[<span class="st">'mannings'</span>] =<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">substr</span>(lbl, <span class="dv">4</span>, 10L))
   roughness.plot =<span class="st"> </span><span class="kw">rbind</span>(roughness.plot, f)
 }
-roughness.plot[<span class="st">'run'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot$run, 
+roughness.plot[<span class="st">'run'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot<span class="op">$</span>run, 
   <span class="dt">levels =</span> <span class="kw">names</span>(roughness.test.m1))
-roughness.plot[<span class="st">'mannings'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot$mannings, 
+roughness.plot[<span class="st">'mannings'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot<span class="op">$</span>mannings, 
   <span class="dt">levels =</span> <span class="kw">sort</span>(roughnesses))
-roughness.plot[<span class="st">'type'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot$type, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">'M1'</span>, <span class="st">'M2'</span>))
+roughness.plot[<span class="st">'type'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot<span class="op">$</span>type, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">'M1'</span>, <span class="st">'M2'</span>))
 
 ## ---- roughplot -------------------------------------------------------
-<span class="kw">ggplot</span>(roughness.plot, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y +<span class="st"> </span>z)) +<span class="st"> </span>
-<span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">linetype =</span> mannings, <span class="dt">color =</span> mannings), <span class="dt">size =</span> <span class="dv">1</span>) +<span class="st">  </span>plotopts +<span class="st"> </span>
-<span class="kw">facet_wrap</span>(~<span class="st"> </span>type) +<span class="st"> </span><span class="kw">ylab</span>(<span class="kw">expression</span>(River~stage~<span class="er">~</span>(ft))) +<span class="st"> </span>
-<span class="kw">scale_linetype_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.plot$mannings), 
-  <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, <span class="st">"longdash"</span>, <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) +<span class="st"> </span>
-<span class="kw">scale_color_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.plot$mannings), 
-  <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">6</span>, <span class="st">"Oranges"</span>)[<span class="dv">2</span>:<span class="dv">6</span>])
+<span class="kw">ggplot</span>(roughness.plot, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y <span class="op">+</span><span class="st"> </span>z)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">linetype =</span> mannings, <span class="dt">color =</span> mannings), <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st">  </span>plotopts <span class="op">+</span><span class="st"> </span>
+<span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>type) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="kw">expression</span>(River<span class="op">~</span>stage<span class="op">~</span><span class="er">~</span>(ft))) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_linetype_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.plot<span class="op">$</span>mannings), 
+  <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, <span class="st">"longdash"</span>, <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_color_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.plot<span class="op">$</span>mannings), 
+  <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">6</span>, <span class="st">"Oranges"</span>)[<span class="dv">2</span><span class="op">:</span><span class="dv">6</span>])
 
 ## ---- relroughplot ----------------------------------------------------
 roughness.rel.m1 =<span class="st"> </span><span class="kw">list</span>()
 roughness.rel.m2 =<span class="st"> </span><span class="kw">list</span>()
-for(n in roughnesses){
+<span class="cf">for</span>(n <span class="cf">in</span> roughnesses){
   thisyn =<span class="st"> </span><span class="kw"><a href="../reference/normal_depth.html">normal_depth</a></span>(slope, n, flow, <span class="dv">2</span>, Cm, width, sideslope)
   roughness.rel.m1[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]] =<span class="st"> </span><span class="kw"><a href="../reference/compute_profile.html">compute_profile</a></span>(slope, n, flow, 
-    <span class="fl">1.25</span>*thisyn, Cm, g, width, sideslope, <span class="dt">stepdist=</span>stepsize, <span class="dt">totaldist=</span>rivdist)
+    <span class="fl">1.25</span><span class="op">*</span>thisyn, Cm, g, width, sideslope, <span class="dt">stepdist=</span>stepsize, <span class="dt">totaldist=</span>rivdist)
   roughness.rel.m2[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]] =<span class="st"> </span><span class="kw"><a href="../reference/compute_profile.html">compute_profile</a></span>(slope, n, flow, 
-    <span class="fl">0.75</span>*thisyn, Cm, g, width, sideslope, <span class="dt">stepdist=</span>stepsize, <span class="dt">totaldist=</span>rivdist)
+    <span class="fl">0.75</span><span class="op">*</span>thisyn, Cm, g, width, sideslope, <span class="dt">stepdist=</span>stepsize, <span class="dt">totaldist=</span>rivdist)
   roughness.rel.m1[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]][<span class="st">'pd.yn'</span>] =<span class="st"> </span>
-<span class="st">    </span>(roughness.rel.m1[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]]$y -<span class="st"> </span>thisyn)/thisyn
+<span class="st">    </span>(roughness.rel.m1[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]]<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>thisyn)<span class="op">/</span>thisyn
   roughness.rel.m2[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]][<span class="st">'pd.yn'</span>] =<span class="st"> </span>
-<span class="st">    </span>(roughness.rel.m2[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]]$y -<span class="st"> </span>thisyn)/thisyn
+<span class="st">    </span>(roughness.rel.m2[[<span class="kw">paste0</span>(<span class="st">'n='</span>,n)]]<span class="op">$</span>y <span class="op">-</span><span class="st"> </span>thisyn)<span class="op">/</span>thisyn
 }
 roughness.rel.plot =<span class="st"> </span><span class="ot">NULL</span>
-for(lbl in <span class="kw">names</span>(roughness.rel.m1)){
+<span class="cf">for</span>(lbl <span class="cf">in</span> <span class="kw">names</span>(roughness.rel.m1)){
   f1 =<span class="st"> </span>roughness.rel.m1[[lbl]]
   f2 =<span class="st"> </span>roughness.rel.m2[[lbl]]
   f1[<span class="st">'type'</span>] =<span class="st"> 'M1'</span>
@@ -203,20 +203,20 @@ for(lbl in <span class="kw">names</span>(roughness.rel.m1)){
   f[<span class="st">'mannings'</span>] =<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">substr</span>(lbl, <span class="dv">4</span>, 10L))
   roughness.rel.plot =<span class="st"> </span><span class="kw">rbind</span>(roughness.rel.plot, f)
 }
-roughness.rel.plot[<span class="st">'mannings'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot$mannings, 
+roughness.rel.plot[<span class="st">'mannings'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.plot<span class="op">$</span>mannings, 
   <span class="dt">levels =</span> <span class="kw">sort</span>(roughnesses))
-roughness.rel.plot[<span class="st">'run'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.rel.plot$run, 
+roughness.rel.plot[<span class="st">'run'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.rel.plot<span class="op">$</span>run, 
   <span class="dt">levels =</span> <span class="kw">names</span>(roughness.rel.m1))
-roughness.rel.plot[<span class="st">'type'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.rel.plot$type, 
+roughness.rel.plot[<span class="st">'type'</span>] =<span class="st"> </span><span class="kw">factor</span>(roughness.rel.plot<span class="op">$</span>type, 
   <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">'M1'</span>, <span class="st">'M2'</span>))
-<span class="kw">ggplot</span>(roughness.rel.plot, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> pd.yn)) +<span class="st"> </span>
-<span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">linetype =</span> mannings, <span class="dt">color =</span> mannings), <span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>
-plotopts +<span class="st"> </span><span class="kw">facet_wrap</span>(~type, <span class="dt">scales =</span> <span class="st">'free_y'</span>) +<span class="st"> </span>
-<span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(Percent~difference~from~normal~depth), <span class="dt">labels =</span> percent) +<span class="st"> </span>
-<span class="kw">scale_linetype_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.rel.plot$mannings), 
-  <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, <span class="st">"longdash"</span>, <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) +<span class="st"> </span>
-<span class="kw">scale_color_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.rel.plot$mannings), 
-  <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">6</span>, <span class="st">"Oranges"</span>)[<span class="dv">2</span>:<span class="dv">6</span>])
+<span class="kw">ggplot</span>(roughness.rel.plot, <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> pd.yn)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">linetype =</span> mannings, <span class="dt">color =</span> mannings), <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>
+plotopts <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>type, <span class="dt">scales =</span> <span class="st">'free_y'</span>) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(Percent<span class="op">~</span>difference<span class="op">~</span>from<span class="op">~</span>normal<span class="op">~</span>depth), <span class="dt">labels =</span> percent) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_linetype_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.rel.plot<span class="op">$</span>mannings), 
+  <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, <span class="st">"longdash"</span>, <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_color_manual</span>(<span class="st">"Bed roughness"</span>, <span class="dt">labels =</span> <span class="kw">levels</span>(roughness.rel.plot<span class="op">$</span>mannings), 
+  <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">6</span>, <span class="st">"Oranges"</span>)[<span class="dv">2</span><span class="op">:</span><span class="dv">6</span>])
 
 
 ## ---- loadup-kwm ------------------------------------------------------
@@ -235,27 +235,27 @@ iflow =<span class="st"> </span><span class="dv">250</span>
 <span class="co"># keep Courant number at 0.7 to balance temporal and spatial resolution</span>
 idepth =<span class="st"> </span><span class="kw"><a href="../reference/normal_depth.html">normal_depth</a></span>(slope, mannings, <span class="dv">250</span>, <span class="dv">10</span>, <span class="fl">1.485</span>, <span class="dv">100</span>, SS)  
 iarea =<span class="st"> </span><span class="kw"><a href="../reference/channel_geom.html">channel_geom</a></span>(idepth, B, SS)[<span class="st">"A"</span>]
-cn =<span class="st"> </span><span class="fl">0.7</span>*iarea/iflow
+cn =<span class="st"> </span><span class="fl">0.7</span><span class="op">*</span>iarea<span class="op">/</span>iflow
 <span class="co"># define upstream boundary condition assuming a timestep in seconds</span>
-bcfunc =<span class="st"> </span>function(x)
-  <span class="kw">ifelse</span>(x &lt;<span class="st"> </span><span class="dv">9000</span>, <span class="dv">250</span> +<span class="st"> </span>(<span class="dv">750</span>/pi)*(<span class="dv">1</span> -<span class="st"> </span><span class="kw">cos</span>(pi*x/(<span class="dv">60</span>*<span class="dv">75</span>))), <span class="dv">250</span>)
+bcfunc =<span class="st"> </span><span class="cf">function</span>(x)
+  <span class="kw">ifelse</span>(x <span class="op">&lt;</span><span class="st"> </span><span class="dv">9000</span>, <span class="dv">250</span> <span class="op">+</span><span class="st"> </span>(<span class="dv">750</span><span class="op">/</span>pi)<span class="op">*</span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">cos</span>(pi<span class="op">*</span>x<span class="op">/</span>(<span class="dv">60</span><span class="op">*</span><span class="dv">75</span>))), <span class="dv">250</span>)
 bctime =<span class="st"> </span><span class="dv">76000</span>
-xnodes =<span class="st"> </span>extent/<span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">50</span>, <span class="dv">125</span>, <span class="dv">250</span>, <span class="dv">500</span>, <span class="dv">1000</span>, <span class="dv">2000</span>, <span class="dv">5000</span>) +<span class="st"> </span><span class="dv">1</span>
-myxres =<span class="st"> </span>extent/(xnodes -<span class="st"> </span><span class="dv">1</span>)
-mytres =<span class="st"> </span>cn*myxres
+xnodes =<span class="st"> </span>extent<span class="op">/</span><span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">50</span>, <span class="dv">125</span>, <span class="dv">250</span>, <span class="dv">500</span>, <span class="dv">1000</span>, <span class="dv">2000</span>, <span class="dv">5000</span>) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+myxres =<span class="st"> </span>extent<span class="op">/</span>(xnodes <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)
+mytres =<span class="st"> </span>cn<span class="op">*</span>myxres
 plotopts =<span class="st"> </span><span class="kw">list</span>(<span class="kw">theme_bw</span>())
 
 <span class="co"># run the model</span>
 modtime =<span class="st"> </span><span class="kw">list</span>()
 modelresults =<span class="st"> </span><span class="kw">list</span>()
-for(i in <span class="kw">seq</span>(<span class="kw">length</span>(xnodes))){
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="kw">seq</span>(<span class="kw">length</span>(xnodes))){
   numnodes =<span class="st"> </span>xnodes[i]
   xstep =<span class="st"> </span>myxres[i]
   tstep =<span class="st"> </span>mytres[i]
   bc =<span class="st"> </span><span class="kw">bcfunc</span>(<span class="kw">seq</span>(<span class="dv">0</span>, bctime, <span class="dt">by=</span>tstep))
-  mp =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="dv">50000</span>/xstep +<span class="st"> </span><span class="dv">1</span>), <span class="kw">as.integer</span>(<span class="dv">100000</span>/xstep +<span class="st"> </span><span class="dv">1</span>), numnodes)
+  mp =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="dv">50000</span><span class="op">/</span>xstep <span class="op">+</span><span class="st"> </span><span class="dv">1</span>), <span class="kw">as.integer</span>(<span class="dv">100000</span><span class="op">/</span>xstep <span class="op">+</span><span class="st"> </span><span class="dv">1</span>), numnodes)
   mt =<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="kw">length</span>(bc), <span class="dt">length.out=</span><span class="dv">10</span>)))[<span class="kw">seq</span>(<span class="dv">7</span>)]
-  if(xstep ==<span class="st"> </span><span class="kw">min</span>(myxres)){
+  <span class="cf">if</span>(xstep <span class="op">==</span><span class="st"> </span><span class="kw">min</span>(myxres)){
     mt =<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="kw">length</span>(bc), <span class="dt">length.out=</span><span class="dv">125</span>)))
     mtslice =<span class="st"> </span>mt[<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="kw">length</span>(mt), <span class="dt">length.out=</span><span class="dv">7</span>))]
   }
@@ -271,76 +271,76 @@ for(i in <span class="kw">seq</span>(<span class="kw">length</span>(xnodes))){
 }
 allresults =<span class="st"> </span><span class="kw">do.call</span>(rbind.data.frame, modelresults)
 <span class="kw">row.names</span>(allresults) =<span class="st"> </span><span class="ot">NULL</span>
-<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)==<span class="st">'flow'</span>)] =<span class="st"> "Q"</span>
-<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)==<span class="st">'distance'</span>)] =<span class="st"> "x"</span>
-<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)==<span class="st">'time'</span>)] =<span class="st"> "t"</span>
+<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)<span class="op">==</span><span class="st">'flow'</span>)] =<span class="st"> "Q"</span>
+<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)<span class="op">==</span><span class="st">'distance'</span>)] =<span class="st"> "x"</span>
+<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)<span class="op">==</span><span class="st">'time'</span>)] =<span class="st"> "t"</span>
 
 ## ---- floodhydrograph -------------------------------------------------
 floodhydro =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">time =</span> <span class="kw">seq</span>(<span class="dv">15000</span>), <span class="dt">flow=</span><span class="kw">bcfunc</span>(<span class="kw">seq</span>(<span class="dv">15000</span>)))
-<span class="kw">ggplot</span>(floodhydro, <span class="kw">aes</span>(<span class="dt">x=</span>time/<span class="dv">60</span>, <span class="dt">y=</span>flow)) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="dt">color=</span><span class="st">"darkblue"</span>, 
-  <span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>plotopts +
-<span class="kw">xlab</span>(<span class="kw">expression</span>(time~<span class="er">~</span>(minutes))) +<span class="st"> </span><span class="kw">ylab</span>(<span class="kw">expression</span>(flow~<span class="er">~</span>(ft^<span class="dv">3</span>~<span class="er">~</span>s^-<span class="dv">1</span>)))
+<span class="kw">ggplot</span>(floodhydro, <span class="kw">aes</span>(<span class="dt">x=</span>time<span class="op">/</span><span class="dv">60</span>, <span class="dt">y=</span>flow)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>(<span class="dt">color=</span><span class="st">"darkblue"</span>, 
+  <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span>
+<span class="kw">xlab</span>(<span class="kw">expression</span>(time<span class="op">~</span><span class="er">~</span>(minutes))) <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="kw">expression</span>(flow<span class="op">~</span><span class="er">~</span>(ft<span class="op">^</span><span class="dv">3</span><span class="op">~</span><span class="er">~</span>s<span class="op">^-</span><span class="dv">1</span>)))
 
 ## ---- routeplot-kinematic ---------------------------------------------
 <span class="co"># still plot</span>
-surfaces =<span class="st"> </span><span class="kw">group_by</span>(<span class="kw">filter</span>(allresults, monitor.type==<span class="st">'timestep'</span>, 
-  deltax==<span class="kw">min</span>(deltax)))
-<span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step %in%<span class="st"> </span>mtslice[<span class="dv">2</span>:<span class="dv">5</span>]), 
-  <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">round</span>(t/<span class="dv">60</span>)), <span class="dt">color=</span><span class="kw">factor</span>(<span class="kw">round</span>(t/<span class="dv">60</span>)))) +<span class="st"> </span>
-<span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>plotopts +<span class="st"> </span>
-<span class="kw">scale_color_manual</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span>:<span class="dv">6</span>]) +<span class="st"> </span>
+surfaces =<span class="st"> </span><span class="kw">group_by</span>(<span class="kw">filter</span>(allresults, monitor.type<span class="op">==</span><span class="st">'timestep'</span>, 
+  deltax<span class="op">==</span><span class="kw">min</span>(deltax)))
+<span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step <span class="op">%in%</span><span class="st"> </span>mtslice[<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]), 
+  <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">round</span>(t<span class="op">/</span><span class="dv">60</span>)), <span class="dt">color=</span><span class="kw">factor</span>(<span class="kw">round</span>(t<span class="op">/</span><span class="dv">60</span>)))) <span class="op">+</span><span class="st"> </span>
+<span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_color_manual</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span><span class="op">:</span><span class="dv">6</span>]) <span class="op">+</span><span class="st"> </span>
 <span class="kw">scale_linetype_manual</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>, <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, 
-  <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) +<span class="st"> </span>
-<span class="kw">xlab</span>(<span class="kw">expression</span>(distance~<span class="er">~</span>downstream~<span class="er">~</span>(ft))) +<span class="st"> </span>
-<span class="kw">ylab</span>(<span class="kw">expression</span>(flow~<span class="er">~</span>(ft^<span class="dv">3</span>~<span class="er">~</span>s^-<span class="dv">1</span>)))
+  <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">xlab</span>(<span class="kw">expression</span>(distance<span class="op">~</span><span class="er">~</span>downstream<span class="op">~</span><span class="er">~</span>(ft))) <span class="op">+</span><span class="st"> </span>
+<span class="kw">ylab</span>(<span class="kw">expression</span>(flow<span class="op">~</span><span class="er">~</span>(ft<span class="op">^</span><span class="dv">3</span><span class="op">~</span><span class="er">~</span>s<span class="op">^-</span><span class="dv">1</span>)))
 <span class="co"># animation</span>
-routeylims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces$Q), <span class="kw">max</span>(surfaces$Q))
-routexlims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces$x), <span class="kw">max</span>(surfaces$x))
-thisdt =<span class="st"> </span><span class="kw">unique</span>(surfaces$deltat)
-for(n in <span class="kw">unique</span>(surfaces$step))
+routeylims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces<span class="op">$</span>Q), <span class="kw">max</span>(surfaces<span class="op">$</span>Q))
+routexlims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces<span class="op">$</span>x), <span class="kw">max</span>(surfaces<span class="op">$</span>x))
+thisdt =<span class="st"> </span><span class="kw">unique</span>(surfaces<span class="op">$</span>deltat)
+<span class="cf">for</span>(n <span class="cf">in</span> <span class="kw">unique</span>(surfaces<span class="op">$</span>step))
   <span class="kw">print</span>(
-    <span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step==n), <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q)) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">color =</span> <span class="st">"darkblue"</span>, <span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>plotopts +<span class="st"> </span>
-<span class="st">    </span><span class="kw">scale_linetype_discrete</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance~<span class="er">~</span>downstream~<span class="er">~</span>(ft)), 
-      <span class="dt">limits=</span>routexlims) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow~<span class="er">~</span>(ft^<span class="dv">3</span>~<span class="er">~</span>s^-<span class="dv">1</span>)), <span class="dt">limits=</span>routeylims) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">ggtitle</span>(<span class="kw">paste</span>(<span class="kw">format</span>(<span class="kw">round</span>((n -<span class="st"> </span><span class="dv">1</span>)*thisdt/<span class="dv">60</span>), <span class="dt">width =</span> <span class="dv">4</span>), <span class="st">"minutes"</span>))
+    <span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step<span class="op">==</span>n), <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">color =</span> <span class="st">"darkblue"</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">scale_linetype_discrete</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance<span class="op">~</span><span class="er">~</span>downstream<span class="op">~</span><span class="er">~</span>(ft)), 
+      <span class="dt">limits=</span>routexlims) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow<span class="op">~</span><span class="er">~</span>(ft<span class="op">^</span><span class="dv">3</span><span class="op">~</span><span class="er">~</span>s<span class="op">^-</span><span class="dv">1</span>)), <span class="dt">limits=</span>routeylims) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">ggtitle</span>(<span class="kw">paste</span>(<span class="kw">format</span>(<span class="kw">round</span>((n <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)<span class="op">*</span>thisdt<span class="op">/</span><span class="dv">60</span>), <span class="dt">width =</span> <span class="dv">4</span>), <span class="st">"minutes"</span>))
   )
 
 ## ---- xsectionplot-kinematic ------------------------------------------
-xsections =<span class="st"> </span><span class="kw">filter</span>(allresults, monitor.type ==<span class="st"> "node"</span>, 
-  x %in%<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">50000</span>))[<span class="kw">c</span>(<span class="st">"x"</span>,<span class="st">"t"</span>,<span class="st">"Q"</span>, <span class="st">"deltax"</span>)]
-xsections[<span class="st">'deltax'</span>] =<span class="st"> </span><span class="kw">factor</span>(<span class="kw">paste</span>(xsections$deltax, <span class="st">"feet"</span>), 
-  <span class="dt">levels=</span><span class="kw">paste</span>(<span class="kw">sort</span>(<span class="kw">unique</span>(xsections$deltax)), <span class="st">"feet"</span>))
-<span class="kw">ggplot</span>(xsections, <span class="kw">aes</span>(<span class="dt">x=</span>t/<span class="dv">60</span>, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">format</span>(x, <span class="dt">big.mark=</span><span class="st">","</span>, 
+xsections =<span class="st"> </span><span class="kw">filter</span>(allresults, monitor.type <span class="op">==</span><span class="st"> "node"</span>, 
+  x <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">50000</span>))[<span class="kw">c</span>(<span class="st">"x"</span>,<span class="st">"t"</span>,<span class="st">"Q"</span>, <span class="st">"deltax"</span>)]
+xsections[<span class="st">'deltax'</span>] =<span class="st"> </span><span class="kw">factor</span>(<span class="kw">paste</span>(xsections<span class="op">$</span>deltax, <span class="st">"feet"</span>), 
+  <span class="dt">levels=</span><span class="kw">paste</span>(<span class="kw">sort</span>(<span class="kw">unique</span>(xsections<span class="op">$</span>deltax)), <span class="st">"feet"</span>))
+<span class="kw">ggplot</span>(xsections, <span class="kw">aes</span>(<span class="dt">x=</span>t<span class="op">/</span><span class="dv">60</span>, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">format</span>(x, <span class="dt">big.mark=</span><span class="st">","</span>, 
   <span class="dt">trim=</span><span class="ot">TRUE</span>), <span class="dt">levels =</span> <span class="kw">format</span>(<span class="kw">sort</span>(<span class="kw">unique</span>(x)), <span class="dt">big.mark=</span><span class="st">","</span>, <span class="dt">trim=</span><span class="ot">TRUE</span>)), 
-  <span class="dt">color =</span> deltax)) +<span class="st"> </span>
-<span class="kw">geom_path</span>(<span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span><span class="kw">facet_grid</span>(deltax~.) +<span class="st"> </span>plotopts +
-<span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow~<span class="er">~</span>(ft^<span class="dv">3</span>~<span class="er">~</span>s^-<span class="dv">1</span>)), <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">300</span>, <span class="dv">500</span>,<span class="dv">700</span>)) +<span class="st"> </span>
+  <span class="dt">color =</span> deltax)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">geom_path</span>(<span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(deltax<span class="op">~</span>.) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span>
+<span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow<span class="op">~</span><span class="er">~</span>(ft<span class="op">^</span><span class="dv">3</span><span class="op">~</span><span class="er">~</span>s<span class="op">^-</span><span class="dv">1</span>)), <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">300</span>, <span class="dv">500</span>,<span class="dv">700</span>)) <span class="op">+</span><span class="st"> </span>
 <span class="kw">scale_linetype_manual</span>(<span class="st">"downstream</span><span class="ch">\n</span><span class="st">distance (ft)"</span>, <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, 
-  <span class="st">"dashed"</span>, <span class="st">"dotted"</span>)) +<span class="st"> </span>
-<span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(time~<span class="er">~</span>(min)), <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">600</span>)) +<span class="st"> </span>
+  <span class="st">"dashed"</span>, <span class="st">"dotted"</span>)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(time<span class="op">~</span><span class="er">~</span>(min)), <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">600</span>)) <span class="op">+</span><span class="st"> </span>
 <span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"#7570B3"</span>, <span class="st">"#8DA0CB"</span>, <span class="st">"#66C2A5"</span>, <span class="st">"#A6D854"</span>,
   <span class="st">"#E5C494"</span>, <span class="st">"#E6AB02"</span>, <span class="st">"#FC8D62"</span>, <span class="st">"#E78AC3"</span>), <span class="dt">guide =</span> <span class="ot">FALSE</span>)  
 
 ## ---- peakstable-kinematic --------------------------------------------
-peaks =<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">summarize</span>(<span class="kw">group_by</span>(<span class="kw">filter</span>(allresults, x==<span class="dv">50000</span>, 
-  monitor.type==<span class="st">'node'</span>), computationtime, deltax, deltat, monitor.type), 
-  <span class="dt">peak.flow=</span><span class="kw">max</span>(Q), <span class="dt">time.to.peak=</span>t[<span class="kw">which</span>(Q==peak.flow)]))
-real.peak =<span class="st"> </span><span class="kw">max</span>(floodhydro$flow)
-peaks[<span class="st">'flow.percent.error'</span>] =<span class="st"> </span>(peaks$peak.flow -<span class="st"> </span>real.peak)/real.peak
+peaks =<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">summarize</span>(<span class="kw">group_by</span>(<span class="kw">filter</span>(allresults, x<span class="op">==</span><span class="dv">50000</span>, 
+  monitor.type<span class="op">==</span><span class="st">'node'</span>), computationtime, deltax, deltat, monitor.type), 
+  <span class="dt">peak.flow=</span><span class="kw">max</span>(Q), <span class="dt">time.to.peak=</span>t[<span class="kw">which</span>(Q<span class="op">==</span>peak.flow)]))
+real.peak =<span class="st"> </span><span class="kw">max</span>(floodhydro<span class="op">$</span>flow)
+peaks[<span class="st">'flow.percent.error'</span>] =<span class="st"> </span>(peaks<span class="op">$</span>peak.flow <span class="op">-</span><span class="st"> </span>real.peak)<span class="op">/</span>real.peak
 tbld =<span class="st"> </span><span class="kw">as.data.frame</span>(peaks[<span class="kw">c</span>(<span class="st">"deltax"</span>, <span class="st">"deltat"</span>, <span class="st">"flow.percent.error"</span>, 
   <span class="st">"computationtime"</span>)])
-tbld[<span class="st">"deltax"</span>] =<span class="st"> </span><span class="kw">round</span>(tbld$deltax)
-tbld[<span class="st">"deltat"</span>] =<span class="st"> </span><span class="kw">round</span>(tbld$deltat, <span class="dv">2</span>)
-tbld[<span class="st">"flow.percent.error"</span>] =<span class="st"> </span><span class="kw">round</span>(<span class="dv">100</span>*tbld$flow.percent.error, <span class="dv">2</span>)
+tbld[<span class="st">"deltax"</span>] =<span class="st"> </span><span class="kw">round</span>(tbld<span class="op">$</span>deltax)
+tbld[<span class="st">"deltat"</span>] =<span class="st"> </span><span class="kw">round</span>(tbld<span class="op">$</span>deltat, <span class="dv">2</span>)
+tbld[<span class="st">"flow.percent.error"</span>] =<span class="st"> </span><span class="kw">round</span>(<span class="dv">100</span><span class="op">*</span>tbld<span class="op">$</span>flow.percent.error, <span class="dv">2</span>)
 <span class="kw">names</span>(tbld) =<span class="st"> </span><span class="kw">c</span>(<span class="st">"$</span><span class="ch">\\</span><span class="st">Delta x$ (ft)"</span>, <span class="st">"$</span><span class="ch">\\</span><span class="st">Delta t$ (s)"</span>, <span class="st">"</span><span class="ch">\\</span><span class="st">% error (peak flow)"</span>, 
   <span class="st">"cost (s)"</span>)
 ptable =<span class="st"> </span><span class="kw">xtable</span>(tbld[<span class="kw">order</span>(tbld[,<span class="dv">1</span>]),], <span class="dt">digits =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>))
 <span class="kw">print</span>(ptable, <span class="dt">include.rownames =</span> <span class="ot">FALSE</span>, <span class="dt">sanitize.colnames.function =</span> identity,
-  <span class="dt">sanitize.text.function =</span> function(x){x}, <span class="dt">floating=</span><span class="ot">FALSE</span>, <span class="dt">hline.after=</span><span class="ot">NULL</span>, 
-  <span class="dt">add.to.row=</span><span class="kw">list</span>(<span class="dt">pos=</span><span class="kw">list</span>(-<span class="dv">1</span>,<span class="dv">0</span>, <span class="kw">nrow</span>(ptable)),
+  <span class="dt">sanitize.text.function =</span> <span class="cf">function</span>(x){x}, <span class="dt">floating=</span><span class="ot">FALSE</span>, <span class="dt">hline.after=</span><span class="ot">NULL</span>, 
+  <span class="dt">add.to.row=</span><span class="kw">list</span>(<span class="dt">pos=</span><span class="kw">list</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">0</span>, <span class="kw">nrow</span>(ptable)),
   <span class="dt">command=</span><span class="kw">c</span>(<span class="st">'</span><span class="ch">\\</span><span class="st">toprule '</span>, <span class="st">'</span><span class="ch">\\</span><span class="st">midrule '</span>, <span class="st">'</span><span class="ch">\\</span><span class="st">bottomrule '</span>)), 
   <span class="dt">format.args =</span> <span class="kw">list</span>(<span class="dt">big.mark =</span> <span class="st">","</span>))  
 
@@ -361,27 +361,27 @@ iflow =<span class="st"> </span><span class="dv">250</span>
 idepth =<span class="st"> </span><span class="kw"><a href="../reference/normal_depth.html">normal_depth</a></span>(slope, mannings, <span class="dv">250</span>, <span class="dv">10</span>, Cm, <span class="dv">100</span>, SS)  
 iarea =<span class="st"> </span><span class="kw"><a href="../reference/channel_geom.html">channel_geom</a></span>(idepth, B, SS)[[<span class="st">"A"</span>]]
 <span class="co"># keep Courant number at 0.06 to balance temporal and spatial resolution</span>
-cn =<span class="st"> </span><span class="fl">0.06</span>*iarea/<span class="dv">250</span>
-bcfunc =<span class="st"> </span>function(x)
-  <span class="kw">ifelse</span>(x &lt;<span class="st"> </span><span class="dv">9000</span>, <span class="dv">250</span> +<span class="st"> </span>(<span class="dv">750</span>/pi)*(<span class="dv">1</span> -<span class="st"> </span><span class="kw">cos</span>(pi*x/(<span class="dv">60</span>*<span class="dv">75</span>))), <span class="dv">250</span>)
+cn =<span class="st"> </span><span class="fl">0.06</span><span class="op">*</span>iarea<span class="op">/</span><span class="dv">250</span>
+bcfunc =<span class="st"> </span><span class="cf">function</span>(x)
+  <span class="kw">ifelse</span>(x <span class="op">&lt;</span><span class="st"> </span><span class="dv">9000</span>, <span class="dv">250</span> <span class="op">+</span><span class="st"> </span>(<span class="dv">750</span><span class="op">/</span>pi)<span class="op">*</span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">cos</span>(pi<span class="op">*</span>x<span class="op">/</span>(<span class="dv">60</span><span class="op">*</span><span class="dv">75</span>))), <span class="dv">250</span>)
 bctime =<span class="st"> </span><span class="dv">76000</span>
-xnodes =<span class="st"> </span>extent/<span class="kw">c</span>(<span class="dv">50</span>, <span class="dv">125</span>, <span class="dv">250</span>, <span class="dv">500</span>, <span class="dv">1000</span>) +<span class="st"> </span><span class="dv">1</span>
-myxres =<span class="st"> </span>extent/(xnodes -<span class="st"> </span><span class="dv">1</span>)
-mytres =<span class="st"> </span>cn*myxres
+xnodes =<span class="st"> </span>extent<span class="op">/</span><span class="kw">c</span>(<span class="dv">50</span>, <span class="dv">125</span>, <span class="dv">250</span>, <span class="dv">500</span>, <span class="dv">1000</span>) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
+myxres =<span class="st"> </span>extent<span class="op">/</span>(xnodes <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)
+mytres =<span class="st"> </span>cn<span class="op">*</span>myxres
 plotopts =<span class="st"> </span><span class="kw">list</span>(<span class="kw">theme_bw</span>())
 
 <span class="co"># run the model</span>
 modtime =<span class="st"> </span><span class="kw">list</span>()
 modelresults =<span class="st"> </span><span class="kw">list</span>()
-for(i in <span class="kw">seq</span>(<span class="kw">length</span>(xnodes))){
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="kw">seq</span>(<span class="kw">length</span>(xnodes))){
   numnodes =<span class="st"> </span>xnodes[i]
   xstep =<span class="st"> </span>myxres[i]
   tstep =<span class="st"> </span>mytres[i]
   bc =<span class="st"> </span><span class="kw">bcfunc</span>(<span class="kw">seq</span>(<span class="dv">0</span>, bctime, <span class="dt">by=</span>tstep))
-  dc =<span class="st"> </span><span class="kw">rep</span>(-<span class="dv">1</span>, <span class="kw">length</span>(bc))
-  mp =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="dv">1000</span>, <span class="dv">50000</span>, <span class="dv">100000</span>, <span class="dv">149000</span>)/xstep +<span class="st"> </span><span class="dv">1</span>), numnodes)
+  dc =<span class="st"> </span><span class="kw">rep</span>(<span class="op">-</span><span class="dv">1</span>, <span class="kw">length</span>(bc))
+  mp =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="dv">1000</span>, <span class="dv">50000</span>, <span class="dv">100000</span>, <span class="dv">149000</span>)<span class="op">/</span>xstep <span class="op">+</span><span class="st"> </span><span class="dv">1</span>), numnodes)
   mt =<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="kw">length</span>(bc), <span class="dt">length.out=</span><span class="dv">10</span>)))[<span class="kw">seq</span>(<span class="dv">7</span>)]
-  if(xstep ==<span class="st"> </span><span class="kw">min</span>(myxres)){
+  <span class="cf">if</span>(xstep <span class="op">==</span><span class="st"> </span><span class="kw">min</span>(myxres)){
     mt =<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="kw">length</span>(bc), <span class="dt">length.out=</span><span class="dv">125</span>)))  
     mtslice =<span class="st"> </span>mt[<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="kw">length</span>(mt), <span class="dt">length.out=</span><span class="dv">7</span>))]
   }
@@ -398,84 +398,84 @@ for(i in <span class="kw">seq</span>(<span class="kw">length</span>(xnodes))){
 <span class="co"># combine results</span>
 allresults =<span class="st"> </span><span class="kw">do.call</span>(rbind.data.frame, modelresults)
 <span class="kw">row.names</span>(allresults) =<span class="st"> </span><span class="ot">NULL</span>
-<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)==<span class="st">'flow'</span>)] =<span class="st"> "Q"</span>
-<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)==<span class="st">'distance'</span>)] =<span class="st"> "x"</span>
-<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)==<span class="st">'time'</span>)] =<span class="st"> "t"</span>
-allresults[<span class="st">'t'</span>] =<span class="st"> </span>(allresults$step -<span class="st"> </span><span class="dv">1</span>)*allresults$deltat
-allresults[<span class="st">'x'</span>] =<span class="st"> </span>(allresults$node -<span class="st"> </span><span class="dv">1</span>)*allresults$deltax
+<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)<span class="op">==</span><span class="st">'flow'</span>)] =<span class="st"> "Q"</span>
+<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)<span class="op">==</span><span class="st">'distance'</span>)] =<span class="st"> "x"</span>
+<span class="kw">names</span>(allresults)[<span class="kw">which</span>(<span class="kw">names</span>(allresults)<span class="op">==</span><span class="st">'time'</span>)] =<span class="st"> "t"</span>
+allresults[<span class="st">'t'</span>] =<span class="st"> </span>(allresults<span class="op">$</span>step <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)<span class="op">*</span>allresults<span class="op">$</span>deltat
+allresults[<span class="st">'x'</span>] =<span class="st"> </span>(allresults<span class="op">$</span>node <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)<span class="op">*</span>allresults<span class="op">$</span>deltax
 
 ## ---- routeplot-characteristic ----------------------------------------
 <span class="co"># still plot</span>
-surfaces =<span class="st"> </span><span class="kw">filter</span>(allresults, monitor.type==<span class="st">'timestep'</span>, 
-  deltax==<span class="kw">min</span>(deltax))
-<span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step %in%<span class="st"> </span>mtslice[<span class="dv">2</span>:<span class="dv">5</span>]), 
-  <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">round</span>(t/<span class="dv">60</span>)), <span class="dt">color=</span><span class="kw">factor</span>(<span class="kw">round</span>(t/<span class="dv">60</span>)))) +<span class="st"> </span>
-<span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>plotopts +<span class="st"> </span>
-<span class="kw">scale_color_manual</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span>:<span class="dv">6</span>]) +<span class="st"> </span>
+surfaces =<span class="st"> </span><span class="kw">filter</span>(allresults, monitor.type<span class="op">==</span><span class="st">'timestep'</span>, 
+  deltax<span class="op">==</span><span class="kw">min</span>(deltax))
+<span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step <span class="op">%in%</span><span class="st"> </span>mtslice[<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]), 
+  <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">round</span>(t<span class="op">/</span><span class="dv">60</span>)), <span class="dt">color=</span><span class="kw">factor</span>(<span class="kw">round</span>(t<span class="op">/</span><span class="dv">60</span>)))) <span class="op">+</span><span class="st"> </span>
+<span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_color_manual</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span><span class="op">:</span><span class="dv">6</span>]) <span class="op">+</span><span class="st"> </span>
 <span class="kw">scale_linetype_manual</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>, <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, 
-  <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) +
-<span class="st">  </span><span class="kw">xlab</span>(<span class="kw">expression</span>(distance~<span class="er">~</span>downstream~<span class="er">~</span>(ft))) +<span class="st"> </span>
-<span class="st">  </span><span class="kw">ylab</span>(<span class="kw">expression</span>(flow~<span class="er">~</span>(ft^<span class="dv">3</span>~<span class="er">~</span>s^-<span class="dv">1</span>)))
+  <span class="st">"dashed"</span>, <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="kw">expression</span>(distance<span class="op">~</span><span class="er">~</span>downstream<span class="op">~</span><span class="er">~</span>(ft))) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">ylab</span>(<span class="kw">expression</span>(flow<span class="op">~</span><span class="er">~</span>(ft<span class="op">^</span><span class="dv">3</span><span class="op">~</span><span class="er">~</span>s<span class="op">^-</span><span class="dv">1</span>)))
 <span class="co"># animation</span>
-routeylims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces$Q), <span class="kw">max</span>(surfaces$Q))
-routexlims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces$x), <span class="kw">max</span>(surfaces$x))
-thisdt =<span class="st"> </span><span class="kw">unique</span>(surfaces$deltat)
-for(n in <span class="kw">unique</span>(surfaces$step))
+routeylims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces<span class="op">$</span>Q), <span class="kw">max</span>(surfaces<span class="op">$</span>Q))
+routexlims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(surfaces<span class="op">$</span>x), <span class="kw">max</span>(surfaces<span class="op">$</span>x))
+thisdt =<span class="st"> </span><span class="kw">unique</span>(surfaces<span class="op">$</span>deltat)
+<span class="cf">for</span>(n <span class="cf">in</span> <span class="kw">unique</span>(surfaces<span class="op">$</span>step))
   <span class="kw">print</span>(
-    <span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step==n), <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q)) +<span class="st"> </span>
-<span class="st">      </span><span class="kw">geom_line</span>(<span class="dt">color =</span> <span class="st">"darkblue"</span>, <span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>plotopts +<span class="st"> </span>
-<span class="st">      </span><span class="kw">scale_linetype_discrete</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>) +<span class="st"> </span>
-<span class="st">      </span><span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance~<span class="er">~</span>downstream~<span class="er">~</span>(ft)), 
-        <span class="dt">limits=</span>routexlims) +<span class="st"> </span>
-<span class="st">      </span><span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow~<span class="er">~</span>(ft^<span class="dv">3</span>~<span class="er">~</span>s^-<span class="dv">1</span>)), <span class="dt">limits =</span> routeylims) +<span class="st"> </span>
-<span class="st">      </span><span class="kw">ggtitle</span>(<span class="kw">paste</span>(<span class="kw">format</span>(<span class="kw">round</span>((n -<span class="st"> </span><span class="dv">1</span>)*thisdt/<span class="dv">60</span>), <span class="dt">width =</span> <span class="dv">4</span>), <span class="st">"minutes"</span>))
+    <span class="kw">ggplot</span>(<span class="kw">filter</span>(surfaces, step<span class="op">==</span>n), <span class="kw">aes</span>(<span class="dt">x=</span>x, <span class="dt">y=</span>Q)) <span class="op">+</span><span class="st"> </span>
+<span class="st">      </span><span class="kw">geom_line</span>(<span class="dt">color =</span> <span class="st">"darkblue"</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span><span class="st"> </span>
+<span class="st">      </span><span class="kw">scale_linetype_discrete</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">      </span><span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance<span class="op">~</span><span class="er">~</span>downstream<span class="op">~</span><span class="er">~</span>(ft)), 
+        <span class="dt">limits=</span>routexlims) <span class="op">+</span><span class="st"> </span>
+<span class="st">      </span><span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow<span class="op">~</span><span class="er">~</span>(ft<span class="op">^</span><span class="dv">3</span><span class="op">~</span><span class="er">~</span>s<span class="op">^-</span><span class="dv">1</span>)), <span class="dt">limits =</span> routeylims) <span class="op">+</span><span class="st"> </span>
+<span class="st">      </span><span class="kw">ggtitle</span>(<span class="kw">paste</span>(<span class="kw">format</span>(<span class="kw">round</span>((n <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)<span class="op">*</span>thisdt<span class="op">/</span><span class="dv">60</span>), <span class="dt">width =</span> <span class="dv">4</span>), <span class="st">"minutes"</span>))
   )
 
 ## ---- xsectionplot-characteristic -------------------------------------
-xsections =<span class="st"> </span><span class="kw">filter</span>(allresults, monitor.type ==<span class="st"> "node"</span>, 
-  x %in%<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>, <span class="dv">150000</span>))[<span class="kw">c</span>(<span class="st">"x"</span>,<span class="st">"t"</span>,<span class="st">"Q"</span>, <span class="st">"deltax"</span>)]
-xsections[<span class="st">'deltax'</span>] =<span class="st"> </span><span class="kw">factor</span>(<span class="kw">paste</span>(xsections$deltax, <span class="st">"feet"</span>), 
-  <span class="dt">levels=</span><span class="kw">paste</span>(<span class="kw">sort</span>(<span class="kw">unique</span>(xsections$deltax)), <span class="st">"feet"</span>))
+xsections =<span class="st"> </span><span class="kw">filter</span>(allresults, monitor.type <span class="op">==</span><span class="st"> "node"</span>, 
+  x <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>, <span class="dv">150000</span>))[<span class="kw">c</span>(<span class="st">"x"</span>,<span class="st">"t"</span>,<span class="st">"Q"</span>, <span class="st">"deltax"</span>)]
+xsections[<span class="st">'deltax'</span>] =<span class="st"> </span><span class="kw">factor</span>(<span class="kw">paste</span>(xsections<span class="op">$</span>deltax, <span class="st">"feet"</span>), 
+  <span class="dt">levels=</span><span class="kw">paste</span>(<span class="kw">sort</span>(<span class="kw">unique</span>(xsections<span class="op">$</span>deltax)), <span class="st">"feet"</span>))
 <span class="kw">data</span>(waterolympics)
 realdat =<span class="st"> </span><span class="ot">NULL</span>
-for(x in <span class="kw">unique</span>(xsections$deltax)){
-  thisdat =<span class="st"> </span>waterolympics[waterolympics$t &gt;<span class="st"> </span><span class="dv">200</span>*<span class="dv">60</span>,]
+<span class="cf">for</span>(x <span class="cf">in</span> <span class="kw">unique</span>(xsections<span class="op">$</span>deltax)){
+  thisdat =<span class="st"> </span>waterolympics[waterolympics<span class="op">$</span>t <span class="op">&gt;</span><span class="st"> </span><span class="dv">200</span><span class="op">*</span><span class="dv">60</span>,]
   thisdat[<span class="st">'deltax'</span>] =<span class="st"> </span>x
   realdat =<span class="st"> </span><span class="kw">rbind</span>(realdat, thisdat)
 }
-realdat[<span class="st">'deltax'</span>] =<span class="st"> </span><span class="kw">factor</span>(realdat$deltax)
-<span class="kw">ggplot</span>(xsections, <span class="kw">aes</span>(<span class="dt">x=</span>t/<span class="dv">60</span>, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">format</span>(x, <span class="dt">big.mark=</span><span class="st">","</span>, 
+realdat[<span class="st">'deltax'</span>] =<span class="st"> </span><span class="kw">factor</span>(realdat<span class="op">$</span>deltax)
+<span class="kw">ggplot</span>(xsections, <span class="kw">aes</span>(<span class="dt">x=</span>t<span class="op">/</span><span class="dv">60</span>, <span class="dt">y=</span>Q, <span class="dt">linetype=</span><span class="kw">factor</span>(<span class="kw">format</span>(x, <span class="dt">big.mark=</span><span class="st">","</span>, 
   <span class="dt">trim=</span><span class="ot">TRUE</span>), <span class="dt">levels =</span> <span class="kw">format</span>(<span class="kw">sort</span>(<span class="kw">unique</span>(x)), <span class="dt">big.mark=</span><span class="st">","</span>, <span class="dt">trim=</span><span class="ot">TRUE</span>)), 
-  <span class="dt">color =</span> deltax)) +<span class="st"> </span>
-<span class="kw">geom_path</span>(<span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">data =</span> realdat[realdat$t &gt;<span class="st"> </span><span class="dv">200</span>*<span class="dv">60</span>,], <span class="dt">color =</span> <span class="st">"black"</span>) +<span class="st"> </span>
-<span class="kw">facet_grid</span>(deltax~.) +<span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow~<span class="er">~</span>(ft^<span class="dv">3</span>~<span class="er">~</span>s^-<span class="dv">1</span>)), 
-  <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">300</span>, <span class="dv">500</span>,<span class="dv">700</span>)) +<span class="st"> </span>
+  <span class="dt">color =</span> deltax)) <span class="op">+</span><span class="st"> </span>
+<span class="kw">geom_path</span>(<span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">data =</span> realdat[realdat<span class="op">$</span>t <span class="op">&gt;</span><span class="st"> </span><span class="dv">200</span><span class="op">*</span><span class="dv">60</span>,], <span class="dt">color =</span> <span class="st">"black"</span>) <span class="op">+</span><span class="st"> </span>
+<span class="kw">facet_grid</span>(deltax<span class="op">~</span>.) <span class="op">+</span><span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(flow<span class="op">~</span><span class="er">~</span>(ft<span class="op">^</span><span class="dv">3</span><span class="op">~</span><span class="er">~</span>s<span class="op">^-</span><span class="dv">1</span>)), 
+  <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">300</span>, <span class="dv">500</span>,<span class="dv">700</span>)) <span class="op">+</span><span class="st"> </span>
 <span class="kw">scale_linetype_manual</span>(<span class="st">"downstream</span><span class="ch">\n</span><span class="st">distance (ft)"</span>, <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, 
-  <span class="st">"dashed"</span>, <span class="st">"dotted"</span>)) +<span class="st"> </span>plotopts +
-<span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(time~<span class="er">~</span>(min)), <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1250</span>)) +
+  <span class="st">"dashed"</span>, <span class="st">"dotted"</span>)) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span>
+<span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(time<span class="op">~</span><span class="er">~</span>(min)), <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1250</span>)) <span class="op">+</span>
 <span class="kw">scale_color_manual</span>(<span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"#8DA0CB"</span>, <span class="st">"#66C2A5"</span>, <span class="st">"#A6D854"</span>, <span class="st">"#E5C494"</span>, 
   <span class="st">"#E6AB02"</span>), <span class="dt">guide =</span> <span class="ot">FALSE</span>)  
 
 ## ---- peakstable-characteristic ---------------------------------------
-peaks =<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">summarize</span>(<span class="kw">group_by</span>(<span class="kw">filter</span>(allresults, x==<span class="dv">50000</span>, 
-  monitor.type==<span class="st">'node'</span>), computationtime, deltax, deltat, monitor.type), 
-  <span class="dt">peak.flow=</span><span class="kw">max</span>(Q), <span class="dt">time.to.peak=</span>t[<span class="kw">which</span>(Q==peak.flow)]))
-real.peak.flow =<span class="st"> </span><span class="kw">max</span>(waterolympics$Q)
-real.time.to.peak =<span class="st"> </span>waterolympics$t[<span class="kw">which</span>(waterolympics$Q==real.peak.flow)][<span class="dv">1</span>]
+peaks =<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">summarize</span>(<span class="kw">group_by</span>(<span class="kw">filter</span>(allresults, x<span class="op">==</span><span class="dv">50000</span>, 
+  monitor.type<span class="op">==</span><span class="st">'node'</span>), computationtime, deltax, deltat, monitor.type), 
+  <span class="dt">peak.flow=</span><span class="kw">max</span>(Q), <span class="dt">time.to.peak=</span>t[<span class="kw">which</span>(Q<span class="op">==</span>peak.flow)]))
+real.peak.flow =<span class="st"> </span><span class="kw">max</span>(waterolympics<span class="op">$</span>Q)
+real.time.to.peak =<span class="st"> </span>waterolympics<span class="op">$</span>t[<span class="kw">which</span>(waterolympics<span class="op">$</span>Q<span class="op">==</span>real.peak.flow)][<span class="dv">1</span>]
 peaks[<span class="st">'flow.percent.error'</span>] =<span class="st"> </span>
-<span class="st">  </span>(peaks$peak.flow -<span class="st"> </span>real.peak.flow)/real.peak.flow
+<span class="st">  </span>(peaks<span class="op">$</span>peak.flow <span class="op">-</span><span class="st"> </span>real.peak.flow)<span class="op">/</span>real.peak.flow
 peaks[<span class="st">'time.percent.error'</span>] =<span class="st"> </span>
-<span class="st">  </span>(peaks$time.to.peak -<span class="st"> </span>real.time.to.peak)/real.time.to.peak
+<span class="st">  </span>(peaks<span class="op">$</span>time.to.peak <span class="op">-</span><span class="st"> </span>real.time.to.peak)<span class="op">/</span>real.time.to.peak
 tbld =<span class="st"> </span><span class="kw">as.data.frame</span>(peaks[<span class="kw">c</span>(<span class="st">"deltax"</span>, <span class="st">"deltat"</span>, <span class="st">"flow.percent.error"</span>, 
   <span class="st">"time.percent.error"</span>, <span class="st">"computationtime"</span>)])
-tbld[<span class="st">"flow.percent.error"</span>] =<span class="st"> </span><span class="kw">round</span>(<span class="dv">100</span>*tbld$flow.percent.error, <span class="dv">2</span>)
-tbld[<span class="st">"time.percent.error"</span>] =<span class="st"> </span><span class="kw">round</span>(<span class="dv">100</span>*tbld$time.percent.error, <span class="dv">2</span>)
+tbld[<span class="st">"flow.percent.error"</span>] =<span class="st"> </span><span class="kw">round</span>(<span class="dv">100</span><span class="op">*</span>tbld<span class="op">$</span>flow.percent.error, <span class="dv">2</span>)
+tbld[<span class="st">"time.percent.error"</span>] =<span class="st"> </span><span class="kw">round</span>(<span class="dv">100</span><span class="op">*</span>tbld<span class="op">$</span>time.percent.error, <span class="dv">2</span>)
 <span class="kw">names</span>(tbld) =<span class="st"> </span><span class="kw">c</span>(<span class="st">"$</span><span class="ch">\\</span><span class="st">Delta x$ (ft)"</span>, <span class="st">"$</span><span class="ch">\\</span><span class="st">Delta t$ (s)"</span>, <span class="st">"</span><span class="ch">\\</span><span class="st">% error (peak flow)"</span>, 
   <span class="st">"</span><span class="ch">\\</span><span class="st">% error (time to peak)"</span>, <span class="st">"cost (s)"</span>)
 ptable =<span class="st"> </span><span class="kw">xtable</span>(tbld[<span class="kw">order</span>(tbld[,<span class="dv">1</span>]),], <span class="dt">digits =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>))
 <span class="kw">print</span>(ptable, <span class="dt">include.rownames=</span><span class="ot">FALSE</span>, <span class="dt">sanitize.colnames.function=</span>identity,
-  <span class="dt">sanitize.text.function =</span> function(x){x}, <span class="dt">floating=</span><span class="ot">FALSE</span>, <span class="dt">hline.after=</span><span class="ot">NULL</span>, 
-  <span class="dt">add.to.row=</span><span class="kw">list</span>(<span class="dt">pos=</span><span class="kw">list</span>(-<span class="dv">1</span>,<span class="dv">0</span>, <span class="kw">nrow</span>(ptable)),  
+  <span class="dt">sanitize.text.function =</span> <span class="cf">function</span>(x){x}, <span class="dt">floating=</span><span class="ot">FALSE</span>, <span class="dt">hline.after=</span><span class="ot">NULL</span>, 
+  <span class="dt">add.to.row=</span><span class="kw">list</span>(<span class="dt">pos=</span><span class="kw">list</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">0</span>, <span class="kw">nrow</span>(ptable)),  
   <span class="dt">command=</span><span class="kw">c</span>(<span class="st">'</span><span class="ch">\\</span><span class="st">toprule '</span>, <span class="st">'</span><span class="ch">\\</span><span class="st">midrule '</span>, <span class="st">'</span><span class="ch">\\</span><span class="st">bottomrule '</span>)), 
   <span class="dt">format.args =</span> <span class="kw">list</span>(<span class="dt">big.mark =</span> <span class="st">","</span>))  
 
@@ -498,19 +498,19 @@ ia =<span class="st"> </span><span class="kw"><a href="../reference/channel_geom
 CN =<span class="st"> </span><span class="fl">0.9</span>
 
 dx =<span class="st"> </span><span class="dv">10</span>
-dt =<span class="st"> </span><span class="kw">round</span>(dx*CN/(ic/ia +<span class="st"> </span><span class="kw">sqrt</span>(id*g)), <span class="dv">2</span>)
-numnodes =<span class="st"> </span>extent/dx +<span class="st"> </span><span class="dv">1</span>
+dt =<span class="st"> </span><span class="kw">round</span>(dx<span class="op">*</span>CN<span class="op">/</span>(ic<span class="op">/</span>ia <span class="op">+</span><span class="st"> </span><span class="kw">sqrt</span>(id<span class="op">*</span>g)), <span class="dv">2</span>)
+numnodes =<span class="st"> </span>extent<span class="op">/</span>dx <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
 
 bctime =<span class="st"> </span><span class="dv">2000</span>
-bc =<span class="st"> </span><span class="kw">rep</span>(id, <span class="kw">round</span>(bctime/dt) +<span class="st"> </span><span class="dv">1</span>)
+bc =<span class="st"> </span><span class="kw">rep</span>(id, <span class="kw">round</span>(bctime<span class="op">/</span>dt) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)
 dc =<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, <span class="kw">length</span>(bc))
-dt =<span class="st"> </span><span class="kw">round</span>(bctime/(<span class="kw">length</span>(bc) -<span class="st"> </span><span class="dv">1</span>), <span class="dv">2</span>)
+dt =<span class="st"> </span><span class="kw">round</span>(bctime<span class="op">/</span>(<span class="kw">length</span>(bc) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>), <span class="dv">2</span>)
 
-CN =<span class="st"> </span>dt*(ic/ia +<span class="st"> </span><span class="kw">sqrt</span>(id*g))/dx
+CN =<span class="st"> </span>dt<span class="op">*</span>(ic<span class="op">/</span>ia <span class="op">+</span><span class="st"> </span><span class="kw">sqrt</span>(id<span class="op">*</span>g))<span class="op">/</span>dx
 
-mp =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="dv">1500</span>, <span class="dv">2500</span>, <span class="dv">3000</span>, <span class="dv">5000</span>)/dx +<span class="st"> </span><span class="dv">1</span>))
-mt =<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="kw">length</span>(bc)-<span class="dv">1</span>, <span class="dt">by=</span><span class="dv">25</span>))) +<span class="st"> </span>1L
-mtslice =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="dv">500</span>, <span class="dv">1000</span>, <span class="dv">1500</span>, <span class="dv">2000</span>)/dt +<span class="st"> </span><span class="dv">1</span>))
+mp =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="dv">1500</span>, <span class="dv">2500</span>, <span class="dv">3000</span>, <span class="dv">5000</span>)<span class="op">/</span>dx <span class="op">+</span><span class="st"> </span><span class="dv">1</span>))
+mt =<span class="st"> </span><span class="kw">as.integer</span>(<span class="kw">round</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="kw">length</span>(bc)<span class="op">-</span><span class="dv">1</span>, <span class="dt">by=</span><span class="dv">25</span>))) <span class="op">+</span><span class="st"> </span>1L
+mtslice =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="kw">as.integer</span>(<span class="kw">c</span>(<span class="dv">500</span>, <span class="dv">1000</span>, <span class="dv">1500</span>, <span class="dv">2000</span>)<span class="op">/</span>dt <span class="op">+</span><span class="st"> </span><span class="dv">1</span>))
 
 dclose.lax =<span class="st"> </span><span class="kw"><a href="../reference/route_wave.html">route_wave</a></span>(slope, mannings, Cm, g, B, SS, ic, bc, dc, 
   <span class="dt">timestep=</span>dt, <span class="dt">spacestep=</span>dx, <span class="dt">numnodes=</span>numnodes, <span class="dt">monitor.nodes=</span>mp, 
@@ -522,31 +522,31 @@ dclose.lax[<span class="st">'scheme'</span>] =<span class="st"> "Lax diffusive"<
 dclose.mac[<span class="st">'scheme'</span>] =<span class="st"> "MacCormack predictor-corrector"</span>
 dclose =<span class="st"> </span><span class="kw">rbind</span>(dclose.lax, dclose.mac)
 <span class="kw">row.names</span>(dclose) =<span class="st"> </span><span class="ot">NULL</span>
-dclose[<span class="st">"CN"</span>] =<span class="st"> </span>dt*(dclose$flow/dclose$area +<span class="st"> </span><span class="kw">sqrt</span>(dclose$depth*g))/dx
+dclose[<span class="st">"CN"</span>] =<span class="st"> </span>dt<span class="op">*</span>(dclose<span class="op">$</span>flow<span class="op">/</span>dclose<span class="op">$</span>area <span class="op">+</span><span class="st"> </span><span class="kw">sqrt</span>(dclose<span class="op">$</span>depth<span class="op">*</span>g))<span class="op">/</span>dx
 
 ## ---- through-time ----------------------------------------------------
-dclose.times =<span class="st"> </span><span class="kw">filter</span>(dclose, monitor.type==<span class="st">"timestep"</span>)
-<span class="kw">ggplot</span>(<span class="kw">filter</span>(dclose.times, step %in%<span class="st"> </span>mtslice), 
+dclose.times =<span class="st"> </span><span class="kw">filter</span>(dclose, monitor.type<span class="op">==</span><span class="st">"timestep"</span>)
+<span class="kw">ggplot</span>(<span class="kw">filter</span>(dclose.times, step <span class="op">%in%</span><span class="st"> </span>mtslice), 
   <span class="kw">aes</span>(<span class="dt">x=</span>distance, <span class="dt">y=</span>depth, <span class="dt">linetype =</span> <span class="kw">factor</span>(<span class="kw">round</span>(time)), 
-    <span class="dt">color =</span> <span class="kw">factor</span>(<span class="kw">round</span>(time)))) +<span class="st"> </span><span class="kw">geom_path</span>(<span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>
-<span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(depth~<span class="er">~</span>(ft))) +<span class="st"> </span><span class="kw">facet_wrap</span>(~scheme) +
-<span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance~<span class="er">~</span>downstream~<span class="er">~</span>(ft))) +<span class="st"> </span>plotopts +
-<span class="kw">scale_color_manual</span>(<span class="st">"time (s)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span>:<span class="dv">7</span>]) +<span class="st"> </span>
+    <span class="dt">color =</span> <span class="kw">factor</span>(<span class="kw">round</span>(time)))) <span class="op">+</span><span class="st"> </span><span class="kw">geom_path</span>(<span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>
+<span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(depth<span class="op">~</span><span class="er">~</span>(ft))) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>scheme) <span class="op">+</span>
+<span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance<span class="op">~</span><span class="er">~</span>downstream<span class="op">~</span><span class="er">~</span>(ft))) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span>
+<span class="kw">scale_color_manual</span>(<span class="st">"time (s)"</span>, <span class="dt">values =</span> <span class="kw">brewer.pal</span>(<span class="dv">7</span>, <span class="st">"YlGnBu"</span>)[<span class="dv">3</span><span class="op">:</span><span class="dv">7</span>]) <span class="op">+</span><span class="st"> </span>
 <span class="kw">scale_linetype_manual</span>(<span class="st">"time (s)"</span>, <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">"solid"</span>, <span class="st">"longdash"</span>, <span class="st">"dashed"</span>, 
   <span class="st">"dotdash"</span>, <span class="st">"dotted"</span>))
 <span class="co"># animation</span>
-routeylims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(dclose.times$depth), <span class="kw">max</span>(dclose.times$depth))
-routexlims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(dclose.times$distance), <span class="kw">max</span>(dclose.times$distance))
-for(n in <span class="kw">unique</span>(dclose.times$step))
+routeylims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(dclose.times<span class="op">$</span>depth), <span class="kw">max</span>(dclose.times<span class="op">$</span>depth))
+routexlims =<span class="st"> </span><span class="kw">c</span>(<span class="kw">min</span>(dclose.times<span class="op">$</span>distance), <span class="kw">max</span>(dclose.times<span class="op">$</span>distance))
+<span class="cf">for</span>(n <span class="cf">in</span> <span class="kw">unique</span>(dclose.times<span class="op">$</span>step))
   <span class="kw">print</span>(
-    <span class="kw">ggplot</span>(<span class="kw">filter</span>(dclose.times, step==n), <span class="kw">aes</span>(<span class="dt">x=</span>distance, <span class="dt">y=</span>depth)) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">color =</span> <span class="st">"darkblue"</span>, <span class="dt">size =</span> <span class="dv">1</span>) +<span class="st"> </span>plotopts +<span class="st"> </span>
-<span class="st">    </span><span class="kw">scale_linetype_discrete</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance~<span class="er">~</span>downstream~<span class="er">~</span>(ft)), 
-      <span class="dt">limits=</span>routexlims) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(depth~<span class="er">~</span>(ft)), <span class="dt">limits=</span>routeylims) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">ggtitle</span>(<span class="kw">paste</span>(<span class="kw">format</span>(<span class="kw">round</span>((n -<span class="st"> </span><span class="dv">1</span>)*dt), <span class="dt">width =</span> <span class="dv">4</span>), <span class="st">"seconds"</span>)) +<span class="st"> </span>
-<span class="st">    </span><span class="kw">facet_wrap</span>(~scheme)
+    <span class="kw">ggplot</span>(<span class="kw">filter</span>(dclose.times, step<span class="op">==</span>n), <span class="kw">aes</span>(<span class="dt">x=</span>distance, <span class="dt">y=</span>depth)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">color =</span> <span class="st">"darkblue"</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>plotopts <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">scale_linetype_discrete</span>(<span class="st">"time</span><span class="ch">\n</span><span class="st">(minutes)"</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="kw">expression</span>(distance<span class="op">~</span><span class="er">~</span>downstream<span class="op">~</span><span class="er">~</span>(ft)), 
+      <span class="dt">limits=</span>routexlims) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="kw">expression</span>(depth<span class="op">~</span><span class="er">~</span>(ft)), <span class="dt">limits=</span>routeylims) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">ggtitle</span>(<span class="kw">paste</span>(<span class="kw">format</span>(<span class="kw">round</span>((n <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)<span class="op">*</span>dt), <span class="dt">width =</span> <span class="dv">4</span>), <span class="st">"seconds"</span>)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span>scheme)
   )</code></pre></div>
 </div>
   </div>

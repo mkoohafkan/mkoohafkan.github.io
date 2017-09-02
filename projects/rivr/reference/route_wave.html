@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Flood wave routing � route_wave • rivr</title>
+<title>Flood wave routing - route_wave • rivr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -23,7 +23,8 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -219,33 +220,32 @@ are <code>"yQ"</code> and <code>"yy"</code>.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>not_run</span>({
-
-  <span class='co'># kinematic wave routing</span>
-  <span class='no'>times</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>0</span>, <span class='fl'>30000</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>25</span>)
-  <span class='no'>floodwave</span> <span class='kw'>=</span> <span class='fu'>ifelse</span>(<span class='no'>times</span> <span class='kw'>&gt;=</span> <span class='fl'>9000</span>, <span class='fl'>250</span>,
-    <span class='fl'>250</span> + (<span class='fl'>750</span>/<span class='no'>pi</span>)*(<span class='fl'>1</span> - <span class='fu'>cos</span>(<span class='no'>pi</span>*<span class='no'>times</span>/(<span class='fl'>60</span>*<span class='fl'>75</span>))))
-  <span class='fu'>route_wave</span>(<span class='fl'>0.001</span>, <span class='fl'>0.045</span>, <span class='fl'>1.486</span>, <span class='fl'>32.2</span>, <span class='fl'>100</span>, <span class='fl'>0</span>, <span class='kw'>initial.condition</span> <span class='kw'>=</span> <span class='fl'>250</span>,
-    <span class='kw'>boundary.condition</span> <span class='kw'>=</span> <span class='no'>floodwave</span>, <span class='kw'>timestep</span> <span class='kw'>=</span> <span class='fl'>25</span>, <span class='kw'>spacestep</span> <span class='kw'>=</span> <span class='fl'>50</span>,
-    <span class='kw'>numnodes</span><span class='kw'>=</span><span class='fl'>301</span>, <span class='kw'>monitor.nodes</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>101</span>, <span class='fl'>201</span>, <span class='fl'>301</span>),
-    <span class='kw'>monitor.times</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>1</span>, <span class='fu'>length</span>(<span class='no'>times</span>), <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>10</span>), <span class='kw'>engine</span> <span class='kw'>=</span> <span class='st'>"Kinematic"</span>)
-  <span class='co'># dynamic wave routing with zero-gradient downstream condition using MacCormack scheme</span>
-  <span class='fu'>route_wave</span>(<span class='fl'>0.001</span>, <span class='fl'>0.045</span>, <span class='fl'>1.486</span>, <span class='fl'>32.2</span>, <span class='fl'>100</span>, <span class='fl'>0</span>, <span class='kw'>initial.condition</span> <span class='kw'>=</span> <span class='fl'>250</span>,
-    <span class='kw'>boundary.condition</span> <span class='kw'>=</span> <span class='no'>floodwave</span>, <span class='kw'>downstream.condition</span> <span class='kw'>=</span> <span class='fu'>rep</span>(-<span class='fl'>1</span>, <span class='fu'>length</span>(<span class='no'>times</span>)),
-    <span class='kw'>timestep</span> <span class='kw'>=</span> <span class='fl'>25</span>, <span class='kw'>spacestep</span> <span class='kw'>=</span> <span class='fl'>500</span>, <span class='kw'>numnodes</span> <span class='kw'>=</span> <span class='fl'>31</span>, <span class='kw'>engine</span> <span class='kw'>=</span> <span class='st'>"Dynamic"</span>,
-    <span class='kw'>scheme</span> <span class='kw'>=</span> <span class='st'>"MacCormack"</span>, <span class='kw'>monitor.nodes</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>11</span>, <span class='fl'>21</span>, <span class='fl'>31</span>),
-    <span class='kw'>monitor.times</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>1</span>, <span class='fu'>length</span>(<span class='no'>times</span>), <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>10</span>))
-  <span class='co'># mixed boundary conditions (sudden gate closure) using Lax scheme</span>
-  <span class='no'>lax</span> <span class='kw'>=</span> <span class='fu'>route_wave</span>(<span class='fl'>0.00008</span>, <span class='fl'>0.013</span>, <span class='fl'>1</span>, <span class='fl'>9.81</span>, <span class='fl'>6.1</span>, <span class='fl'>1.5</span>,
-    <span class='kw'>initial.condition</span> <span class='kw'>=</span> <span class='fl'>126</span>, <span class='kw'>boundary.condition</span> <span class='kw'>=</span> <span class='fu'>rep</span>(<span class='fl'>5.79</span>, <span class='fl'>2001</span>),
-    <span class='kw'>downstream.condition</span> <span class='kw'>=</span> <span class='fu'>rep</span>(<span class='fl'>0</span>, <span class='fl'>2001</span>), <span class='kw'>timestep</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>spacestep</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-    <span class='kw'>numnodes</span> <span class='kw'>=</span> <span class='fl'>501</span>, <span class='kw'>monitor.nodes</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>151</span>, <span class='fl'>251</span>, <span class='fl'>301</span>, <span class='fl'>501</span>),
-    <span class='kw'>monitor.times</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>501</span>, <span class='fl'>1001</span>, <span class='fl'>1501</span>, <span class='fl'>2001</span>),
-    <span class='kw'>engine</span><span class='kw'>=</span><span class='st'>"Dynamic"</span>, <span class='kw'>scheme</span><span class='kw'>=</span><span class='st'>"Lax"</span>, <span class='kw'>boundary.type</span><span class='kw'>=</span><span class='st'>"yQ"</span>)
-  <span class='co'># extract data for a monitored point</span>
-  <span class='fu'>require</span>(<span class='no'>dplyr</span>)
-  <span class='fu'>filter</span>(<span class='no'>lax</span>, <span class='no'>monitor.type</span> <span class='kw'>==</span> <span class='st'>"node"</span>, <span class='no'>node</span> <span class='kw'>==</span> <span class='fl'>151</span>)
-})</div></pre>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='co'># kinematic wave routing</span>
+<span class='no'>times</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>0</span>, <span class='fl'>30000</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>25</span>)
+<span class='no'>floodwave</span> <span class='kw'>=</span> <span class='fu'>ifelse</span>(<span class='no'>times</span> <span class='kw'>&gt;=</span> <span class='fl'>9000</span>, <span class='fl'>250</span>,
+  <span class='fl'>250</span> + (<span class='fl'>750</span>/<span class='no'>pi</span>)*(<span class='fl'>1</span> - <span class='fu'>cos</span>(<span class='no'>pi</span>*<span class='no'>times</span>/(<span class='fl'>60</span>*<span class='fl'>75</span>))))
+<span class='fu'>route_wave</span>(<span class='fl'>0.001</span>, <span class='fl'>0.045</span>, <span class='fl'>1.486</span>, <span class='fl'>32.2</span>, <span class='fl'>100</span>, <span class='fl'>0</span>, <span class='kw'>initial.condition</span> <span class='kw'>=</span> <span class='fl'>250</span>,
+  <span class='kw'>boundary.condition</span> <span class='kw'>=</span> <span class='no'>floodwave</span>, <span class='kw'>timestep</span> <span class='kw'>=</span> <span class='fl'>25</span>, <span class='kw'>spacestep</span> <span class='kw'>=</span> <span class='fl'>50</span>,
+  <span class='kw'>numnodes</span><span class='kw'>=</span><span class='fl'>301</span>, <span class='kw'>monitor.nodes</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>101</span>, <span class='fl'>201</span>, <span class='fl'>301</span>),
+  <span class='kw'>monitor.times</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>1</span>, <span class='fu'>length</span>(<span class='no'>times</span>), <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>10</span>), <span class='kw'>engine</span> <span class='kw'>=</span> <span class='st'>"Kinematic"</span>)
+<span class='co'># dynamic wave routing with zero-gradient downstream condition using MacCormack scheme</span>
+<span class='fu'>route_wave</span>(<span class='fl'>0.001</span>, <span class='fl'>0.045</span>, <span class='fl'>1.486</span>, <span class='fl'>32.2</span>, <span class='fl'>100</span>, <span class='fl'>0</span>, <span class='kw'>initial.condition</span> <span class='kw'>=</span> <span class='fl'>250</span>,
+  <span class='kw'>boundary.condition</span> <span class='kw'>=</span> <span class='no'>floodwave</span>, <span class='kw'>downstream.condition</span> <span class='kw'>=</span> <span class='fu'>rep</span>(-<span class='fl'>1</span>, <span class='fu'>length</span>(<span class='no'>times</span>)),
+  <span class='kw'>timestep</span> <span class='kw'>=</span> <span class='fl'>25</span>, <span class='kw'>spacestep</span> <span class='kw'>=</span> <span class='fl'>500</span>, <span class='kw'>numnodes</span> <span class='kw'>=</span> <span class='fl'>31</span>, <span class='kw'>engine</span> <span class='kw'>=</span> <span class='st'>"Dynamic"</span>,
+  <span class='kw'>scheme</span> <span class='kw'>=</span> <span class='st'>"MacCormack"</span>, <span class='kw'>monitor.nodes</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>11</span>, <span class='fl'>21</span>, <span class='fl'>31</span>),
+  <span class='kw'>monitor.times</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>1</span>, <span class='fu'>length</span>(<span class='no'>times</span>), <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>10</span>))
+<span class='co'># mixed boundary conditions (sudden gate closure) using Lax scheme</span>
+<span class='no'>lax</span> <span class='kw'>=</span> <span class='fu'>route_wave</span>(<span class='fl'>0.00008</span>, <span class='fl'>0.013</span>, <span class='fl'>1</span>, <span class='fl'>9.81</span>, <span class='fl'>6.1</span>, <span class='fl'>1.5</span>,
+  <span class='kw'>initial.condition</span> <span class='kw'>=</span> <span class='fl'>126</span>, <span class='kw'>boundary.condition</span> <span class='kw'>=</span> <span class='fu'>rep</span>(<span class='fl'>5.79</span>, <span class='fl'>2001</span>),
+  <span class='kw'>downstream.condition</span> <span class='kw'>=</span> <span class='fu'>rep</span>(<span class='fl'>0</span>, <span class='fl'>2001</span>), <span class='kw'>timestep</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>spacestep</span> <span class='kw'>=</span> <span class='fl'>10</span>,
+  <span class='kw'>numnodes</span> <span class='kw'>=</span> <span class='fl'>501</span>, <span class='kw'>monitor.nodes</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>151</span>, <span class='fl'>251</span>, <span class='fl'>301</span>, <span class='fl'>501</span>),
+  <span class='kw'>monitor.times</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>501</span>, <span class='fl'>1001</span>, <span class='fl'>1501</span>, <span class='fl'>2001</span>),
+  <span class='kw'>engine</span><span class='kw'>=</span><span class='st'>"Dynamic"</span>, <span class='kw'>scheme</span><span class='kw'>=</span><span class='st'>"Lax"</span>, <span class='kw'>boundary.type</span><span class='kw'>=</span><span class='st'>"yQ"</span>)
+<span class='co'># extract data for a monitored point</span>
+<span class='fu'>require</span>(<span class='no'>dplyr</span>)
+<span class='fu'><a href='http://dplyr.tidyverse.org/reference/filter.html'>filter</a></span>(<span class='no'>lax</span>, <span class='no'>monitor.type</span> <span class='kw'>==</span> <span class='st'>"node"</span>, <span class='no'>node</span> <span class='kw'>==</span> <span class='fl'>151</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
