@@ -28,7 +28,7 @@ issue thread itself).
 Github 
 [reactions](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments)
 are a nice feature for collaborative work on code bases, but they have
-limited utility for a blog. I figured that one could commandeer a 
+limited utility for a blog. I figured that I could commandeer a 
 particular reaction type to use as a way for moderating comments.
 For this example, I decided to use a whitelist approach where 
 comments would only get posted if I (Github username `mkoohafkan`)
