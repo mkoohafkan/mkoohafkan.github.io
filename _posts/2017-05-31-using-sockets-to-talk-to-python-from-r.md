@@ -52,7 +52,7 @@ uses Python v2 but ArcGIS Pro uses Python v3), so I had to be wary
 of module imports and code formatting (mostly with respect to 
 print statements and [io](https://docs.python.org/3/library/io.html) vs
 [StringIO](https://docs.python.org/2/library/stringio.html)). I ended up 
-[completely rewriting](https://github.com/mkoohafkan/pysockr/blob/master/inst/py-src/server.py) 
+[completely rewriting](https://github.com/mkoohafkan/expyr/blob/master/inst/py-src/server.py) 
 the Python server script from runr, reworked it multiple times and 
 eventually came up with something almost identical to the original 
 [server script](https://github.com/yihui/runr/blob/master/inst/lang/python_socket.py). 
@@ -70,15 +70,15 @@ results, but I didn't want to do it either! The solution turned out to be
 incredibly simple: use [JSON](https://www.json.org) as an intermediate format. 
 Both Python and R support JSON via the 
 [json](https://docs.python.org/3/library/json.html) module for Python and the 
-[jsonlite](https://cran.r-project.org/package=jsonlite) package for R. My 
+[rjson](https://cran.r-project.org/package=rjson) package for R. My 
 variable getting  and setting methods read/write JSON formats using `json.dumps` 
 on the Python side and `toJSON`/`fromJSON` on the R side, so all the variable 
 typing is done for me. If needed, users can define their own functions for 
 encoding specific Python objects into JSON format.
 
 I wrapped all this functionality into a package that I'm currently calling 
-**pysockr**. 
-It's [available on GitHub](https://github.com/mkoohafkan/pysockr) 
+**expyr** (Executing Python from R). 
+It's [available on GitHub](https://github.com/mkoohafkan/expyr) 
 and ready for testing; install it with 
 [devtools](https://cran.r-project.org/package=devtools), 
 play around, and let me know what you think!
