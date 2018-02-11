@@ -6,26 +6,32 @@ tags: about
 shorttitle: About
 ---
 
-![Michael Koohafkan](/images/mk2.jpg)
+![Michael Koohafkan](/images/mk3.jpg)
 <div class="clearfix"></div>
 {% include social_links.html %}
 
-I am a PhD student in the [Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu/) at University of California Davis. I started the
-doctoral program in late 2014 following completion of a Masters of Science in 
-[Environmental Engineering](http://efmh.berkeley.edu) at University of 
-California Berkeley, where I studied the role of fog in the hydrology of 
-coastal watersheds in California. My doctoral research is focused on sediment 
-transport and geomorphologic processes in large braided sandbed rivers; 
-specifically, I collaborate with the 
-[USACE Hydrologic Engineering Center](http://www.hec.usace.army.mil/)
-to understand the morphodynamics of emergent sandbars in the 
-Missouri River. I have also collaborated with NOAA's 
-[Habitat Blueprint](http://www.habitat.noaa.gov/habitatblueprint/) to 
-explore hydrologic controls on salmonid habitat quality in the 
-[Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary/), and 
-with the [American Bird Conservancy](https://abcbirds.org/) on the development 
-of an [agent-based model](http://www.leasttern.org/) of Interior Least Tern 
-breeding behavior. 
+I am a PhD student in the 
+[Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu/) 
+at University of California Davis and a Hydraulic Engineer at the 
+[USACE Hydrologic Engineering Center](http://www.hec.usace.army.mil/). 
+My doctoral research is focused on sediment 
+transport and geomorphologic processes in large braided sandbed rivers,
+with particular emphasis on the morphodynamics of emergent sandbars in the 
+Missouri River. 
+I started the doctoral program in late 2014 following completion of a 
+Masters of Science in 
+[Environmental Engineering](http://efmh.berkeley.edu) 
+at University of California Berkeley, where I studied the role of fog in the 
+hydrology of 
+coastal watersheds in California. I have also collaborated with NOAA's 
+[Habitat Blueprint](http://www.habitat.noaa.gov/habitatblueprint/) 
+to explore hydrologic controls on salmonid habitat quality in the 
+[Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary/), 
+and with the 
+[American Bird Conservancy](https://abcbirds.org/) 
+on the development of an 
+[agent-based model](http://www.leasttern.org/) 
+of Interior Least Tern breeding behavior. 
 
 #### Publications
 
