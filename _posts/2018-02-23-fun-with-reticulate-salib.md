@@ -4,7 +4,7 @@ title:      Fun with reticulate and SALib
 date:       2018-02-23 08:00:00
 summary:    Reticulate is a new R package to interface with Python. I used it to play with SALib module from within R. 
 categories: codemonkey reticulate salib r python
-commentIssueId: 30
+commentIssueId: 31
 ---
 
 The RStudio developers recently released 
