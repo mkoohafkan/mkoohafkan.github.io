@@ -236,9 +236,9 @@ sens.ind %>% mutate(
 
 ![Plot of first-order effects](/images/2018-02-23-sensitivity-plot-1.png)
 
-Note that the sensitivty indices cannot be negative, so a
+Note that the sensitivity indices cannot be negative, so a
 confidence interval that results in a negative value for the lower
-bound of a sensitivity index can be interprested as equal to zero.
+bound of a sensitivity index can be interpreted as equal to zero.
 The results are mostly as expected: bed slope and roughness have the most
 significant effect both on crest height and travel time. Side slope appears
 to have a low first-order effect on crest height, but becomes more significant 
