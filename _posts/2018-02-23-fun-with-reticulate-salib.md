@@ -320,6 +320,7 @@ second.ind %>% left_join(second.conf) %>%
   scale_fill_brewer(NULL, palette = "Accent") +
   coord_fixed()
 ```
+
 ![Plot of second-order effects](/images/2018-02-23-sensitivity-plot-2.png)
 
 The above plot shows the second-order effects, with the inner/outer squares
