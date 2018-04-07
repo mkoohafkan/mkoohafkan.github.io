@@ -2,7 +2,7 @@
 layout:     post
 title:      Muddling through Docker and Google Earth Engine
 date:       2017-10-09 20:00:00
-summary:    I didn't really understand what I was doing, but I managed to build a custom Docker image for Google Earth Engine that lets me load additional Python modules. 
+summary:    I bumbled my way through building a custom Docker image for Google Earth Engine that lets me load additional Python modules. 
 categories: codemonkey google-earth-engine docker python
 commentIssueId: 30
 ---

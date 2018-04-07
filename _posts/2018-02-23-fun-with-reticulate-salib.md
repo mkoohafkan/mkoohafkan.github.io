@@ -29,7 +29,10 @@ There aren't many examples for reticulate yet, so that's what this post is for.
 UC Davis Professor [John Herman](https://faculty.engineering.ucdavis.edu/herman/) 
 developed the Python module [SALib](https://github.com/SALib/SALib) (also available
 on [pypi](https://pypi.python.org/pypi/SALib)) which implements commonly used 
-sensitivity analysis methods. To be fair, many of the same methods are probably 
+sensitivity analysis methods. I've been curious about trying the module out for
+a while, but I didn't have any existing models I wrote in Python that would be
+a good fit for playing with it. By using reticulate, I can use SALib with my
+R code directly. To be fair, many of the same methods are probably 
 included in the [sensitivity](https://cran.r-project.org/package=sensitivity) package
 for R, but it's a good excuse make a reticulate example.
 

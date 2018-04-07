@@ -1,0 +1,129 @@
+---
+layout:     post
+title:      Reticulated ArcPython
+date:       2018-04-07 14:00:00
+summary:    I tried working with arcpy through reticulate, and was pleasantly surprised. 
+categories: codemonkey reticulate arcpy arcgis r python
+commentIssueId: 32
+---
+
+I was recently asked to generate a spatially-referenced polyline of a
+river thalweg (the location of minimum elevation) for a visualization in
+a paper I am a co-author on. In the paper, we explore river morphology using
+a large collection of river cross section surveys. The locations of 
+these cross sections and the survey lines are available
+as a spatially-referenced GIS layer. However, the station elevation 
+data itself is maintained as a separate table. In order to generate a 
+polyline of the river thalweg, I needed to combine these two datasets.
+
+The cross sections are specified in an HEC-RAS model. RAS allows you to 
+export the cross section cut lines as a shapefile using RAS Mapper, so 
+I did that first. 
+The station-elevation data is a bit more complicated to access.
+The data is stored in the HEC-RAS hydraulic model geometry file. One
+option would be to export the geometry to a text file, and the use R
+to read from the file. However, I've been building an R package (tentatively
+named `RAStestR`) for working with HEC-RAS model data over the past few months, 
+so I already have the framework in place for extracting station-elevation data
+directly from the geometry file (stored in HDF format).
+I used my package to read the cross section data directly.
+
+```r
+# devtools::install_github("mkoohafkan/RAStestR")
+library(RAStestR)
+
+project.geom = "myproject.g01.hdf"
+xs = read_xs(project.geom, from.geometry = TRUE)
+```
+
+Obviously, creating a spatially-referenced polyline is going to involve 
+GIS software. I'm pretty comfortable with ArcGIS and the `arcpy` Python 
+module, so it was the natural choice for doing the spatial manipulations.
+However, because I wanted to use my R package for manipulating HEC-RAS data
+I preferred to work from R. I wasn't sure how well `reticulate` would work 
+with `arcpy`, so it was a good opportunity to test the iterface. As it
+turns out, it works perfectly! 
+
+First,  I imported the `arcpy` module and specified the relevant file paths.
+
+```r
+library(reticulate)
+use_python("C:/Python27/ArcGISx6410.2")
+
+arcpy = import("arcpy")
+project.gdb = "path/to/project.gdb"
+xs.file = file.path(project.gdb, "project_cross_sections")
+```
+
+Next, I needed to load in the feature class and loop through the cross 
+sections to extract the location of the thalweg at each cross section. 
+I first created a temporary representation of the cross section cut 
+lines using the 
+`MakeFeatureLayer` from the ArcGIS management toolbox. Then, I used an
+`arcy.da.SearchCursor` object to access each feature in the layer.
+I can use a search cursor to extract arcpy geometry objects using the 
+"SHAPE@" geometry selection token.
+Using `arcy.da.SearchCursor` creates a Python iterator, so I used the 
+`iter_next` function from `reticulate` to loop through the features. 
+For each feature, I calculated the distance of the thalweg from the 
+left edge of the cross section, and then extracted the location of this 
+point based on the fraction of the total length of the cross section.
+Then, I created a point at this location using the method `positionAlongLine`.
+
+```r
+# create a list that will store the geometry objects
+points = list()
+
+# create a feature selection
+selection = "xs_selected"
+layer = arcpy$management$MakeFeatureLayer(xs.file, selection)
+
+# iterate over the cut lines: River_Stat is the cross-section label
+cursor = arcpy$da$SearchCursor(selection, list("River_Stat", "SHAPE@"))
+row = iter_next(cursor)
+while (!is.null(row)) {
+  # get station name from cut line
+  this.station = row[[1]]
+
+  # extract the station-elevation data from the table 
+  this.xs = subset(xs, Station == paste0("XS_", this.station))  
+
+  # calculate the distance of the thalweg from the cross section edge,
+  # as a fraction of the total length of the cut line
+  frac.over = with(this.xs, Distance[which.min(Elevation)]/max(Distance))
+
+  # create a point at that location and add it to the list
+  points = append(points, row[[2]]$positionAlongLine(frac.over, TRUE))
+
+  # go the next cut line
+  row = iter_next(cursor)  
+}
+```
+
+The `for` loop generates a list of geoprocessing geometry objects,
+which are the point locations of the thalweg at each cross section. Once
+that was done, it was easy to export those points to a feature class 
+using the `CopyFeatures` tool from the Management toolbox. It's good 
+practice to clean up after yourself when using `arcpy`, so I used the 
+`Delete` tool to delete the temporary feature selection I created.
+
+```r
+# export the points to a feature class
+thalweg.points = file.path(project.gdb, "thalweg_points")
+arcpy$management$CopyFeatures(points, thalweg.points)
+
+# all done, delete the feature selection
+arcpy$management$Delete(selection)
+```
+
+The last step was to compute a polyline from the points using the
+`PointsToLine` tool (also in the management toolbox). 
+
+```r
+# generate a polyline from the points
+thalweg.line = file.path(project.gdb, "thalweg_line")
+arcpy$management$PointsToLine(thalweg.points, thalweg.line) 
+```
+
+That's it!
+
