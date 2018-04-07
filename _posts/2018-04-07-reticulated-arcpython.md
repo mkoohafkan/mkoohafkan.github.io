@@ -41,7 +41,7 @@ GIS software. I'm pretty comfortable with ArcGIS and the `arcpy` Python
 module, so it was the natural choice for doing the spatial manipulations.
 However, because I wanted to use my R package for manipulating HEC-RAS data
 I preferred to work from R. I wasn't sure how well 
-`[reticulate](https://cran.r-project.org/package=reticulate)` 
+[`reticulate`](https://cran.r-project.org/package=reticulate)
 would work with `arcpy`, so it was a good opportunity to test the iterface. 
 
 First, I imported the `arcpy` module and specified the relevant file paths.
