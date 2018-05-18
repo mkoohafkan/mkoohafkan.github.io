@@ -53,7 +53,8 @@ medium_id:
 bitcoin_url:
 paypal_url:
 flattr_button:
-academia_username: MichaelKoohafkan
+academia_username:
+researchgate_username : Michael_Koohafkan
 
 # Post sharing icons
 show_sharing_icons: true

@@ -1,4 +1,4 @@
-<head>
+﻿<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title | strip_html }} &#8211; {% endif %}{{ site.title | strip_html }}</title>
@@ -7,10 +7,13 @@
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if page.meta_description %}{{ page.meta_description | xml_escape }}{% elsif page.summary %}{{ page.summary | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
-    {% if page.meta_robots %}<meta name="robots" content="{{ page.meta_robots }}">
-    {% else %}<meta name="robots" content="all">{% endif %}
+    {% if page.meta_robots %}
+    <meta name="robots" content="{{ page.meta_robots }}">
+    {% else %}
+    <meta name="robots" content="all">{% endif %}
     <meta name="author" content="{{ site.author }}">
-    {% if page.categories %}<meta name="keywords" content="{{ page.categories | join: ', ' }}">{% endif %}
+    {% if page.categories %}
+    <meta name="keywords" content="{{ page.categories | join: ', ' }}">{% endif %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
 
@@ -26,7 +29,7 @@
     <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
     {% endif %}
     {% if site.show_social_icons or site.show_sharing_icons %}
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     {% endif %}
 
     <!-- MathJax -->
@@ -37,10 +40,10 @@
 
     <!-- Verifications -->
     {% if site.google_verification %}
-      <meta name="google-site-verification" content="{{ site.google_verification }}" />
+    <meta name="google-site-verification" content="{{ site.google_verification }}" />
     {% endif %}
     {% if site.bing_verification %}
-      <meta name="msvalidate.01" content="{{ site.bing_verification }}" />
+    <meta name="msvalidate.01" content="{{ site.bing_verification }}" />
     {% endif %}
 
     <!-- Open Graph -->
@@ -55,7 +58,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     {% if site.twitter_username %}
-        <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+    <meta name="twitter:site" content="@{{ site.twitter_username }}" />
     {% endif %}
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}" />
@@ -71,7 +74,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -93,23 +96,23 @@
 
     <!-- jQuery -->
     {% if page.carousel or page.commentIssueId %}
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     {% endif %}
-    
+
     <!-- Flexslider carousel -->
     {% if page.carousel %}
-      <link rel="stylesheet" href="/css/flexslider.css" media="screen" type="text/css">
-      <script src="/assets/carousel/jquery.flexslider-min.js"></script>
-      <script src="/assets/carousel/modernizr.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $('.flexslider').flexslider({
-            animation: "slide",
-            prevText: "",
-            nextText: ""
-          });
-        });    
-      </script>
-    {% endif %}    
-  {% seo %}
+    <link rel="stylesheet" href="/css/flexslider.css" media="screen" type="text/css">
+    <script src="/assets/carousel/jquery.flexslider-min.js"></script>
+    <script src="/assets/carousel/modernizr.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                prevText: "",
+                nextText: ""
+            });
+        });
+    </script>
+    {% endif %}
+    {% seo %}
 </head>
