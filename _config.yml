@@ -4,7 +4,7 @@ email:       michael.koohafkan@gmail.com
 author:      Michael Koohafkan
 description: "Michael Koohafkan's research blog"
 baseurl:     ""
-url:         "http://hydroecology.net/"
+url:         "https://hydroecology.net/"
 date_format: "%b %-d, %Y"
 default_post_color: "darken-5"
 
