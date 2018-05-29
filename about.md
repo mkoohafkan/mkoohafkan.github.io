@@ -35,7 +35,7 @@ of Interior Least Tern breeding behavior.
 
 #### Publications
 
-Gerlein-Safdi, C., <span class="red">Koohafkan, M.C.>/span>, Chung, M., Rockwell, F.E., Thompson, S., and K.K. Caylor. 2018. "Dew deposition suppresses transpiration and carbon uptake in leaves". Agricultural and Forest Meteorology, 259(15):305-316. ([link](https://authors.elsevier.com/c/1X7PtcFXJOkNl))
+Gerlein-Safdi, C., <span class="red">Koohafkan, M.C.</span>, Chung, M., Rockwell, F.E., Thompson, S., and K.K. Caylor. 2018. "Dew deposition suppresses transpiration and carbon uptake in leaves". Agricultural and Forest Meteorology, 259(15):305-316. ([link](https://authors.elsevier.com/c/1X7PtcFXJOkNl))
 
 <span class="red">Koohafkan, M.C.</span> and B.A. Younis. 2015. "Open-Channel Computation with R." The R Journal, 7(2):249-262. ([link](https://journal.r-project.org/archive/2015-2/koohafkan-younis.pdf))
 
