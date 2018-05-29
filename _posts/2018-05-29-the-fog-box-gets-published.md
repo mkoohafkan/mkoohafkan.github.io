@@ -1,0 +1,31 @@
+---
+layout:     post
+title:      The fog box gets published
+date:       2018-05-29 14:30:00
+summary:    Some experiments I ran as Masters student found their way into the literature. 
+categories: labrat fog sensors manuscript
+commentIssueId: 33
+---
+
+A number of years ago, I ran some laboratory experiments in a
+["fog box"]({% post_url 2013-05-23-the-fog-box %}) to 
+develop a relationship
+between voltage outputs from leaf wetness sensors and measured 
+[dew deposition on leaf samples]({% post_url 2013-07-19-measuring-leaf-area-with-matlab %}).
+We wrote up a manuscript on our findings but we never ended up publishing it,
+and as my interests shifted to geomorphology I lost motivation to pursue the
+work.
+
+Thankfully, there are others more committed to the field. I was recently
+contacted by 
+[Cynthia Gerlein-Safdi](https://www.linkedin.com/in/cynthia-gerlein-safdi-a13b6a9a/), a 
+PhD student at Princeton University working with 
+[Kelly Caylor](https://www.linkedin.com/in/kellycaylor/)
+(now at UC Santa Barbara). Cynthia had been collaborating with 
+[Sally Thompson](https://www.linkedin.com/in/sally-thompson-686641123) 
+(my Masters research advisor) on a dew deposition model. 
+Cynthia used leaf wetness sensor data from the BORR field station in 
+conjunction with the results from my fog box experiment to transform 
+the voltage outputs of the sensors to actual water mass for model 
+validation. The manuscript was just published and it's pretty neat stuff, 
+so [check it out](https://authors.elsevier.com/c/1X7PtcFXJOkNl)! 
