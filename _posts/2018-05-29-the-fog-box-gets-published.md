@@ -11,10 +11,12 @@ A number of years ago, I ran some laboratory experiments in a
 ["fog box"]({% post_url 2013-05-23-the-fog-box %}) to 
 develop a relationship
 between voltage outputs from leaf wetness sensors and measured 
-[dew deposition on leaf samples]({% post_url 2013-07-19-measuring-leaf-area-with-matlab %}).
-We wrote up a manuscript on our findings but we never ended up publishing it,
-and as my interests shifted to geomorphology I lost motivation to pursue the
-work.
+dew deposition on leaf samples (see some of my 
+[earlier]({% post_url 2013-07-19-measuring-leaf-area-with-matlab %}) 
+[posts]({% post_url 2013-09-13-leveraging-laboratory-data-with-r %}) 
+on how I went about doing that). We wrote up a manuscript on our findings 
+but we never ended up publishing, and as my interests shifted to 
+geomorphology I lost motivation to pursue the work.
 
 Thankfully, there are others more committed to the field. I was recently
 contacted by 
