@@ -2,7 +2,7 @@
 layout:     post
 title:      The fog box gets published
 date:       2018-05-29 14:30:00
-summary:    Some experiments I ran as Masters student found their way into the literature. 
+summary:    Some experiments I ran as a Masters student made their way into the literature. 
 categories: labrat fog sensors manuscript
 commentIssueId: 33
 ---
@@ -26,8 +26,9 @@ PhD student at Princeton University working with
 (now at UC Santa Barbara). Cynthia had been collaborating with 
 [Sally Thompson](https://www.linkedin.com/in/sally-thompson-686641123) 
 (my Masters research advisor) on a dew deposition model. 
-Cynthia used leaf wetness sensor data from the BORR field station in 
-conjunction with the results from my fog box experiment to transform 
-the voltage outputs of the sensors to actual water mass for model 
-validation. The manuscript was just published and it's pretty neat stuff, 
+Cynthia used the findings from my fog box experiment 
+to transform the voltage outputs of leaf wetness sensor data from 
+the Blue Oak Ranch Reserve field station to actual water mass,
+and used the results to validate the model. 
+The manuscript was just published and it's pretty neat stuff, 
 so [check it out](https://authors.elsevier.com/c/1X7PtcFXJOkNl)! 
