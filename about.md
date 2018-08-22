@@ -35,6 +35,8 @@ of Interior Least Tern breeding behavior.
 
 #### Publications
 
+<span class="red">Koohafkan, M.C.</span> and S. Gibson. 2018. "Geomorphic trajectory and landform analysis using graph theory: A panel data approach to quantitative geomorphology." Progress in Physical Geography, DOI 10.1177/0309133318783143. ([link](/docs/2018-koohafkan-gibson-ppg-accepted.pdf))
+
 Gerlein-Safdi, C., <span class="red">Koohafkan, M.C.</span>, Chung, M., Rockwell, F.E., Thompson, S., and K.K. Caylor. 2018. "Dew deposition suppresses transpiration and carbon uptake in leaves". Agricultural and Forest Meteorology, 259(15):305-316. ([link](https://authors.elsevier.com/c/1X7PtcFXJOkNl))
 
 <span class="red">Koohafkan, M.C.</span> and B.A. Younis. 2015. "Open-Channel Computation with R." The R Journal, 7(2):249-262. ([link](https://journal.r-project.org/archive/2015-2/koohafkan-younis.pdf))
