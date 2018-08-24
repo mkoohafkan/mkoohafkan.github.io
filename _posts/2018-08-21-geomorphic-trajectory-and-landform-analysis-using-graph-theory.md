@@ -44,10 +44,11 @@ from sets of fully- or partially-overlapping snapshots of a system. The method
 automatically links observations of individual landforms across images---even 
 in cases where landforms fragment, merge, migrate, or become temporarily 
 obstructed from view---and generates time series for individual landforms. The
-method method is powered by graph theory, which I use to create a data structure 
-that represents connnections features across snapshots.
+method is powered by graph theory, which I use to create a data structure 
+that represents connnections between features across snapshots.
 
-This is a methods paper, so I focus on the mathematics and procedure of the method.
+This is a methods paper, so I focus on how the procedure compares to current 
+practices of analyzing spatial data.
 I do some fairly basic demonstrations of analyzing the panel datasets the method 
 generates and explore the potential for applying some of the more advanced aspects of
 graph theory for an alternative approach to analyzing spatial data. But I'm not done
