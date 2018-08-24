@@ -50,7 +50,7 @@ that represents connnections between features across snapshots.
 This is a methods paper, so I focus on how the procedure compares to current 
 practices of analyzing spatial data.
 I do some fairly basic demonstrations of analyzing the panel datasets the method 
-generates and explore the potential for applying some of the more advanced aspects of
+generates, and explore the potential for applying some of the more advanced aspects of
 graph theory for an alternative approach to analyzing spatial data. But I'm not done
 yet! I've been applying the method to an analysis of the imagery that started 
 this whole thing, and---at the risk of sounding immodest---the results are powerful. 
