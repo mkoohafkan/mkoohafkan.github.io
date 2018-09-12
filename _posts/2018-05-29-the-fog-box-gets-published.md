@@ -3,8 +3,9 @@ layout:     post
 title:      The fog box gets published
 date:       2018-05-29 14:30:00
 summary:    Some experiments I ran as a Masters student made their way into the literature. 
-categories: labrat fog sensors manuscript
+categories: horntooter labrat fog sensors manuscript
 commentIssueId: 33
+color: darken-red
 ---
 
 A number of years ago, I ran some laboratory experiments in a

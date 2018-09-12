@@ -5,6 +5,7 @@ date:       2018-08-21 20:00:00
 summary:    I developed a method for automatically generating panel datasets from spatial datasets. It was recently published in Progress in Physical Geography. Check it out!
 categories: horntooter dataphile graph-theory geomorphology remote-sensing manuscript
 commentIssueId: 34
+color: darken-red
 ---
 
 A big chunk of my research has focused on studying emergent
@@ -45,7 +46,7 @@ automatically links observations of individual landforms across images---even
 in cases where landforms fragment, merge, migrate, or become temporarily 
 obstructed from view---and generates time series for individual landforms. The
 method is powered by graph theory, which I use to create a data structure 
-that represents connnections between features across snapshots.
+that represents connections between features across snapshots.
 
 This is a methods paper, so I focus on how the procedure compares to current 
 practices of analyzing spatial data.
