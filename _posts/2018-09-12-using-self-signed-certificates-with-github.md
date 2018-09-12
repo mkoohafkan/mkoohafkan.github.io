@@ -34,7 +34,7 @@ interfering with Git (pretty weird). So what do I do about it?
 It took a few rounds of googling, but I eventually figured out that I
 had to manually add my organization's self-signed certificates 
 to the certificate library used by Git. Doing this required three things: 
-*(1)* access to the Git command prompt (e.g. by installing 
+*(1)* access to the Git command prompt, e.g. by installing 
 [Git for Windows](https://gitforwindows.org/),
 *(2)* Access to the Microsoft Management Console, and 
 *(3)* a text editor.
