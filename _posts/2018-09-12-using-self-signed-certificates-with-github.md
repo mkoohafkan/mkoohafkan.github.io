@@ -7,7 +7,7 @@ categories: infomaniac git ssl certificates
 commentIssueId: 35
 ---
 
-So I started a new job recently (woo)! and have been going through my 
+So I started a new job recently (woo!) and have been going through my 
 rites of passage, namely cleaning the dust bunnies out of my cubicle,
 raiding the supply closet for pens and notepads I'll probably never use, 
 and installing my favorite software on my workstation. I've developed a lot of tools
