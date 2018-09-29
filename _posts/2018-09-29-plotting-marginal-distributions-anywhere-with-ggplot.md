@@ -23,8 +23,10 @@ You have to start somewhere though, and that somewhere is HEC's
 Watershed Analysis Tool
 ([HEC-WAT](http://www.hec.usace.army.mil/software/hec-wat/)). The WAT 
 is a model integration tool that allows multi-disciplinary teams in USACE 
-offices to perform water resources studies. [Will Lehman]() has been doing
-a lot of great work on this system, and one of his team's more recent 
+offices to perform water resources studies. 
+[Will Lehman](https://www.linkedin.com/in/william-lehman-05abb86b) 
+has been doing
+a lot of great work on this software, and one of his team's more recent 
 additions is a new plugin for continuous simulation that allows the WAT 
 to run a hydrologic sampler in conjunction with HEC-RAS sediment transport 
 models to generates multiple future hydrologic time series and
