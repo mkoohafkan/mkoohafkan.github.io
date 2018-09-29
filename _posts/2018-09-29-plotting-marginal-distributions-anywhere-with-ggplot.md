@@ -68,16 +68,16 @@ and I'm fairly kinda sure-ish that I'm using the term correctly:
 #' @param compute.on The data to compute densities over.
 #' @param group.by A grouping variable specifying where to
 #'   compute densities.
-#' @param rescale.max If `TRUE`, rescale all density curves
-#'   to a common maximum. The specified maximum reflects the
-#'   maximum height of the density curve on the mapped scale.
-#' @param trim minimum density to maintain at the left and right
-#'   extremes of the density line. Accepts a single value or a 
-#'   two-element vector specifying left and right trim fractions, 
-#'   respectively.
-#' @return A data.frame with columns `group`, `value`, and `density`.
+#' @param rescale.height Rescale density curves
+#'   to a maximum height on the mapped scale.
+#' @param trim Minimum density height to maintain at the left 
+#'   and right extremes of each density line. Accepts a single 
+#'   value or a two-element vector specifying left and right 
+#'   trim fractions, respectively.
+#' @return A data.frame with columns `group`, `value`, and 
+#'   `density`.
 marginal_densities = function(data, compute.on, group.by,
-  rescale.max = 1, trim = 0) {
+  rescale.height = 1, trim = 0) {
 	if(trim < 0)
 	  stop('Argument "trim" must be positive.')
   temp = data[c(compute.on, group.by)]
@@ -95,11 +95,10 @@ marginal_densities = function(data, compute.on, group.by,
     value = d$x,
     density = d$y
   )
-  if(rescale.max)
-    nd$density = nd$group + rescale.max*nd$density/max(nd$density)
-  else
-    nd$density = nd$group + nd$density
-  if (trim > 0) {
+  # rescale height
+   nd$density = nd$group + rescale.max*nd$density/max(nd$density)
+  # trim
+	if (any(trim > 0)) {
     # ok, I haven't implemented this yet
   }
   nd
@@ -141,7 +140,7 @@ names(res) = c("time", paste("run", seq(1, ncol(res) - 1)))
 # extract specific times to compute marginal densities
 res.select = filter(res.plot, time %in% c(50, 150))
 
-# specify a maxium height of 25 hours
+# specify a maximum height of 25 hours
 max.range = 25
 marginal.data = marginal_densities(res.select,
   compute.on = "x", group.by = "time",
