@@ -78,8 +78,6 @@ and I'm fairly kinda sure-ish that I'm using the term correctly:
 #'   `density`.
 marginal_densities = function(data, compute.on, group.by,
   rescale.height = 1, trim = 0) {
-	if(trim < 0)
-	  stop('Argument "trim" must be positive.')
   temp = data[c(compute.on, group.by)]
   names(temp) = c("x", "group.name")
   temp = temp[order(temp$group.name),]
@@ -96,7 +94,7 @@ marginal_densities = function(data, compute.on, group.by,
     density = d$y
   )
   # rescale height
-   nd$density = nd$group + rescale.max*nd$density/max(nd$density)
+  nd$density = nd$group + rescale.max*nd$density/max(nd$density)
   # trim
 	if (any(trim > 0)) {
     # ok, I haven't implemented this yet
