@@ -7,9 +7,9 @@ categories: codemonkey r ggplot2 ensemble-forecast
 commentIssueId: 37
 ---
 
-One of the last projects I worked on before leaving HEC was exploring the
-aleatory uncertainty in long-term river morphologic trends in quantifying 
-flood risk and project benefits. It should come as no surprise that changes
+One of the last projects I worked on before leaving HEC was exploring
+aleatory uncertainty in long-term river morphologic trends in the context
+of flood risk and project benefits. It should come as no surprise that changes
 in river morphology such as aggradation, erosion or bank migration can 
 modify the effectiveness or capacity of structures such as levees, reservoirs 
 and diversions. It's really important to consider these processes when 
@@ -29,19 +29,20 @@ has been doing
 a lot of great work on this software, and one of his team's more recent 
 additions is a new plugin for continuous simulation that allows the WAT 
 to run a hydrologic sampler in conjunction with HEC-RAS sediment transport 
-models to generates multiple future hydrologic time series and
-evaluate uncertainty in the magnitude and timing of future hydrology, and 
-the resulting morphological impacts, for assessing project benefits.
+models to generates multiple future hydrologic time series. This lets us
+evaluate how uncertainty in the magnitude and timing of future hydrology
+translates to uncertainty in the resulting morphological impacts. This 
+information can then be used for assessing project benefits.
 
 Having the ability to run literally hundreds of thousands of sediment 
 transport systems to sample uncertainty in future hydrology is great 
 and all, but you end up with literally thousands of gigabytes of data
 to sort through. Developing a workflow for *analyzing* the data is no
 less trivial than developing the workflow for simulation. Thankfully,
-I'd already done a lot of work on that front. I had already been building
-a framework for mining the RAS HDF output files---an R package 'm tentatively
-calling RAStestR---which actually *did* make accessing the WAT results a 
-trivial task.
+I'd already done a lot of work on that front. Throughout my time at HEC
+I had been building a framework for mining the RAS HDF output files---an 
+R package I'm tentatively calling `RAStestR`---which actually *did* make 
+accessing the WAT results a trivial task.
 
 Stan and Will were excited to present the results of the WAT simulations,
 and they had a very specific figure in mind: A plot of all realizations, 
@@ -134,7 +135,8 @@ random_walk = function()
 n = tmax/deltat
 res = cbind.data.frame(seq(0,tmax, by = deltat), replicate(reps, random_walk()))
 names(res) = c("time", paste("run", seq(1, ncol(res) - 1)))
-
+# format the data for plotting
+res.plot = gather(res, run, x, -time)
 # extract specific times to compute marginal densities
 res.select = filter(res.plot, time %in% c(50, 150))
 
@@ -145,7 +147,6 @@ marginal.data = marginal_densities(res.select,
   rescale.max = 25)
 
 # plot the results    
-res.plot = gather(res, run, x, -time, - timestep)
 ggplot(res.plot, aes(x = time, y = x, group = run)) + 
   xlab("t (hrs)") + ylab("x(t) (cm)") + theme_bw() +
   # raw data
