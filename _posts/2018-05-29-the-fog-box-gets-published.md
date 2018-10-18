@@ -32,4 +32,4 @@ to transform the voltage outputs of leaf wetness sensor data from
 the Blue Oak Ranch Reserve field station to actual water mass,
 and used the results to validate the model. 
 The manuscript was just published and it's pretty neat stuff, 
-so [check it out](https://authors.elsevier.com/c/1X7PtcFXJOkNl)! 
+so [check it out](https://www.researchgate.net/publication/325604519_Dew_deposition_suppresses_transpiration_and_carbon_uptake_in_leaves)! 
