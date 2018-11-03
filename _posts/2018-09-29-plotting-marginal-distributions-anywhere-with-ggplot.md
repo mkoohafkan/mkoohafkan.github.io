@@ -163,3 +163,131 @@ to pretty it up, or even recode it as a geometry layer
 (`geom_marginal()`, perhaps?). But I've got something that
 works, and Stan and Will are spoiled for choice in how to
 present our results.
+
+## Update
+
+Since the marginal density lines are essentially the same as one-sided
+violin plots, I made some simple modifications to `geom_violin` to 
+achieve the above results via a new geometry `geom_marginal`:
+
+```r
+geom_marginal <- function(mapping = NULL, data = NULL,
+                        stat = "ydensity", position = "dodge",
+                        ...,
+                        draw_quantiles = NULL,
+                        trim = TRUE,
+                        scale = "area",
+                        na.rm = FALSE,
+                        show.legend = NA,
+                        inherit.aes = TRUE) {
+  layer(
+    data = data,
+    mapping = mapping,
+    stat = stat,
+    geom = GeomMarginal,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(
+      trim = trim,
+      scale = scale,
+      draw_quantiles = draw_quantiles,
+      na.rm = na.rm,
+      ...
+    )
+  )
+}
+
+GeomMarginal <- ggproto("GeomMarginal", Geom,
+  setup_data = function(data, params) {
+    if(is.null(data$width)){
+      if(!is.null(params$width)){
+        data$width <- params$width
+      } else{
+        data$width <- resolution(data$x, FALSE) * 0.9
+      }
+    }      
+    # ymin, ymax, xmin, and xmax define the bounding rectangle for each group
+    plyr::ddply(data, "group", transform,
+      xmin = x - width / 2,
+      xmax = x + width / 2
+    )
+  },
+
+  draw_group = function(self, data, ..., draw_quantiles = NULL) {
+    # Find the points for the line to go all the way around
+    data <- transform(data,
+      xminv = x - 0 * (x - xmin),
+      xmaxv = x + violinwidth * (xmax - x)
+    )
+
+    # Make sure it's sorted properly to draw the outline
+    newdata <- #rbind(
+ #     plyr::arrange(transform(data, x = xminv), y),
+      plyr::arrange(transform(data, x = xmaxv), -y)
+#    )
+
+    # Close the polygon: set first and last point the same
+    # Needed for coord_polar and such
+#    newdata <- rbind(newdata, newdata[1,])
+
+    # Draw quantiles if requested, so long as there is non-zero y range
+    if (length(draw_quantiles) > 0 & !scales::zero_range(range(data$y))) {
+      stopifnot(all(draw_quantiles >= 0), all(draw_quantiles <= 1))
+
+      # Compute the quantile segments and combine with existing aesthetics
+      quantiles <- create_quantile_segment_frame(data, draw_quantiles)
+      aesthetics <- data[
+        rep(1, nrow(quantiles)),
+        setdiff(names(data), c("x", "y")),
+        drop = FALSE
+      ]
+      aesthetics$alpha <- rep(1, nrow(quantiles))
+      both <- cbind(quantiles, aesthetics)
+      quantile_grob <- GeomPath$draw_panel(both, ...)
+
+      ggplot2:::ggname("geom_marginal", grid::grobTree(
+        GeomPath$draw_panel(newdata, ...),
+        quantile_grob)
+      )
+    } else {
+      ggplot2:::ggname("geom_marginal", GeomPath$draw_panel(newdata, ...))
+    }
+  },
+
+  draw_key = draw_key_path,
+
+  default_aes = aes(weight = 1, colour = "grey20", fill = NA, size = 0.5,
+    alpha = NA, linetype = "solid"),
+
+  required_aes = c("x", "y")
+)
+
+# Returns a data.frame with info needed to draw quantile segments.
+create_quantile_segment_frame <- function(data, draw_quantiles) {
+  dens <- cumsum(data$density) / sum(data$density)
+  ecdf <- stats::approxfun(dens, data$y)
+  ys <- ecdf(draw_quantiles) # these are all the y-values for quantiles
+
+  # Get the marginal bounds for the requested quantiles.
+  marginal.xminvs <- (stats::approxfun(data$y, data$xminv))(ys)
+  marginal.xmaxvs <- (stats::approxfun(data$y, data$xmaxv))(ys)
+
+  # We have two rows per segment drawn. Each segment gets its own group.
+  data.frame(
+    x = ggplot2:::interleave(marginal.xminvs, marginal.xmaxvs),
+    y = rep(ys, each = 2),
+    group = rep(ys, each = 2)
+  )
+}
+```
+
+Try it out!
+
+```r
+ggplot(res.plot, aes(x = time, y = x, group = run)) + 
+  xlab("t (hrs)") + ylab("x(t) (cm)") + theme_bw() +
+  # raw data
+  geom_line(color = "black", alpha = 0.1) + 
+  geom_marginal(data = res.select, aes(group = time), color = 'red')
+```
