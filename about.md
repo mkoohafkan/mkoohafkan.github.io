@@ -12,12 +12,13 @@ shorttitle: About
 
 I am a PhD student in the 
 [Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu/) 
-at University of California Davis and a Hydraulic Engineer at the 
-[USACE Hydrologic Engineering Center](http://www.hec.usace.army.mil/). 
-My doctoral research is focused on sediment 
-transport and geomorphologic processes in large braided sandbed rivers,
-with particular emphasis on the morphodynamics of emergent sandbars in the 
-Missouri River. 
+at University of California Davis and a Water Resources Engineer at the 
+[California Department of Water Resources](https://water.ca.gov/). 
+My doctoral research is focused on using graph theory to represent 
+and analyze spatio-temporal interactions between landscape features.
+I apply a novel graph-theoretic approach to studying the 
+morphodynamics of emergent sandbars in the Missouri River and to
+assess habitat patch evolution in the Russian River Estuary. 
 I started the doctoral program in late 2014 following completion of a 
 Masters of Science in 
 [Environmental Engineering](http://efmh.berkeley.edu) 
