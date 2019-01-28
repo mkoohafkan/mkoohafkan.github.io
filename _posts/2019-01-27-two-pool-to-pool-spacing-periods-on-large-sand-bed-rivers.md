@@ -2,7 +2,7 @@
 layout:     post
 title:      Two pool-to-pool spacing periods on large sand-bed rivers
 date:       2019-01-27 08:55:00
-summary:    I am a co-author on a paper contrasting geomorphic observations of the Mississippi and Madeira Rivers. It just got published to Journal of Geomorphology, check it out!
+summary:    I'm a co-author on a paper contrasting geomorphic observations of the Mississippi and Madeira Rivers. It just got published to Journal of Geomorphology, check it out!
 categories: horntooter
 commentIssueId: 38
 color: darken-red
@@ -22,7 +22,7 @@ the classic spacing of 5-7 channel widths. This wouldn't
 ordinarily be very special, except for the fact that this period 
 does *not* correspond to the actual river planform---this section of 
 the river is actually quite straight, and meanders are much less 
-frequent. Second, we evidence of periodic, extremely deep 
+frequent. Second, we found evidence of periodic, extremely deep 
 "mega pools" at ~40 channel widths, which we refer to as "forced" 
 features driven by encounters with bedrock. However, the regular 
 spacing of these megapools is more a coincidence of regional 
