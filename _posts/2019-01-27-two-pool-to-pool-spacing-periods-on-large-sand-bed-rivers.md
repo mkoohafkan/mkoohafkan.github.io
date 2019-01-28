@@ -12,7 +12,7 @@ A few months before I left HEC, I worked with Stan and others on a
 study of the Madeira River in Brazil. The Corps (Flood and Coastal
 Research and Development) was working with the Brazilian Government 
 (Mobile District Brazilian initiative) on a sediment study on the
-Madeira River between Manicoré and Porto Velho in Northern Brazil.
+Madeira River between Manicore and Porto Velho in Northern Brazil.
 During the project, the study team discovered some interesting 
 geomorphic patterns in the location and regularity of deep pools
 in the Madeira River. Basically, we found that pool-to-pool spacing 
