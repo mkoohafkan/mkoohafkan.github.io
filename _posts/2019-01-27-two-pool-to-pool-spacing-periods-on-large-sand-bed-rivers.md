@@ -2,7 +2,7 @@
 layout:     post
 title:      Two pool-to-pool spacing periods on large sand-bed rivers
 date:       2019-01-27 08:55:00
-summary:    I'm a co-author on a paper contrasting geomorphic observations of the Mississippi and Madeira Rivers. It just got published to Journal of Geomorphology, check it out!
+summary:    I'm a co-author on a [paper](https://www.researchgate.net/publication/329929424_Two_pool-to-pool_spacing_periods_on_large_sand-bed_rivers_Mega-pools_on_the_Madeira_and_Mississippi) contrasting geomorphic observations of the Mississippi and Madeira Rivers. It just got published to Journal of Geomorphology, check it out!
 categories: horntooter
 commentIssueId: 38
 color: darken-red
@@ -28,4 +28,4 @@ features driven by encounters with bedrock. However, the regular
 spacing of these megapools is more a coincidence of regional 
 geology than anything else. It's a fun paper to read and has a 
 lot of background information on the Madeira that hasn't been 
-published before, so check it out!
+published before, so [check it out](https://www.researchgate.net/publication/329929424_Two_pool-to-pool_spacing_periods_on_large_sand-bed_rivers_Mega-pools_on_the_Madeira_and_Mississippi)!
