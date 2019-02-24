@@ -9,12 +9,12 @@ commentIssueId: 39
 
 I'm settling into my new job at DWR, and one of my first tasks
 has been some analysis of monitoring data for the
-[Delta Smelt Resiliency Strategy ](http://resources.ca.gov/delta-smelt-resiliency-strategy/).
+[Delta Smelt Resiliency Strategy](http://resources.ca.gov/delta-smelt-resiliency-strategy/).
 We have long records of water quality data at a ton of stations,
-and we want to some fairly basic time series analysis to quantify
+and we've been doing some time series analysis to quantify
 the effects of
 [operating the salinity control gates in August](https://water.ca.gov/News/Blog/2018/Aug-18/Researchers-Test-New-Approach-to-Improve-Fish-Habitat-in-Suisun-Marsh)
-on water quality in the
+on delta smelt habitat in
 [Suisun Marsh](https://www.wildlife.ca.gov/Regions/3/Suisun-Marsh).
 These data can be easily accessed from
 [CDEC](http://cdec.water.ca.gov/); here I use the R package
@@ -55,12 +55,11 @@ station.data = map_dfr(stations, cdec_query, sensor_num = 100L,
 
 I'm always interested in relationships between components of a
 system, and I often find it helpful to simultaneously look at both the
-spatial relationship and temporal trends between data.
-When your data is being collected at
-discrete locations, one of the most straightforward ways to
-do this is simply plot the time series graphs on a map. This lets
-your eye quickly identify similar patterns in the time series, and
-also understand spatial gradients in these patterns.
+spatial relationships between and temporal trends across the data.
+When data is collected at discrete locations, one of the most 
+straightforward ways to do this is simply plot the time series graphs 
+on a map. This lets your eye quickly identify similar patterns in the 
+time series as well as spatial gradients in the system.
 
 Many years ago there was a package called
 [`ggsubplot` ](https://github.com/garrettgman/ggsubplot) that could
@@ -69,7 +68,6 @@ and was eventually removed from CRAN. I've fantasized about trying
 to rebuild it myself, but never had the time or the motivation to
 learn about the
 [inner workings of `ggplot2`](https://ggplot2.tidyverse.org/articles/extending-ggplot2.html).
-
 I was actually working on a completely unrelated problem---trying
 to understand the difference between how
 [`ggmap`](https://cran.r-project.org/package=ggmap) and
@@ -163,12 +161,12 @@ ggplot(station.points) +
 
 Not bad! You do have to be careful with how you define your
 plots, because `annotate_custom` doesn't try to make any
-adjustments to the plots when placing them on the map. The code 
-above has a lot of formatting in my plot statement, including reducing
-the base font size, setting consistent axis limits, and reducing the
-number of breaks. There will inevitably be some iteration required
-to produce a map you are happy with, but it beats making the
-maps by hand in GIS software. On the plus side, you're not restricted
+adjustments to the plots when placing them on the map. My code 
+above has a lot of formatting in my plot statement to reduce
+the base font size, sett consistent axis limits, and reduce the
+number of breaks in the axes. There will inevitably be some iteration 
+required to produce a map you are happy with, but it beats making the
+maps by hand in GIS software. Also note that you're not restricted
 to just placing one kind of subplot at a time, so you could make a
 line plot here, a histogram there, etc. to create any combination of
 subplots you want.
@@ -178,4 +176,3 @@ geometry (`geom_subplot` perhaps?) that takes care of some of
 the plot sizing and tweaking automatically, but I don't have
 the motivation right now. Maybe someday I'll take a stab at
 making `ggsubplot2`...
-
