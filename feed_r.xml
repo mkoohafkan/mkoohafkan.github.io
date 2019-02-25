@@ -1,26 +1,25 @@
 ---
 layout: null
 ---
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hydroecology.net -- R</title>
-    <description>R posts from Hydroecology.net, by Michael Koohafkan</description>
-    <link>{{ site.url }}</link>
-    {% for post in site.posts %}
-		{% unless post.draft %}
-			{% for category in post.categories %}	
+	<channel>
+		<title>{{ site.title | xml_escape }} R posts</title>
+		<description>R posts from {{ site.description | xml_escape }}</description>
+		<link>{{ site.url }}{{ site.baseurl }}/</link>
+		<atom:link href="{{ "/feed_r.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
+		{% for post in site.posts %}
+			{% for category in post.categories %}
 				{% if category == 'r' %}
-				  <item>
-					  <title>{{ post.title | xml_escape }}</title>
-					  <description>{{ post.content | xml_escape }}</description>
-					  <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-					  <link>{{ post.url | prepend: site.url }}</link>
-					  <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
-				  </item>
+					<item>
+						<title>{{ post.title | xml_escape }}</title>
+						<description>{{ post.content | xml_escape }}</description>
+						<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+						<link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+						<guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+					</item>
 				{% endif %}
 			{% endfor %}
-		 {% endunless %}
-    {% endfor %}
-  </channel>
+		{% endfor %}
+	</channel>
 </rss>
