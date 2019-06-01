@@ -101,8 +101,8 @@ case below, each callback function assigns a specific name to the request,
 which can then be matched back to the originating request.
 
 ```r
-# asynchronous requst with identifiers
-multi_get2 = function(service.url) {
+# asynchronous request - with identifiers
+multi_get2 = function(service.urls) {
   # container to store the results
   results = list()
   # callback function generator - returns a callback function with ID
@@ -113,15 +113,15 @@ multi_get2 = function(service.url) {
     }
   }
   # define the IDs
-	ids = paste0("request_", seq_along(service.url))
+	ids = paste0("request_", seq_along(service.urls))
 	define the callback functions
 	cbs = lapply(ids, cb_gen)
 	# create the request pool
   pool = new_pool()
 	# add the requests to the pool - use specific callback function for 
 	# each request
-	lapply(ids, function(i)
-  	curl_fetch_multi(service.url[i], pool = pool,
+	lapply(seq_along(service.urls), function(i)
+  	curl_fetch_multi(service.urls[i], pool = pool,
 		  done = cbs[[i]], fail = cbs[[i]],
 			handle = new_handle())	
   # make the requests
