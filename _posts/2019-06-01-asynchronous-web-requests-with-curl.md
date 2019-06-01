@@ -2,7 +2,7 @@
 layout:     post
 title:      Asynchronous web requests with R and curl
 date:       2019-06-01 10:40:00
-summary:    I've been developing web services for our water quality database and implemented asynchronous requests to speed up our system.
+summary:    I've been developing web services for our water quality database and implemented asynchronous requests to speed things up.
 categories: codemonkey r curl web-services
 commentIssueId: 40
 ---
@@ -16,9 +16,9 @@ quality control and assurance. We recently adopted a more
 [rigorous QAQC process](https://pubs.usgs.gov/tm/2006/tm1D3/pdf/TM1D3.pdf)
 which requires our technicians to enter **a lot** more field visit data 
 into our database and perform more complex calculations to determine quality
-ratings in addition to the manual inspections they were already doing.
-I've been working to streamline our data pipeline by reducing the amount
-of data transcription and manual calculations out technicians need to
+ratings (in addition to the manual inspections they were already doing).
+I've been working to streamline our data pipeline and reduce the amount
+of data transcription and manual calculations our technicians need to
 do. The pipeline I've developed consists of a few steps, starting with
 moving our field visit data entry to electronic data sheets (using Excel,
 since that is what our technicians are familiar with) and using our
