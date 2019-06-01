@@ -56,7 +56,9 @@ basic_get = function(service.url) {
   # process the result
 	rawToChar(result$content)
 }}
+```
 
+```r
 # asynchronous request - vector of URLs
 multi_get = function(service.urls) {
   # container to store the results
