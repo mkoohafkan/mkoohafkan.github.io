@@ -54,7 +54,7 @@ basic_get = function(service.url) {
   # perform the request
   result = curl_fetch_memory(service.url, handle = wqpr_handle())
   # process the result
-	rawToChar(result$content)
+  rawToChar(result$content)
 }}
 ```
 
@@ -63,19 +63,19 @@ basic_get = function(service.url) {
 multi_get = function(service.urls) {
   # container to store the results
   results = list()
-	# callback function to capture the result of each request
+  # callback function to capture the result of each request
   cb = function(res) {
     results <<- append(results, list(res))
   }
-	# create the request pool
+  # create the request pool
   pool = new_pool()
-	# add the requests to the pool
+  # add the requests to the pool
   lapply(service.urls, curl_fetch_multi, pool = pool, done = cb,
-	  fail = cb, handle = new_handle())
-	# make the requests
+    fail = cb, handle = new_handle())
+  # make the requests
   out = multi_run(pool = pool)
   # process the results
-	lapply(results, function(x) rawToChar(x$content))
+  lapply(results, function(x) rawToChar(x$content))
 }
 ```
 
@@ -108,26 +108,26 @@ multi_get2 = function(service.urls) {
   # callback function generator - returns a callback function with ID
   cb_gen = function(id) {
     function(res) {
-		  # assign names to added results
+      # assign names to added results
       results[[id]] <<- res
     }
   }
   # define the IDs
-	ids = paste0("request_", seq_along(service.urls))
-	define the callback functions
-	cbs = lapply(ids, cb_gen)
-	# create the request pool
+  ids = paste0("request_", seq_along(service.urls))
+  define the callback functions
+  cbs = lapply(ids, cb_gen)
+  # create the request pool
   pool = new_pool()
-	# add the requests to the pool - use specific callback function for 
-	# each request
-	lapply(seq_along(service.urls), function(i)
-  	curl_fetch_multi(service.urls[i], pool = pool,
-		  done = cbs[[i]], fail = cbs[[i]],
-			handle = new_handle())	
+  # add the requests to the pool - use specific callback function for 
+  # each request
+  lapply(seq_along(service.urls), function(i)
+    curl_fetch_multi(service.urls[i], pool = pool,
+      done = cbs[[i]], fail = cbs[[i]],
+      handle = new_handle())	
   # make the requests
   out = multi_run(pool = pool)
   # process the results in the same order that the URLs were given
-	lapply(results[ids], function(x) rawToChar(x$content))
+  lapply(results[ids], function(x) rawToChar(x$content))
 }
 ```
 
