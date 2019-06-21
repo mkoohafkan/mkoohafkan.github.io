@@ -10,10 +10,27 @@ shorttitle: About
 <div class="clearfix"></div>
 {% include social_links.html %}
 
-I am a PhD student in the 
+I am a Water Resources Engineer with the 
+[California Department of Water Resources](https://water.ca.gov/)
+[Division of Environmental Services](https://water.ca.gov/Programs/Environmental-Services). 
+I provide modeling and data analysis support for special studies relating to
+water resources management, ecosystem function, and habitat restoration, with special
+focus on the Suisun Marsh and Bay-Delta.
+I have wide-ranging expertise in hydrodynamic, sediment transport, and
+water quality modeling as well as remote sensing and GIS data and the
+management and analysis of "big" environmental data, including the 
+collection, management and analysis of spatio-temporal time series.
+Prior to joining DWR, I worked with the 
+[USACE Hydrologic Engineering Center](https://www.hec.usace.army.mil/), 
+where I worked with the [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/) 
+software development team to design and implement sediment transport 
+modeling features. During this time I also provided support to
+USACE regional offices on projects involving bed, bank and floodplain 
+geomorphic processes in large sand-bed rivers. 
+
+I am also a PhD student in the 
 [Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu/) 
-at University of California Davis and a Water Resources Engineer at the 
-[California Department of Water Resources](https://water.ca.gov/). 
+at University of California Davis and 
 My doctoral research is focused on using graph theory to represent 
 and analyze spatio-temporal interactions between landscape features.
 I apply a novel graph-theoretic approach to studying the 
