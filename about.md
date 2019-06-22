@@ -11,25 +11,25 @@ shorttitle: About
 {% include social_links.html %}
 
 I am a Water Resources Engineer with the 
-[California Department of Water Resources](https://water.ca.gov/)
+[California Department of Water Resources](https://water.ca.gov),
 [Division of Environmental Services](https://water.ca.gov/Programs/Environmental-Services). 
 I provide modeling and data analysis support for special studies relating to
 water resources management, ecosystem function, and habitat restoration, with special
 focus on the Suisun Marsh and Bay-Delta.
 I have wide-ranging expertise in hydrodynamic, sediment transport, and
-water quality modeling as well as remote sensing and GIS data and the
-management and analysis of "big" environmental data, including the 
-collection, management and analysis of spatio-temporal time series.
+water quality modeling as well as remote-sensing and GIS analysis. More recently,
+my work has involved the management and analysis of "big" environmental data and
+large longitudinal datasets from long-term environmental sensor networks.
 Prior to joining DWR, I worked with the 
-[USACE Hydrologic Engineering Center](https://www.hec.usace.army.mil/), 
-where I worked with the [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras/) 
+[USACE Hydrologic Engineering Center](https://www.hec.usace.army.mil), 
+where I worked with the [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras) 
 software development team to design and implement sediment transport 
 modeling features. During this time I also provided support to
 USACE regional offices on projects involving bed, bank and floodplain 
 geomorphic processes in large sand-bed rivers. 
 
-I am also a PhD student in the 
-[Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu/) 
+I am also a PhD candidate in the 
+[Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu) 
 at University of California Davis and 
 My doctoral research is focused on using graph theory to represent 
 and analyze spatio-temporal interactions between landscape features.
@@ -42,13 +42,13 @@ Masters of Science in
 at University of California Berkeley, where I studied the role of fog in the 
 hydrology of 
 coastal watersheds in California. I have also collaborated with NOAA's 
-[Habitat Blueprint](http://www.habitat.noaa.gov/habitatblueprint/) 
+[Habitat Blueprint](http://www.habitat.noaa.gov/habitatblueprint) 
 to explore hydrologic controls on salmonid habitat quality in the 
-[Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary/), 
+[Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary), 
 and with the 
-[American Bird Conservancy](https://abcbirds.org/) 
+[American Bird Conservancy](https://abcbirds.org) 
 on the development of an 
-[agent-based model](http://www.leasttern.org/) 
+[agent-based model](http://www.leasttern.org) 
 of Interior Least Tern breeding behavior. 
 
 #### Publications
