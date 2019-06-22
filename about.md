@@ -32,9 +32,9 @@ I am also a PhD candidate in the
 [Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu) 
 at University of California Davis and 
 My doctoral research is focused on using graph theory to represent 
-and analyze spatio-temporal interactions between landscape features.
+and analyze spatial and temporal interactions between landscape features.
 I apply a novel graph-theoretic approach to studying the 
-morphodynamics of emergent sandbars in the Missouri River and to
+morphodynamics of emergent sandbars in the Missouri River, and to
 assess habitat patch evolution in the Russian River Estuary. 
 I started the doctoral program in late 2014 following completion of a 
 Masters of Science in 
@@ -50,6 +50,15 @@ and with the
 on the development of an 
 [agent-based model](http://www.leasttern.org) 
 of Interior Least Tern breeding behavior. 
+
+That covers what I *am* (professionally), but what I *do* is write 
+code. I love writing code to solve problems and improve workflows. 
+I'm passionate about data visualization, and communicating science 
+to the public. I'm all about using the right tool for the right job
+(as long as I can automate it!) and love to teach my methods, so 
+my blog posts mostly explore approaches to solving programming 
+problems in a variety of languages (along with some shout-outs
+to publications and presentations I'm involved in).
 
 #### Publications
 
