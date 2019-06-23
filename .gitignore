@@ -8,3 +8,6 @@ _config.gh-pages.yml
 
 Gemfile.lock
 .Rproj.user
+
+.rhistory
+.vs

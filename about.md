@@ -30,33 +30,32 @@ geomorphic processes in large sand-bed rivers.
 
 I am also a PhD candidate in the 
 [Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu) 
-at University of California Davis and 
+at University of California Davis.
 My doctoral research is focused on using graph theory to represent 
 and analyze spatial and temporal interactions between landscape features.
-I apply a novel graph-theoretic approach to studying the 
-morphodynamics of emergent sandbars in the Missouri River, and to
-assess habitat patch evolution in the Russian River Estuary. 
+I developed a novel graph-theoretic approach and am using it to 
+study the morphodynamics of emergent sandbars in the Missouri River
+in collaboration with the 
+[Missouri River Recovery Program](https://www.nwo.usace.army.mil/mrrp/efforts-actions/esh), 
+and to explore habitat patch evolution in the Russian River Estuary 
+in collaboration with NOAA's 
+[Habitat Blueprint](https://www.habitatblueprint.noaa.gov/habitat-focus-areas/russian-river-california/). 
 I started the doctoral program in late 2014 following completion of a 
 Masters of Science in 
 [Environmental Engineering](http://efmh.berkeley.edu) 
 at University of California Berkeley, where I studied the role of fog in the 
-hydrology of 
-coastal watersheds in California. I have also collaborated with NOAA's 
-[Habitat Blueprint](http://www.habitat.noaa.gov/habitatblueprint) 
-to explore hydrologic controls on salmonid habitat quality in the 
-[Russian River estuary](http://www.scwa.ca.gov/russian-river-estuary), 
-and with the 
+hydrology of coastal watersheds in California. I have also worked with the 
 [American Bird Conservancy](https://abcbirds.org) 
 on the development of an 
 [agent-based model](http://www.leasttern.org) 
 of Interior Least Tern breeding behavior. 
 
-That covers what I *am* (professionally), but what I *do* is write 
-code. I love writing code to solve problems and improve workflows. 
-I'm passionate about data visualization, and communicating science 
-to the public. I'm all about using the right tool for the right job
+Mostly though, I write code. I love using computer programming to 
+solve problems and improve workflows. I'm passionate about 
+visualizing data and using computers to communicate science. 
+I'm all about using the right tool for the right job
 (as long as I can automate it!) and love to teach my methods, so 
-my blog posts mostly explore approaches to solving programming 
+my blog mostly explores approaches to solving programming 
 problems in a variety of languages (along with some shout-outs
 to publications and presentations I'm involved in).
 
