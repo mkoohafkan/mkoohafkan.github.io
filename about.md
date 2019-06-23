@@ -45,9 +45,10 @@ Masters of Science in
 [Environmental Engineering](http://efmh.berkeley.edu) 
 at University of California Berkeley, where I studied the role of fog in the 
 hydrology of coastal watersheds in California. I have also worked with the 
-[American Bird Conservancy](https://abcbirds.org) 
+[American Bird Conservancy](https://abcbirds.org) and the 
+[Engineer Research and Development Center](https://www.erdc.usace.army.mil)
 on the development of an 
-[agent-based model](http://www.leasttern.org) 
+[agent-based model](https://erdc-library.erdc.dren.mil/xmlui/handle/11681/2905) 
 of Interior Least Tern breeding behavior. 
 
 Mostly though, I write code. I love using computer programming to 
