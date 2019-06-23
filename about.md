@@ -37,7 +37,7 @@ I developed a novel graph-theoretic approach and am using it to
 study the morphodynamics of emergent sandbars in the Missouri River
 in collaboration with the 
 [Missouri River Recovery Program](https://www.nwo.usace.army.mil/mrrp/efforts-actions/esh), 
-and to explore habitat patch evolution in the Russian River Estuary 
+and to explore salmonid habitat dynamics in the Russian River Estuary 
 in collaboration with NOAA's 
 [Habitat Blueprint](https://www.habitatblueprint.noaa.gov/habitat-focus-areas/russian-river-california/). 
 I started the doctoral program in late 2014 following completion of a 
