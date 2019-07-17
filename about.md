@@ -74,8 +74,8 @@ Gerlein-Safdi, C., <span class="red">Koohafkan, M.C.</span>, Chung, M., Rockwell
 
 <span class="red">Koohafkan, M.C.</span> and Younis, B.A. 2015. "Open-Channel Computation with R." The R Journal, 7(2):249-262. ([link](https://journal.r-project.org/archive/2015-2/koohafkan-younis.pdf))
 
-Lott, C.A., Railsback,S.F., Sheppard, C.F., and <span class="red">Koohafkan, M.C.</span> 2013. "Developing and Testing TernCOLONY 1.0: An Individual-based Model of Least Tern Reproduction." ERDC/EL CR-13-2, U.S. Army Engineer Research and Development Center, Vicksburg, MS. Dated June 2013, 192 pp.
+Lott, C.A., Railsback, S.F., Sheppard, C.F., and <span class="red">Koohafkan, M.C.</span> 2013. "Developing and Testing TernCOLONY 1.0: An Individual-based Model of Least Tern Reproduction." ERDC/EL CR-13-2, U.S. Army Engineer Research and Development Center, Vicksburg, MS. Dated June 2013, 192 pp.
 
 <span class="red">Koohafkan, M.C.</span>, Thompson, S.E., Leonardson, R., and Dufour, A. (2013), Broad-spectrum monitoring strategies for predicting occult precipitation contribution to water balance in a coastal watershed in California: Ground-truthing, areal monitoring and isotopic analysis of fog in the San Francisco Bay region, Abstract A41E-0102 presented at 2013 Fall Meeting, AGU, San Francisco, Calif., 9-13 Dec.
 
-<span class="red">Koohafkan, M.C.</span>, Thompson, S.E. and Hamilton, M.P. (2012), Predicting Potential Evaporation in Topographically Complex Terrain, Abstract H43C-1347 presented at 2012 Fall Meeting, AGU, San Francisco, Calif., 3-7 Dec.
+<span class="red">Koohafkan, M.C.</span>, Thompson, S.E., and Hamilton, M.P. (2012), Predicting Potential Evaporation in Topographically Complex Terrain, Abstract H43C-1347 presented at 2012 Fall Meeting, AGU, San Francisco, Calif., 3-7 Dec.
