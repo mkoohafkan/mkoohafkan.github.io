@@ -62,6 +62,10 @@ to publications and presentations I'm involved in).
 
 #### Publications
 
+<span class="red">Koohafkan, M.</span>, Gibson, S., Pridal, D., Boyd, P. 2019. "Modeling Bank Migration on the Missouri River with HEC-RAS: A Calibrated HEC-RAS/BSTEM Model." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-232))
+
+Gibson, S., Lehman, W., <span class="red">Koohafkan, M.</span>, Pridal, D. 2019. "Using HEC-WAT and HEC-RAS-Sediment to the Evaluate the Effect of Hydrologic Uncertainty on Bed Evolution." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-237))
+
 Gibson, S., Osorio, A., Creech, C., Amorim, R., Dircksen, M., Dahl, T., <span class="red">Koohafkan, M.</span> 2019. "Two pool-to-pool spacing periods on large sand-bed rivers: Mega-pools on the Madeira and Mississippi". Geomorphology, 328:196-210.
 
 <span class="red">Koohafkan, M.C.</span> and S. Gibson. 2018. "Geomorphic trajectory and landform analysis using graph theory: A panel data approach to quantitative geomorphology." Progress in Physical Geography, 42(6):679-696. ([link](/docs/2018-koohafkan-gibson-ppg-accepted.pdf))
