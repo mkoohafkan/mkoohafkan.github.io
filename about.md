@@ -62,19 +62,19 @@ to publications and presentations I'm involved in).
 
 #### Publications
 
-<span class="red">Koohafkan, M.</span>, Gibson, S., Pridal, D., Boyd, P. 2019. "Modeling Bank Migration on the Missouri River with HEC-RAS: A Calibrated HEC-RAS/BSTEM Model." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-232.pdf))
+<span class="red">Koohafkan, M.</span>, Gibson, S., Pridal, D., and Boyd, P. 2019. "Modeling Bank Migration on the Missouri River with HEC-RAS: A Calibrated HEC-RAS/BSTEM Model." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-232.pdf))
 
-Gibson, S., Lehman, W., <span class="red">Koohafkan, M.</span>, Pridal, D. 2019. "Using HEC-WAT and HEC-RAS-Sediment to the Evaluate the Effect of Hydrologic Uncertainty on Bed Evolution." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-237.pdf))
+Gibson, S., Lehman, W., <span class="red">Koohafkan, M.</span>, and Pridal, D. 2019. "Using HEC-WAT and HEC-RAS-Sediment to the Evaluate the Effect of Hydrologic Uncertainty on Bed Evolution." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-237.pdf))
 
-Gibson, S., Osorio, A., Creech, C., Amorim, R., Dircksen, M., Dahl, T., <span class="red">Koohafkan, M.</span> 2019. "Two pool-to-pool spacing periods on large sand-bed rivers: Mega-pools on the Madeira and Mississippi". Geomorphology, 328:196-210.
+Gibson, S., Osorio, A., Creech, C., Amorim, R., Dircksen, M., Dahl, T., and <span class="red">Koohafkan, M.</span> 2019. "Two pool-to-pool spacing periods on large sand-bed rivers: Mega-pools on the Madeira and Mississippi". Geomorphology, 328:196-210.
 
-<span class="red">Koohafkan, M.C.</span> and S. Gibson. 2018. "Geomorphic trajectory and landform analysis using graph theory: A panel data approach to quantitative geomorphology." Progress in Physical Geography, 42(6):679-696. ([link](/docs/2018-koohafkan-gibson-ppg-accepted.pdf))
+<span class="red">Koohafkan, M.C.</span> and Gibson, S. 2018. "Geomorphic trajectory and landform analysis using graph theory: A panel data approach to quantitative geomorphology." Progress in Physical Geography, 42(6):679-696. ([link](/docs/2018-koohafkan-gibson-ppg-accepted.pdf))
 
-Gerlein-Safdi, C., <span class="red">Koohafkan, M.C.</span>, Chung, M., Rockwell, F.E., Thompson, S., and K.K. Caylor. 2018. "Dew deposition suppresses transpiration and carbon uptake in leaves". Agricultural and Forest Meteorology, 259(15):305-316.
+Gerlein-Safdi, C., <span class="red">Koohafkan, M.C.</span>, Chung, M., Rockwell, F.E., Thompson, S., and Caylor, K.K. 2018. "Dew deposition suppresses transpiration and carbon uptake in leaves". Agricultural and Forest Meteorology, 259(15):305-316.
 
-<span class="red">Koohafkan, M.C.</span> and B.A. Younis. 2015. "Open-Channel Computation with R." The R Journal, 7(2):249-262. ([link](https://journal.r-project.org/archive/2015-2/koohafkan-younis.pdf))
+<span class="red">Koohafkan, M.C.</span> and Younis, B.A. 2015. "Open-Channel Computation with R." The R Journal, 7(2):249-262. ([link](https://journal.r-project.org/archive/2015-2/koohafkan-younis.pdf))
 
-Lott, C.A., S.F. Railsback, C.F. Sheppard, and <span class="red">M.C. Koohafkan</span>. 2013. "Developing and Testing TernCOLONY 1.0: An Individual-based Model of Least Tern Reproduction." ERDC/EL CR-13-2, U.S. Army Engineer Research and Development Center, Vicksburg, MS. Dated June 2013, 192 pp.
+Lott, C.A., Railsback,S.F., Sheppard, C.F., and <span class="red">Koohafkan, M.C.</span> 2013. "Developing and Testing TernCOLONY 1.0: An Individual-based Model of Least Tern Reproduction." ERDC/EL CR-13-2, U.S. Army Engineer Research and Development Center, Vicksburg, MS. Dated June 2013, 192 pp.
 
 <span class="red">Koohafkan, M.C.</span>, Thompson, S.E., Leonardson, R., and Dufour, A. (2013), Broad-spectrum monitoring strategies for predicting occult precipitation contribution to water balance in a coastal watershed in California: Ground-truthing, areal monitoring and isotopic analysis of fog in the San Francisco Bay region, Abstract A41E-0102 presented at 2013 Fall Meeting, AGU, San Francisco, Calif., 9-13 Dec.
 
