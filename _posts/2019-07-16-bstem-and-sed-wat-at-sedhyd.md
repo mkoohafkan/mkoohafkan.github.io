@@ -14,7 +14,7 @@ Conference](https://www.sedhyd.org/2019)
 (SEDHYD) has come and gone, held as usual in Reno, NV. 
 While I wasn't able to attend, I did submit two papers
 to the conference. The first paper is all about
-[using HEC-WAT and HEC-RAS-Sediment to evaluate the effect of hydrologic uncertainty on bed evolution](/docs/2019-sedwat-237).
+[using HEC-WAT and HEC-RAS-Sediment to evaluate the effect of hydrologic uncertainty on bed evolution](/docs/2019-sedwat-237.pdf).
 I posted about this project [a little while ago]({% post_url 2018-09-29-plotting-marginal-distributions-anywhere-with-ggplot %}),
 but I focused on the R code used to generate some of the figures and 
 didn't go into much detail on how the data for these figures was
@@ -26,7 +26,7 @@ modeling with HEC-RAS, this paper is a good introduction to tools
 provided by HEC.
 
 The second paper focuses on 
-[modeling bank migration on the Missouri River with HEC-RAS](/docs/2019-sedwat-232).
+[modeling bank migration on the Missouri River with HEC-RAS](/docs/2019-sedwat-232.pdf).
 I spent a lot of time working on the Bank Stability and Toe Erosion Model (BSTEM)
 during my time at HEC, and this paper covers a major application---probably
 the largest RAS-BSTEM model to date---and discusses calibration approaches

@@ -62,9 +62,9 @@ to publications and presentations I'm involved in).
 
 #### Publications
 
-<span class="red">Koohafkan, M.</span>, Gibson, S., Pridal, D., Boyd, P. 2019. "Modeling Bank Migration on the Missouri River with HEC-RAS: A Calibrated HEC-RAS/BSTEM Model." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-232))
+<span class="red">Koohafkan, M.</span>, Gibson, S., Pridal, D., Boyd, P. 2019. "Modeling Bank Migration on the Missouri River with HEC-RAS: A Calibrated HEC-RAS/BSTEM Model." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-232.pdf))
 
-Gibson, S., Lehman, W., <span class="red">Koohafkan, M.</span>, Pridal, D. 2019. "Using HEC-WAT and HEC-RAS-Sediment to the Evaluate the Effect of Hydrologic Uncertainty on Bed Evolution." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-237))
+Gibson, S., Lehman, W., <span class="red">Koohafkan, M.</span>, Pridal, D. 2019. "Using HEC-WAT and HEC-RAS-Sediment to the Evaluate the Effect of Hydrologic Uncertainty on Bed Evolution." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-237.pdf))
 
 Gibson, S., Osorio, A., Creech, C., Amorim, R., Dircksen, M., Dahl, T., <span class="red">Koohafkan, M.</span> 2019. "Two pool-to-pool spacing periods on large sand-bed rivers: Mega-pools on the Madeira and Mississippi". Geomorphology, 328:196-210.
 
