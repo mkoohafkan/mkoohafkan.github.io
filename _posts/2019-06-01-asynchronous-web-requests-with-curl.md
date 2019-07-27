@@ -86,8 +86,8 @@ requests are performed asynchronously, it's very likely that the requests
 will complete *in a different order than you provided*. This is usually 
 fine with a GET request, since the information you retrieve will 
 (probably) have some identifying information that you can use to link
-it back to the original request. However, can be a serious issue with
-POST requests, because the data you are sending out is contained in the
+it back to the original request. However, this can be a serious issue with
+POST requests because the data you are sending out is contained in the
 request body and web service response might not contain *ANY*
 identifying information. So if you make 5 POST requests and two of them
 fail, how can you determine *which* requests failed?
