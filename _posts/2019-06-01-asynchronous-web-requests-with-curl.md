@@ -97,7 +97,7 @@ programming language](http://adv-r.had.co.nz/Functional-programming.html#functio
 Instead of creating a single callback function like above, I create a 
 unique callback function *for each request* that captures information 
 that would not otherwise be returned by the web service request. In the 
-case below, each callback function assigns a specific name to the response,
+case below, each callback function assigns a specific name to the response
 which can then be matched back to the originating request.
 
 ```r
