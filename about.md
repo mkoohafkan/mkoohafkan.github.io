@@ -6,7 +6,7 @@ tags: about
 shorttitle: About
 ---
 
-![Michael Koohafkan](/images/mk3.jpg)
+![Michael Koohafkan](/images/mk4.jpg)
 <div class="clearfix"></div>
 {% include social_links.html %}
 
