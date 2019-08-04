@@ -163,7 +163,7 @@ Not bad! You do have to be careful with how you define your
 plots, because `annotate_custom` doesn't try to make any
 adjustments to the plots when placing them on the map. My code 
 above has a lot of formatting in my plot statement to reduce
-the base font size, sett consistent axis limits, and reduce the
+the base font size, set consistent axis limits, and reduce the
 number of breaks in the axes. There will inevitably be some iteration 
 required to produce a map you are happy with, but it beats making the
 maps by hand in GIS software. Also note that you're not restricted
