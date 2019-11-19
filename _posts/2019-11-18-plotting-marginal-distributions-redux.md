@@ -10,7 +10,7 @@ commentIssueId: 42
 in a 
 [previous post]({% post_url 2018-09-29-plotting-marginal-distributions-anywhere-with-ggplot %}) 
 I showed how to plot marginal distributions
-on top of time series by abusing `geom_density`. It involved a lot
+on top of time series by abusing `geom_density()`. It involved a lot
 of data wrangling, and I developed a custom function for generating
 the data needed to plot the marginal densities using `geom_path()`.
 It worked, but it was messy. I later updated the post to show a 
