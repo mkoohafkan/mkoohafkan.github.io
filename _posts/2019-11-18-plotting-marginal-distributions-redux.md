@@ -56,14 +56,14 @@ distributions at.
 
 ```r
 # extract specific times to compute marginal densities
-res.select = filter(res.plot, time %in% c(50, 150))
+res.select = filter(res.plot, time %in% c(50, 100, 150))
 ```
 
 But now, let's use `geom_vridgeline()` to plot the marginal
 distributions:
 
 ```r
-library(ggplot)
+library(ggplot2)
 library(ggridges)
 
 ggplot(res.plot) + theme_bw() +
@@ -76,7 +76,7 @@ ggplot(res.plot) + theme_bw() +
     data = res.select, 
     aes(group = time, width = ..density..), 
     stat = "ydensity", scale = 5000, 
-    fill = NA, color = "orange", size = 1
+    fill = NA, color = "blue", size = 1
   ) 
 ```
 
@@ -95,4 +95,8 @@ The result looks great:
 
 ![Realizations of a random walk with marginal distributions using ggridges](/images/2019-11-18-markov-marginal.png)
 
-And that's it! WAY easier than my old way.
+And that's it! WAY easier than my old way. Note that if you place
+too many marginal distributions at once, you can get some 
+[weird behavior]() in the axis extents set by `ggridges`. However,
+this is easy to work around by manually setting the x-axis limits
+using `ggplot2::coord_cartesian()`.
