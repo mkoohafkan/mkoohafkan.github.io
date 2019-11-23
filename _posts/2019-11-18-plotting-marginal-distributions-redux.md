@@ -97,6 +97,7 @@ The result looks great:
 
 And that's it! WAY easier than my old way. Note that if you place
 too many marginal distributions at once, you can get some 
-[weird behavior]() in the axis extents set by `ggridges`. However,
+[weird behavior](https://github.com/clauswilke/ggridges/issues/47) 
+in the axis extents set by `ggridges`. However,
 this is easy to work around by manually setting the x-axis limits
 using `ggplot2::coord_cartesian()`.
