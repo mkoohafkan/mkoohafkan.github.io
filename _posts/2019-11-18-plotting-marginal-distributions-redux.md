@@ -99,6 +99,7 @@ And that's it! WAY easier than my old way. Note that if one of
 your marginal distributions is a point (i.e. all values are identical,
 such as `x` at `time = 0` in the above dataset) you can get some 
 [weird behavior](https://github.com/clauswilke/ggridges/issues/47) 
-in the axis extents set by `ggridges`. One easy workaround 
-is to manually setting the x-axis limits of the plot
-using `ggplot2::coord_cartesian()`.
+in the axis extents set by `ggridges`. If you don't want to filter 
+out those instances from the marginal distribution data, you can always 
+work around the issue by manually setting the x-axis limits of the 
+plot using `ggplot2::coord_cartesian()`.
