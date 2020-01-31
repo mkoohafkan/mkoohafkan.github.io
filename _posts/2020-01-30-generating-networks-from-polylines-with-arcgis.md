@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Generating Networks From Polylines With ArcGIS
+title:      Generating networks from polylines with ArcGIS
 date:       2020-01-30 20:00:00
 summary:    Converting a polyline layer to a network object isn't complicated, but it can get finicky. Here's one way to do it with ArcGIS.
 categories: codemonkey r arcpy reticulate arcgis
