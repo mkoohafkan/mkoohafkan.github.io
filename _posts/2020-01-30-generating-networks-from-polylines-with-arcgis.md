@@ -97,10 +97,7 @@ start and end of the whole line. We therefore need to create a layer of
 polyline segments, where each segment corresponds to a node in the network.
 We can use the ArcGIS 
 [Split Line At Vertices](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/split-line-at-vertices.htm)
-tool to convert long polylines into many short segments. If you have any
-special identifiers for your polylines (e.g. names) you will want to apply this
-to your original polyline layer, otherwise you can use the dissolved layer we
-created (which will not have any identifying info).
+tool to convert long polylines into many short segments.
 
 Now that we have the segments defined, we can capture the "from" and "to" 
 node lists through some repetitive use of the ArcGIS 
@@ -212,7 +209,7 @@ stream.network.dense = arcpy$edit$Densify(stream.network, "DISTANCE",
 stream.network.segments = arcpy$management$SplitLine(stream.network.dense,
   "streamlines_segments")
 
-# generate the node list from the streamline segments
+# generate the node list from the streamline network
 stream.network.vertices.raw = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
   "streamlines_vertices_raw", "ALL")
 # delete duplicates
