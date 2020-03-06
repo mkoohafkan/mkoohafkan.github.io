@@ -68,12 +68,18 @@ that captures the ID of the original line segment.
 
 Unfortunately, converting a polyline layer where individual polylines connect
 will produce duplicate vertices at those junctions, because a point will be 
-created *for each line at each junction*. One way around this is to first 
-dissolve our polyline layer into a single feature using the ArcGIS
+created *for each line at each junction*. Surprisingly, this will
+happen even if we first dissolve our polyline layer into a single feature using the ArcGIS
 [Dissolve](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/dissolve.htm)
-tool, and generate the node list from that layer. Make sure to hang on 
-to the original polyline layer though, as we will need it later in
-the process!
+tool. Instead, we need to remove duplicate points using the ArcGIS 
+[DeleteIdentical](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/delete-identical.htm)
+tool and use the argument `field = "Shape"` to delete duplicates based on their
+location. This will remove the duplicate points, but it also means that there will
+be gaps in the `OBJECTID` of the vertices layer. If you know that your graph creation
+software assumes you network nodes have sequential IDs, you can fix the issue simply
+by making a copy of the layer with the ArcGIS 
+[CopyFeatures](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/copy-features.htm)
+tool.
 
 ## Capturing network edges from the polylines
 
@@ -201,16 +207,19 @@ stream.network = "suisun_marsh_streamlines"
 # densify the network
 stream.network.dense = arcpy$edit$Densify(stream.network, "DISTANCE",
   10.0)
-#dissolve the network
-stream.network.dissolve = arcpy$management$Dissolve(stream.network.dense,
-  "streamlines_dissolve")
+
 # split the densified streamlines into segments
 stream.network.segments = arcpy$management$SplitLine(stream.network.dense,
   "streamlines_segments")
 
-# generate the node list from the dissolved streamlines
-stream.network.vertices = arcpy$management$FeatureVerticesToPoints(stream.network.dissolve,
-  "streamlines_vertices", "ALL")
+# generate the node list from the streamline segments
+stream.network.vertices.raw = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
+  "streamlines_vertices_raw", "ALL")
+# delete duplicates
+arcpy$management$DeleteIdentical(stream.network.vertices.raw, "Shape")
+# copy to new layer to ensure incrementing OID
+stream.network.vertices = arcpy$management$CopyFeatures(stream.network.vertices.raw, 
+  "streamlines_vertices")
 
 # get the "from" and "to" node lists from the segmented streamlines
 stream.network.from = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
