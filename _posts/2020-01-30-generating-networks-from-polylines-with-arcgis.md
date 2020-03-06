@@ -76,7 +76,7 @@ tool. Instead, we need to remove duplicate points using the ArcGIS
 tool and use the argument `field = "Shape"` to delete duplicates based on their
 location. This will remove the duplicate points, but it also means that there will
 be gaps in the OBJECTID of the vertices layer. If you know that your graph creation
-software assumes you network nodes have sequential IDs, you can fix the issue simply
+software assumes that network nodes have sequential IDs, you can fix the issue simply
 by making a copy of the layer with the ArcGIS 
 [CopyFeatures](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/copy-features.htm)
 tool.
