@@ -68,16 +68,23 @@ that captures the ID of the original line segment.
 
 Unfortunately, converting a polyline layer where individual polylines connect
 will produce duplicate vertices at those junctions, because a point will be 
-created *for each line at each junction*. Surprisingly, this will
-happen even if we first dissolve our polyline layer into a single feature using the ArcGIS
+created *for each line at each junction*. On the other hand, depending on how
+the polylines were constructed some lines might terminate at a junction while
+others actually pass *through* the junction. The easiest way to handle both of
+these issues is to first dissolve our polyline layer into a single feature using the ArcGIS
 [Dissolve](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/dissolve.htm)
-tool. Instead, we need to remove duplicate points using the ArcGIS 
+tool, and use Feature Vertices To Points on the dissolved layer to get a
+list of vertices. 
+
+Unfortunately, this will still result in duplicate points where one segment ends
+and another begins. We need to remove duplicate points using the ArcGIS 
 [DeleteIdentical](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/delete-identical.htm)
-tool and use the argument `field = "Shape"` to delete duplicates based on their
-location. This will remove the duplicate points, but it also means that there will
-be gaps in the OBJECTID of the vertices layer. If you know that your graph creation
-software assumes that network nodes have sequential IDs, you can fix the issue simply
-by making a copy of the layer with the ArcGIS 
+tool and use the argument field = "Shape" to delete 
+duplicates based on their location. This will remove the duplicate points, 
+but it also means that there will be gaps in the OBJECTID of the vertices layer. 
+If you know that your graph creation software assumes that network nodes have 
+sequential IDs, you can fix the issue simply by making a copy of the layer with 
+the ArcGIS 
 [CopyFeatures](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/copy-features.htm)
 tool.
 
@@ -97,7 +104,9 @@ start and end of the whole line. We therefore need to create a layer of
 polyline segments, where each segment corresponds to a node in the network.
 We can use the ArcGIS 
 [Split Line At Vertices](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/split-line-at-vertices.htm)
-tool to convert long polylines into many short segments.
+tool to convert long polylines into many short segments. We need to use the 
+dissolved polyline layer here, for the same reason for the vertices: we need
+to ensure that segments end at junctions, rather than passing through them.
 
 Now that we have the segments defined, we can capture the "from" and "to" 
 node lists through some repetitive use of the ArcGIS 
@@ -154,7 +163,8 @@ to extract values from multiple rasters, we can use the
 [Extract Multi Values to Points](https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-multi-values-to-points.htm)
 tool instead. One issue to keep in mind is that 
 **using Extract Vaues to Points may reorder your OBJECTIDs**, 
-so do this step *before* you start constructing the edge list.
+so do this step *before* you start constructing the edge list (or create a copy
+of the OBJECTID field first, so that you don't lose the original feature ordering).
 If we want our network to have a spatial reference, we can also
 attach the coordinates of the vertices with the ArcGIS
 [Add XY Coordinates](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-xy-coordinates.htm)
@@ -173,7 +183,9 @@ generate the midpoints of each line segment via the Feature Vertices To Points
 tool with the argument `point_location = "MID"`, do whatever analysis we need on
 those midpoints (e.g. extract the values from a raster via the 
 Extract Vaues to Points tool), and then join those fields back to the
-"edge" layer using the Join Field tool.
+"edge" layer using the Join Field tool. If we need to re-associate attributes
+that were originally associated with the polylines but were lost when the polyline
+layer was dissolved, we can add them back in using the Identity tool.
 
 ## Constructing the network
 
@@ -195,47 +207,38 @@ I converted these steps into an R script that uses my
 [arcpy](https://github.com/mkoohafkan/arcpy) package for R:
 
 ```r
-library(arcpy)
-use_ArcGIS(pro = TRUE)
-
-arcpy$env$workspace = "example.gdb"
-stream.network = "suisun_marsh_streamlines"
-
-# densify the network
-stream.network.dense = arcpy$edit$Densify(stream.network, "DISTANCE",
-  10.0)
-
-# split the densified streamlines into segments
-stream.network.segments = arcpy$management$SplitLine(stream.network.dense,
+#dissolve the network
+stream.network.dissolve = arcpy$management$Dissolve(stream.network.dense,
+  "streamlines_dissolve")
+# split the dissolved streamlines into segments
+stream.network.segments = arcpy$management$SplitLine(stream.network.dissolve,
   "streamlines_segments")
 
-# generate the node list from the streamline network
-stream.network.vertices.raw = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
+# generate the node list from the dissolved streamlines
+stream.network.vertices.raw = arcpy$management$FeatureVerticesToPoints(stream.network.dissolve,
   "streamlines_vertices_raw", "ALL")
 # delete duplicates
 arcpy$management$DeleteIdentical(stream.network.vertices.raw, "Shape")
-# copy to new layer to ensure incrementing OID
-stream.network.vertices = arcpy$management$CopyFeatures(stream.network.vertices.raw, 
+stream.network.vertices = arcpy$management$CopyFeatures(stream.network.vertices.raw,
   "streamlines_vertices")
+
+## Edges
 
 # get the "from" and "to" node lists from the segmented streamlines
 stream.network.from = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
   "streamlines_from", "START")
 stream.network.to = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
   "streamlines_to", "END")
-
 # identify the original node IDs in the "from" and "to" node lists
 stream.network.from.id = arcpy$analysis$Identity(stream.network.from,
   stream.network.vertices, "streamlines_from_id", "ONLY_FID")
 stream.network.to.id = arcpy$analysis$Identity(stream.network.to,
   stream.network.vertices, "streamlines_to_id", "ONLY_FID")
-
 # field renaming for future clarity
 arcpy$management$AlterField(stream.network.from.id,
    "FID_streamlines_vertices", "fromFID")
 arcpy$management$AlterField(stream.network.to.id,
    "FID_streamlines_vertices", "toFID")
-
 # join the from/to IDs to the streamline segments
 arcpy$management$JoinField(stream.network.segments, "OBJECTID",
   stream.network.from.id, "ORIG_FID", list("fromFID"))
