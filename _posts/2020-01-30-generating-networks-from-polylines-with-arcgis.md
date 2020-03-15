@@ -74,10 +74,8 @@ others actually pass *through* the junction. The easiest way to handle both of
 these issues is to first dissolve our polyline layer into a single feature using the ArcGIS
 [Dissolve](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/dissolve.htm)
 tool, and use Feature Vertices To Points on the dissolved layer to get a
-list of vertices. 
-
-Unfortunately, this will still result in duplicate points where one segment ends
-and another begins. We need to remove duplicate points using the ArcGIS 
+list of vertices. This may *still* result in a duplicate points at junctions though. 
+We need to remove duplicate points using the ArcGIS 
 [DeleteIdentical](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/delete-identical.htm)
 tool and use the argument field = "Shape" to delete 
 duplicates based on their location. This will remove the duplicate points, 
@@ -207,12 +205,23 @@ I converted these steps into an R script that uses my
 [arcpy](https://github.com/mkoohafkan/arcpy) package for R:
 
 ```r
+library(arcpy)
+use_ArcGIS(pro = TRUE)
+
+arcpy$env$workspace = "example.gdb"
+stream.network = "suisun_marsh_streamlines"
+
+## Prep work
+
+# densify the network
+stream.network.dense = arcpy$edit$Densify(stream.network, "DISTANCE",
+  10.0)
+
 #dissolve the network
 stream.network.dissolve = arcpy$management$Dissolve(stream.network.dense,
   "streamlines_dissolve")
-# split the dissolved streamlines into segments
-stream.network.segments = arcpy$management$SplitLine(stream.network.dissolve,
-  "streamlines_segments")
+
+## Nodes
 
 # generate the node list from the dissolved streamlines
 stream.network.vertices.raw = arcpy$management$FeatureVerticesToPoints(stream.network.dissolve,
@@ -223,6 +232,10 @@ stream.network.vertices = arcpy$management$CopyFeatures(stream.network.vertices.
   "streamlines_vertices")
 
 ## Edges
+
+# split the dissolved streamlines into segments
+stream.network.segments = arcpy$management$SplitLine(stream.network.dissolve,
+  "streamlines_segments")
 
 # get the "from" and "to" node lists from the segmented streamlines
 stream.network.from = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
@@ -245,21 +258,23 @@ arcpy$management$JoinField(stream.network.segments, "OBJECTID",
 arcpy$management$JoinField(stream.network.segments, "OBJECTID",
   stream.network.to.id, "ORIG_FID", list("toFID"))
 
+## Node attributes
+
 # add XY coordinates to node list
 arcpy$management$AddXY(stream.network.vertices)
 
-# add raster values to edge list base on midpoint
-salinity.raster = "Percent_time_lt6psu_100mG"
+## Edge attributes
+
+# generate segment midpoints
 stream.segment.midpoints = arcpy$management$FeatureVerticesToPoints(stream.network.segments,
   "streamlines_midpoints", "MID")
-
+# add raster values to edge list base on midpoint
+salinity.raster = "Percent_time_lt6psu_100mG"
 arcpy$CheckOutExtension("Spatial")
-
 stream.segment.midpoints.rasterval = arcpy$sa$ExtractValuesToPoints(stream.segment.midpoints,
   salinity.raster, "streamlines_midpoints_salinity")
-
 arcpy$CheckInExtension("Spatial")
-
+# join midpoint attributes back to segments
 arcpy$management$JoinField(stream.network.segments, "OBJECTID",
   stream.segment.midpoints.rasterval, "ORIG_FID", list("RASTERVALU"))
 ```
