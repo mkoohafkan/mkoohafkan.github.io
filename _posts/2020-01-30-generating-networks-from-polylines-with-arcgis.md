@@ -79,7 +79,7 @@ list of vertices. This will also remove duplicate points where one segment ends 
 next begins, but it will *still* result in a duplicate points at junctions where more 
 than two lines connect. We can remove these duplicate points using the ArcGIS 
 [DeleteIdentical](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/delete-identical.htm)
-tool and specifying the argument field = "Shape" to delete duplicates based on their 
+tool and specifying the argument `field = "Shape"` to delete duplicates based on their 
 location. 
 
 Note that removing duplicate in this way will leave gaps in the OBJECTID
