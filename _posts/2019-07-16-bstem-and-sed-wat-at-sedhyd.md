@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      BSTEM and SED-WAT at SEDHYD 2019
+title:      BSTEM and SED-WAT at SEDHYD (oh my!)
 date:       2019-07-16 20:00:00
 summary:    I'm an author on two papers at the 2019 Federal Interagency Sedimentation and Hydrologic Modeling Conference. Check them out!
 categories: horntooter

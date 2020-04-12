@@ -2,7 +2,7 @@
 layout:     post
 title:      Generating networks from polylines with ArcGIS
 date:       2020-01-30 20:00:00
-summary:    Converting a polyline layer to a network object isn't complicated, but it can get finicky. Here's one way to do it with ArcGIS.
+summary:    Converting a polyline layer to a network object isn't conceptually complicated, but implementation can be finicky. Here's one way to do it with ArcGIS.
 categories: codemonkey r arcpy reticulate arcgis
 commentIssueId: 43
 ---
@@ -47,17 +47,17 @@ network object. In my case, conditions changed significantly along the length
 of any given polyline, so I needed many points per line in order to adequately
 represent the spatial variation in conditions. I also wanted to keep the geometry
 of my polylines intact, so I needed multiple points along the line in order to
-capture the coordinates and curvature of the lines. I Accomplished this by 
-densifying my polylines using the the ArcGIS 
+capture the coordinates and curvature of the lines. I accomplished this by 
+densifying my polylines using the ArcGIS 
 [Densify](https://pro.arcgis.com/en/pro-app/tool-reference/editing/densify.htm) 
 tool. 
 
 ## Capturing network nodes from the polylines
 
 A network is defined as collection of "nodes" connected by "edges". Logically,
-the polylines will correspond to edges in the resulting network, and the nodes
-are the junctions between polylines. The network nodes therefore correspond to
-the polyline vertices. We need to extract the polyline vertices as a point layer
+the polylines will correspond to edges in the resulting network and the nodes
+are the junctions between polylines, i.e. the polyline vertices. 
+We need to extract the polyline vertices as a point layer
 in order to generate the node list needed to construct the network. We can 
 generate this "nodes" layer from the polyline layer with the ArcGIS
 [Feature Vertices To Points](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/feature-vertices-to-points.htm)
@@ -68,43 +68,47 @@ that captures the ID of the original line segment.
 
 Unfortunately, converting a polyline layer where individual polylines connect
 will produce duplicate vertices at those junctions, because a point will be 
-created *for each line at each junction*. On the other hand, depending on how
-the polylines were constructed some lines might terminate at a junction while
-others actually pass *through* the junction. The easiest way to handle both of
-these issues is to first dissolve our polyline layer into a single feature using the ArcGIS
+created *for each line* at each junction. At the same time, some vertices
+might not be created at all because some lines might terminate at a junction while
+others actually pass *through* the junction (depending on how the polylines were
+created in the first place). The easiest way to handle the second issue is to first 
+dissolve our polyline layer into a single feature using the ArcGIS
 [Dissolve](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/dissolve.htm)
 tool, and use Feature Vertices To Points on the dissolved layer to get a
-list of vertices. This may *still* result in a duplicate points at junctions though. 
-We need to remove duplicate points using the ArcGIS 
+list of vertices. This will also remove duplicate points where one segment ends and the
+next begins, but it will *still* result in a duplicate points at junctions where more 
+than two lines connect. We can remove these duplicate points using the ArcGIS 
 [DeleteIdentical](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/delete-identical.htm)
-tool and use the argument field = "Shape" to delete 
-duplicates based on their location. This will remove the duplicate points, 
-but it also means that there will be gaps in the OBJECTID of the vertices layer. 
-If you know that your graph creation software assumes that network nodes have 
-sequential IDs, you can fix the issue simply by making a copy of the layer with 
-the ArcGIS 
+tool and specifying the argument field = "Shape" to delete duplicates based on their 
+location. 
+
+Note that removing duplicate in this way will leave gaps in the OBJECTID
+of the vertices layer. If you know that your graph creation software 
+assumes that network nodes have sequential IDs, you can fix the issue
+simply by making a copy of the layer with the ArcGIS 
 [CopyFeatures](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/copy-features.htm)
 tool.
 
 ## Capturing network edges from the polylines
 
-Most programs that construct networks expect an "edge list" that defines 
+Most programs that construct networks can accept an "edge list" that defines 
 connections between nodes. Typically, the edge list is a two-column table
-with the "from" nodes listed in the first columns and the "to" nodes listed
+with the "from" nodes listed in the first column and the "to" nodes listed
 in the second column. We have the polylines themselves, but we need to do some
 legwork in order to generate the list of "from" and "to" nodes that define
 each polyline.
 
-Things get a little fiddly if we needed to do the prep work of densifying our 
-polylines, because we likely want to capture the "from" and "to" nodes of 
-each *segment* of the line, not just the
+Things get a little fiddly if we needed to do the prep work of densifying and
+dissolving our polylines, because we likely want to capture the "from" and
+"to" nodes of each *segment* of the line, not just the
 start and end of the whole line. We therefore need to create a layer of
 polyline segments, where each segment corresponds to a node in the network.
 We can use the ArcGIS 
 [Split Line At Vertices](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/split-line-at-vertices.htm)
 tool to convert long polylines into many short segments. We need to use the 
-dissolved polyline layer here, for the same reason for the vertices: we need
-to ensure that segments end at junctions, rather than passing through them.
+dissolved polyline layer here, for the same reason we did for the vertices:
+we need to ensure that segments end at junctions, rather than passing
+through them.
 
 Now that we have the segments defined, we can capture the "from" and "to" 
 node lists through some repetitive use of the ArcGIS 
@@ -113,7 +117,7 @@ layer: the
 first time we specify  the argument `point_location = "START"` to capture
 the "from" nodes of each line, and the second time we specify 
 `point_location = "END"` to capture the "to" nodes of each line.
-In both cases, the resulting layer we again have a "ORIG_FID" field 
+In both cases, the resulting layer will have the field "ORIG_FID"
 that identifies the ID of the original line segment. 
 
 Although we are able to identify the start and end vertices using the 
@@ -133,19 +137,21 @@ polyline segment layer. Since the Feature Vertices To Points tool keeps
 information on the identity of the original polyline using the "ORIG_FID" 
 field, we can use this field with the ArcGIS
 [Join Field](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/join-field.htm)
-tool to join the "from" and "to" node IDs back to the segments. If you don't have any additional information from the polyline
-segments layer that you want to capture your network (e.g. segment length, name,
-etc.) you can join the "from" and "to" layers directly on the "ORIG_FID" field.
-Otherwise, you'll need to run the Join Field tool for each of the "from" and "to"
-layers. You'll only need to join the field containing the IDs of the node layer,
-but this field has the same name in the "from" and "to" layers; you may want to 
-modify the field names of the "from" and "to" layers before joining in order to 
+tool to join the "from" and "to" node IDs back to the segments. If you don't have any 
+additional information from the polyline segments layer that you want to capture your 
+network (e.g. segment length, name, etc.) you can join the "from" and "to" layers 
+directly on the "ORIG_FID" field. Otherwise, you'll need to run the Join Field tool 
+twice to join both the "from" and "to" layers to the polyline segments layer.
+You'll only need to join the field containing the IDs of the node layer,
+but this field has the same name in the "from" and "to" layers; you may want to
+modify the field names of the "from" and "to" layers before joining in order to
 keep things straight. The end result is the "edge list" that defines our network
 object.
 
 ## Capturing node and edge weights
 
-We now have a node and edge list that define the structure of the network.
+We now have a node list and edge list that together define the structure of the 
+network.
 If the geometric structure is all we need, we can jump straight to our program
 of choice (e.g. R, Python, etc.) to construct the network from the edge list.
 However, it's likely that we want to capture other information to define 
@@ -161,9 +167,11 @@ to extract values from multiple rasters, we can use the
 [Extract Multi Values to Points](https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/extract-multi-values-to-points.htm)
 tool instead. One issue to keep in mind is that 
 **using Extract Vaues to Points may reorder your OBJECTIDs**, 
-so do this step *before* you start constructing the edge list (or create a copy
-of the OBJECTID field first, so that you don't lose the original feature ordering).
-If we want our network to have a spatial reference, we can also
+so do this step *before* you start constructing the edge list or create a copy
+of the OBJECTID field first, so that you don't lose the original feature ordering
+(alternatively, just use Extract Multi Values to Points even when you're only using
+one raster, because it will add the raster attributes without reordering your
+OBJECTIDs). If we want our network to have a spatial reference, we can also
 attach the coordinates of the vertices with the ArcGIS
 [Add XY Coordinates](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-xy-coordinates.htm)
 tool.
@@ -171,7 +179,7 @@ tool.
 Edge weights are only slightly trickier, and it really depends on what we want
 to capture. The "edge list" layer we created earlier likely already has some
 attributes, e.g. the length of each segment. We can attach other line information
-too, such as the line bearing. However, if we want to get information that isn't 
+too, such as the line bearing. However, if we want to get information that isn't
 directly calculable from the line---for example, the average raster value under
 the line---we need to do some more legwork. One option is to assign
 the average of the edge's start and end node attributes to the edge after
@@ -183,7 +191,7 @@ those midpoints (e.g. extract the values from a raster via the
 Extract Vaues to Points tool), and then join those fields back to the
 "edge" layer using the Join Field tool. If we need to re-associate attributes
 that were originally associated with the polylines but were lost when the polyline
-layer was dissolved, we can add them back in using the Identity tool.
+layer was dissolved, we can add those back in using the Identity tool.
 
 ## Constructing the network
 
@@ -194,9 +202,9 @@ can construct a network using the `igraph` package function
 `graph_from_data_frame()`, which takes an edge list and node list (as
 dataframes, with additional columns interpreted as edge/node attributes)
 as inputs. The advantage of using R
-is that we can also use the `sf` package to read the attribute tables of the 
-spatial layers directly using the `sf_read()` function, meaning we don't 
-need to export the attribute tables of the "node" and "edge" layers to a 
+is that we can also use the `sf` package to read the attribute tables of the
+spatial layers directly using the `sf_read()` function, i.e. we don't
+need to export the attribute tables of the "node" and "edge" layers to a
 text file first.
 
 ## A demonstration
@@ -306,7 +314,7 @@ ggraph(g, layout = "manual", x = POINT_X, y = POINT_Y) +
 
 ![Stream network plot](/images/2020-01-30-salinity-network.png)
 
-Converting polylines to a network object isn't complicated, but it does 
-take a few steps. It wouldn't be too hard to generalize the above process
+That's surprising amount of code for something that conceptually is quite simple.
+That being said, it wouldn't be too hard to generalize the above process
 into a function. For me, the payoff is worth it---now that I have a network
 object, I can use graph theory to do some interesting analyses.
