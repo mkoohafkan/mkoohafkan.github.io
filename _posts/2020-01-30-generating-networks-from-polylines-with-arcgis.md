@@ -314,7 +314,7 @@ ggraph(g, layout = "manual", x = POINT_X, y = POINT_Y) +
 
 ![Stream network plot](/images/2020-01-30-salinity-network.png)
 
-That's surprising amount of code for something that conceptually is quite simple.
-That being said, it wouldn't be too hard to generalize the above process
+That's a surprising amount of code for something that conceptually is quite simple.
+However, it wouldn't be hard to generalize the above process
 into a function. For me, the payoff is worth it---now that I have a network
 object, I can use graph theory to do some interesting analyses.
