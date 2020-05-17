@@ -1,15 +1,15 @@
 ---
 layout:     post
 title:      Generating networks from rasters with R
-date:       2020-01-30 20:00:00
+date:       2020-05-16 23:15:00
 summary:    Making networks out of rasters turned out to be trivial with R.
 categories: codemonkey r graph-theory
 commentIssueId: 44
 ---
 
 I've been doing a lot of work with networks and graph theory over the years,
-both for work and as a central component of my dissertation. I've been doing
-some work with 
+both for my job at DWR and as a central component of my dissertation. 
+I've been doing some stuff with
 [spatial graphs](https://en.wikipedia.org/wiki/Spatial_network)
 as part of an analysis of salmonid habitat in the 
 [Russian River estuary](https://www.sonomawater.org/russian-river-estuary),
@@ -20,7 +20,7 @@ In a
 [previous post]({% post_url 2020-01-30-generating-networks-from-polylines-with-arcgis %})
 I showed you a very long and arduous process to convert polylines to
 networks using ArcGIS. I initially turned to ArcGIS for converting
-rasters to networks as well, focusing on using the
+*rasters* to networks as well, focusing on using the
 [Create Fishnet](https://pro.arcgis.com/en/pro-app/tool-reference/data-management/create-fishnet.htm)
 and
 [Polygon Neighbors](https://pro.arcgis.com/en/pro-app/tool-reference/analysis/polygon-neighbors.htm)
