@@ -64,8 +64,6 @@ to publications and presentations I'm involved in).
 
 Sommer T., Hartman R., Koller M., Koohafkan M., Conrad J.L., MacWilliams, M., Bever, A., Burdi, C., Hennessy, A., and Beakes, M., 2020. "Evaluation of a large-scale flow manipulation to the upper San Francisco Estuary: Response of habitat conditions for an endangered native fish." PLOS ONE 15(10): e0234673. ([link](https://doi.org/10.1371/journal.pone.0234673))
 
-Largier, J., Behrens, D., Hewett, K., Koohafkan, M.C., Robart, M., Dann, D., and Roettger, R., 2020. "Managing the Mouth of Russian River Estuary, California." In *Complex Coastal Systems*, 71–86. Delft Academic Press.
-
 Koohafkan, M., Gibson, S., Pridal, D., and Boyd, P., 2019. "Modeling Bank Migration on the Missouri River with HEC-RAS: A Calibrated HEC-RAS/BSTEM Model." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-232.pdf))
 
 Gibson, S., Lehman, W., Koohafkan, M., and Pridal, D., 2019. "Using HEC-WAT and HEC-RAS-Sediment to the Evaluate the Effect of Hydrologic Uncertainty on Bed Evolution." Presented at the Federal Interagency Sedimentation and Hydrologic Modeling (SEDHYD) Conference, Reno, NV, 2019. ([link](/docs/2019-sedwat-237.pdf))
