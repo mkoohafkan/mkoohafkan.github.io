@@ -62,6 +62,8 @@ to publications and presentations I'm involved in).
 
 #### Publications
 
+Beakes, M.P., Graham, C., Conrad, J.L., White, J.R., Koohafkan, M., Durand, J., and Sommer, T., 2020. "Large-scale flow management action drives estuarine ecological response." North American Journal of Fisheries Management. Accepted Author Manuscript. https://doi.org/10.1002/nafm.10529.
+
 Sommer, T., Hartman, R., Koller, M., Koohafkan, M., Conrad, J.L., MacWilliams, M., Bever, A., Burdi, C., Hennessy, A., and Beakes, M., 2020. "Evaluation of a large-scale flow manipulation to the upper San Francisco Estuary: Response of habitat conditions for an endangered native fish." PLOS ONE 15(10): e0234673. ([link](https://doi.org/10.1371/journal.pone.0234673))
 
 Largier, J., Behrens, D., Hewett, K., Koohafkan, M.C., Robart, M., Dann, D., and Roettger, R., 2020. "Managing the Mouth of Russian River Estuary, California." In *Complex Coastal Systems*, 71-86. Delft Academic Press.
