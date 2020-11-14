@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Computing in the Cloud with Google and Rstudio
+title:      Computing in the Cloud with Google and RStudio
 date:       2020-11-14 14:40:00
-summary:    I used Google Cloud Platform to do some heavy lifting. Here's a quick guide to get started.
+summary:    I used Google Cloud Platform to do some heavy lifting with R. Here's a quick guide to get started.
 categories: codemonkey r google-cloud-platform
 commentIssueId: 45
 ---
@@ -126,7 +126,7 @@ rather, I don't know why it is ever able to automatically
 authenticate) but the easiest solution is to create a blank
 JSON file on the VM, copy the contents of your authorization
 file into the file on the VM, and then set it on the VM using
-the command `r gcs_auth("path/to/auth-file.json")`.
+the command `gcs_auth("path/to/auth-file.json")`.
 
 To transfer files over, I usually do some kind of regex to
 filter the object names, and then use a for loop to copy over
