@@ -17,7 +17,7 @@ I provide modeling and data analysis support for special studies relating to
 water resources management, ecosystem function, and habitat restoration, with special
 focus on the Suisun Marsh and Bay-Delta.
 I do all kinds of work involving hydrodynamics, sediment transport, and
-water quality as well as remote-sensing, statistics, and GIS analysis. More recently,
+water quality as well as remote sensing, statistics, and GIS analysis. More recently,
 my work has involved the management and analysis of "big" environmental data and
 large longitudinal datasets from long-term environmental sensor networks.
 Prior to joining DWR, I worked with the 
