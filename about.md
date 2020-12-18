@@ -10,42 +10,52 @@ shorttitle: About
 <div class="clearfix"></div>
 {% include social_links.html %}
 
-I am a Water Resources Engineer with the 
-[California Department of Water Resources](https://water.ca.gov),
+Hi there! My name is Michael. I'm a Water Resources Engineer with the 
+California Department of Water Resources
 [Division of Environmental Services](https://water.ca.gov/Programs/Environmental-Services). 
 I provide modeling and data analysis support for special studies relating to
 water resources management, ecosystem function, and habitat restoration, with special
 focus on the Suisun Marsh and Bay-Delta.
-I have wide-ranging expertise in hydrodynamic, sediment transport, and
-water quality modeling as well as remote-sensing and GIS analysis. More recently,
+I do all kinds of work involving hydrodynamics, sediment transport, and
+water quality as well as remote-sensing, statistics, and GIS analysis. More recently,
 my work has involved the management and analysis of "big" environmental data and
 large longitudinal datasets from long-term environmental sensor networks.
 Prior to joining DWR, I worked with the 
 [USACE Hydrologic Engineering Center](https://www.hec.usace.army.mil), 
 where I worked with the [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras) 
 software development team to design and implement sediment transport 
-modeling features. During this time I also provided support to
+modeling features. During that time I also provided support to
 USACE regional offices on projects involving bed, bank and floodplain 
-geomorphic processes in large sand-bed rivers. 
+geomorphic processes in large sand-bed rivers, and helped teach
+HEC modeling courses in the
+[PROSPECT](https://ulc.usace.army.mil/)
+program. 
 
-I am also a PhD candidate in the 
-[Hydrologic Sciences Graduate Group](http://hsgg.ucdavis.edu) 
-at University of California Davis.
-My doctoral research is focused on using graph theory to represent 
+I have a Doctor of Philosophy degree in
+[Hydrologic Sciences](http://hsgg.ucdavis.edu)
+from the University of California Davis.
+My doctoral research focused on using graph theory to represent 
 and analyze spatial and temporal interactions between landscape features.
-I developed a novel graph-theoretic approach and am using it to 
+I developed a novel graph-theoretic approach and used it to 
 study the morphodynamics of emergent sandbars in the Missouri River
 in collaboration with the 
 [Missouri River Recovery Program](https://www.nwo.usace.army.mil/mrrp/efforts-actions/esh), 
-and to explore salmonid habitat dynamics in the Russian River Estuary 
+and model salmonid habitat utilization in the Russian River Estuary
 in collaboration with NOAA's 
-[Habitat Blueprint](https://www.habitatblueprint.noaa.gov/habitat-focus-areas/russian-river-california/). 
-I started the doctoral program in late 2014 following completion of a 
-Masters of Science in 
+[Habitat Blueprint](https://www.habitatblueprint.noaa.gov/habitat-focus-areas/russian-river-california/).
+
+I started this blog while working on a Master of Science degree in 
 [Environmental Engineering](http://efmh.berkeley.edu) 
-at University of California Berkeley, where I studied the role of fog in the 
-hydrology of coastal watersheds in California. I have also worked with the 
-[American Bird Conservancy](https://abcbirds.org) and the 
+at the University of California Berkeley, where I studied the role of
+fog in the hydrology of coastal watersheds in California. Before that,
+I completed a Bachelor of Science in
+[Environmental Resources Engineering](https://engineering.humboldt.edu)
+at Humboldt State University. During my last year in the undergraduate
+program, I worked for
+[Lang, Railsback & Associates](https://langrailsback.com)
+on a joint project with the
+[American Bird Conservancy](https://abcbirds.org)
+and the 
 [Engineer Research and Development Center](https://www.erdc.usace.army.mil)
 on the development of an 
 [agent-based model](https://erdc-library.erdc.dren.mil/xmlui/handle/11681/2905) 
