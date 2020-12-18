@@ -79,7 +79,7 @@ You're already losing so much money by choosing to work as an
 undervalued, poorly-paid graduate student. Paying tuition on top of
 that is adding insult to injury. 
 
-I had a strong aversion to paying out of pocket, so I haven't wracked up
+I had a strong aversion to paying out of pocket, so I haven't racked up
 any debt---just the opportunity cost of getting paid graduate student
 wages instead of gainful employment. I chose both
 my Masters and PhD programs in part because of the funding they
