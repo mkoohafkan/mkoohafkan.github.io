@@ -114,9 +114,8 @@ tied to a specific department and have participating faculty from a wide
 variety of fields. Unfortunately, not being tied to a department means that
 the group doesn't have access to the resources of *any* department, and as
 a student you might not even have access to your *advisor's* department.
-That means that you might not have access to TA
-positions and internal funding that are reserved for the students of a given
-department.
+That means that you might not have access to teaching positions and internal
+funding that are reserved for the students of a given department.
 
 Student support is better managed and supported by established departments;
 they have probably existed for longer and have a stronger foundation in the
@@ -131,13 +130,16 @@ doesn't mean you can't still do interdiscplinary work. PhD research can
 easily transcend the typical field or research focus of a department, and
 you can always take classes outside of your department!
 
-I joined an "interdisciplinary" graduate that I could not in good
-conscience recommend to anyone. I ended up taking almost of all of my
+I joined an "interdisciplinary" graduate group that I could not in good
+conscience recommend to anyone, and I probaby would have been happier if
+I had applied to my advisor's home department rather than through the
+graduate group. I ended up taking almost of all of my
 classes from other departments (primarily the civil engineering and
 statistics departments) and many of the classes that my program
 advertised on its web page turned out to be on a six-year rotation
 or longer (i.e., you could finish a PhD before that class was ever
-offered). The small number of classes also meant that few TA positions
+offered) or in some cases *had only ever been offerred once*.
+The small number of classes also meant that few TA positions
 were available for students in the group. Furthermore, there was
 limited internal funding and scholarships. contrast that with e.g.,
 the Civil Engineering department, which had teaching positions
@@ -170,21 +172,25 @@ when you start out a PhD (that's *kind of the point*) and you likely
 don't know what has already been done, what research is feasible,
 and what resources you'll need to complete it.
 
-I didn't actually know
-what my PhD really was until my last year, and I had a lot of doubt
+Neither I nor my advisor had a specific project in mind when I
+started my dissertation, and while my first year was fully-funded there
+was an understanding that future work would be funded by teaching
+positions and various long-term contracts that my advisor had with local
+and state agencies---meaning that I knew at least some of my work
+wouldn't tie directly into my dissertation, or that I'd have to put in
+some extra effort to glue it all together. I didn't actually know
+what my PhD really was until my final year, and I had a lot of doubt
 about what I was doing for most of the journey. I think I would have
-been happier and more relaxed if my advisor had hired me for a specific
-project. On the other hand, that's sort of what happened with my Masters
-degree; the problem there was that I thought the project was boring and I
-learned that I didn't want to specialize in that field (arguably, that
-whole situation could have been avoided if my advisor had stuck to the
-original plan she had pitched when I applied). I chose to complete
-my Masters program and go elsewhere rather than stay for a PhD and
-pigeonhole myself into a field I didn't care about, and I'm glad I did. And
-although my PhD was challenging and I often felt like I was trying to steer
-a rudderless ship, I was really lucky to have an advisor who was
-willing and interested in supporting me through my PhD even when my
-interests took me outside of his typical research field.
+been happier and more relaxed if had been hired for a specific
+project. My PhD was challenging and I often felt like I was trying to
+steer a rudderless ship---but I was also really lucky to have an
+advisor who was interested and willing to support me through my PhD
+even when my interests took me outside of his typical research field.
+It would have been far worse to be hired onto a project and later
+realize that I thought was boring and that I didn't want to specialize
+in that field---which is sort of what happened during my Masters
+program, and why I decided to go elsewhere rather than stay for a PhD
+and pigeonhole myself into a field I didn't care about.
 
 ## Seek out a project that lets you interact with industry
 
@@ -428,10 +434,26 @@ So I guess I would say: definitely get a Masters degree if you want
 to work in
 industry, you will learn a lot and it is a major step up from a 
 Bachelors degree. But don't take more than two years to do it, and
-try to get someone else to pay for it. If you want to work in
+try to get someone else to pay for it. And don't turn your nose up
+at non-thesis Masters programs; graduate coursework is really valuable
+on it's own, and doing a full thesis doesn't add much value to industry
+work (you'll get enough project manageement experiencee on the job,
+and project management in industry is very different from research
+project management). Doing a full thesis can be risky because research
+delays, failed experiments, etc. can really drag out a Masters degree.
+
+If you want to work in
 Academia... well, you'll need a PhD for that. Just try to remember
 that the PhD is the *first step*, not the end goal, and try to make
-choices that will help you fast-track your dissertation.
+choices that will help you fast-track your dissertation. My advice
+regarding a funded project stands, but also
+consider that grant and proposal writing will be a major part of
+your job as a professor, so you'll want to make an effort to practice
+those skills as a student. One good approach might be to jump on a
+funded, planned-out project but practice proposal and grant writing
+aalong the way by pitching enhancements and auxiliary projects that
+will make your research better, but aren't strictly required to
+complete the work.
 
 If you don't know if you want to work in industry or academia,
 or think you'd be happy either way, then

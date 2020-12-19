@@ -64,8 +64,8 @@ of Interior Least Tern breeding behavior.
 Mostly though, I write code. I love using computer programming to 
 solve problems and improve workflows. I'm passionate about 
 visualizing data and using computers to communicate science. 
-I'm all about using the right tool for the right job
-(as long as I can automate it!) and love to teach my methods, so 
+I'm all about using the right tool for the right job---as long as I
+can automate it! I also love teaching, and 
 my blog mostly explores approaches to solving programming 
 problems in a variety of languages (along with some shout-outs
 to publications and presentations I'm involved in).
