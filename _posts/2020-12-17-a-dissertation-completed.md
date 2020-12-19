@@ -451,7 +451,7 @@ consider that grant and proposal writing will be a major part of
 your job as a professor, so you'll want to make an effort to practice
 those skills as a student. One good approach might be to jump on a
 funded, planned-out project but practice proposal and grant writing
-aalong the way by pitching enhancements and auxiliary projects that
+along the way by pitching enhancements and auxiliary projects that
 will make your research better, but aren't strictly required to
 complete the work.
 
