@@ -19,8 +19,8 @@ large part a methodological contribution to a fairly broad field
 (basically, anything having to do with tracking the
 evolution of spatial features over time). I am a little proud
 that my research really was a unique contribution of my own making, 
-rather than an incremental extension of my advisor's research or
-an effort to solve a problem that someone else came up with. But it
+rather than an incremental extension of someone else's research.
+But it
 was also a difficult, circuitous, and often lonely road, and I came
 close to quitting a few times (but that, at least, is a common
 sentiment among graduate students). I learned a lot and I don't regret
