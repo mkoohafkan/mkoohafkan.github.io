@@ -169,7 +169,7 @@ out your PhD by another year or two. The other benefit of a funded
 project is that both you and your advisor will have some idea of what
 the final form of your dissertation will look like, and what the major
 milestones of the research are. And again, if you do get a funding offer
-**make sure to get it in writing** (gee, did already say that?).
+**make sure to get it in writing** (gee, did I already say that?).
 
 I also recommend this approach because it can be really hard to figure
 out what you want to do, or even what is doable. You're not an expert
@@ -441,14 +441,14 @@ industry, you will learn a lot and it is a major step up from a
 Bachelors degree. But don't take more than two years to do it, and
 try to get someone else to pay for it. And don't turn your nose up
 at non-thesis Masters programs; graduate coursework is really valuable
-on it's own, and doing a full thesis doesn't add much value to industry
-work (you'll get enough project manageement experiencee on the job,
+on its own, and doing a full thesis doesn't add much value to industry
+work (you'll get enough project management experience on the job,
 and project management in industry is very different from research
 project management). Doing a full thesis can be risky because research
 delays, failed experiments, etc. can really drag out a Masters degree.
 
 If you want to work in
-Academia... well, you'll need a PhD for that. Just try to remember
+academia... well, you'll need a PhD for that. Just try to remember
 that the PhD is the *first step*, not the end goal, and try to make
 choices that will help you fast-track your dissertation. My advice
 regarding a funded project stands, but also
