@@ -51,7 +51,7 @@ to work on, I suggest you cast a wide net and follow the money, so
 to speak. Whatever your field is, you probably know what the 
 "big names" are, and various voices have told that those are the places
 where you'll get the "best" education or work with the "pioneers" of
-research. But in truth, the name brand is not worth paying for it out of
+research. But in truth, the name brand is not worth paying for out of
 pocket, and it's definitely not worth graduating with a mountain of debt.
 If you look at the faculty that work at the "best" university, you'll
 quickly realize that practically *none* of those faculty got their
@@ -81,24 +81,29 @@ that is adding insult to injury.
 
 I had a strong aversion to paying out of pocket, so I haven't racked up
 any debt---just the opportunity cost of getting paid graduate student
-wages instead of gainful employment. I chose both
-my Masters and PhD programs in part because of the funding they
-offered, and I'm glad I did. I don't think I would have gotten a
-particularly better education somewhere else. My MS degree was fully-funded,
-but my PhD funding dried up about halfway through---in part because the
+wages instead of gainful employment. I had funding offers from multiple
+schools, and I ended up choosing UC Berkeley for my Masters largely due
+to its reputation. I don't know if that was the right choice---I didn't
+have a great time in the program, and I don't think the courses were
+particularly higher quality than the courses I took at UC Davis during
+my PhD---but my Masters was paid for, so that's a win in the end.
+I chose UC Davis for my PhD based on the funding offer as well, but it
+didn't work out as well as I would have liked; My PhD funding dried up
+about halfway through, in part because the
 program decided to drop some key internal scholarships halfway through my
 program. I made it work by getting hired as a TA or jumping
 on a project here and there. A key part of my "strategy" (if you can
-call it that) was working a full-time job while in school (see below),
+call it that) was working a full-time job while in school,
 so I took small teaching positions (just enough to qualify for fee
 remission) and applied for grants that would pay
 tuition but wouldn't put food on the table. In some ways that made
-me a competitive application because I could apply for smaller amounts.
+me a competitive applicant because I could apply for smaller amounts
+and stretch money farther than other students.
 But I worked a lot of hours, and I probably could have completed
 my degree earlier if I'd been able to focus on it full time. 
 I actually had to pay my final quarter's
-tuition up-front, but managed to recoup those costs through a
-scholarship a few months later---and it still left a bitter taste in
+tuition up-front, and although I managed to recoup those costs through a
+scholarship a few months later it still left a bitter taste in
 my mouth. If I'd been facing more than one unfunded quarter, or if it
 had happened earlier in my program, I probably would have dropped out.
 
@@ -134,11 +139,11 @@ I joined an "interdisciplinary" graduate group that I could not in good
 conscience recommend to anyone, and I probaby would have been happier if
 I had applied to my advisor's home department rather than through the
 graduate group. I ended up taking almost of all of my
-classes from other departments (primarily the civil engineering and
+classes from outside the program anyway (primarily the civil engineering and
 statistics departments) and many of the classes that my program
 advertised on its web page turned out to be on a six-year rotation
 or longer (i.e., you could finish a PhD before that class was ever
-offered) or in some cases *had only ever been offerred once*.
+offered), and in some cases *had only ever been offerred once*.
 The small number of classes also meant that few TA positions
 were available for students in the group. Furthermore, there was
 limited internal funding and scholarships. contrast that with e.g.,
