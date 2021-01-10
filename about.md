@@ -35,10 +35,11 @@ I have a Doctor of Philosophy degree in
 [Hydrologic Sciences](http://hsgg.ucdavis.edu)
 from the University of California Davis.
 My doctoral research focused on using graph theory to represent 
-and analyze spatial and temporal interactions between landscape features.
-I developed a novel graph-theoretic approach and used it to 
-study the morphodynamics of emergent sandbars in the Missouri River
-in collaboration with the 
+and analyze spatial and temporal interactions between landscape
+features. I developed a novel approach to automatically link
+spatial features across longitudinal datasets. I used the method to
+study the geomorphic evolution of emergent sandbars in the 
+Missouri River in collaboration with the 
 [Missouri River Recovery Program](https://www.nwo.usace.army.mil/mrrp/efforts-actions/esh), 
 and model salmonid habitat utilization in the Russian River Estuary
 in collaboration with NOAA's 

@@ -13,13 +13,11 @@ that I have
 completed all degree requirements and will be conferred a Doctor of 
 Philosophy degree in Hydrologic Sciences from the University of California
 Davis. My PhD experience was in some ways quite different from other
-students. It was largely self-driven and evolved organically, 
-was not funded by any particular grant, and ended up being in
-large part a methodological contribution to a fairly broad field
-(basically, anything having to do with tracking the
-evolution of spatial features over time). I am a little proud
-that my research really was a unique contribution of my own making, 
-rather than an incremental extension of someone else's research.
+students. My research was very self-driven and was not funded by any
+particular grant or project, and the dissertation ended up being much
+more about the *methods* I used to answer questions rather than the
+answers themselves. I'm a proud that my research really was of my own
+making, rather than an incremental extension of someone else's research.
 But it
 was also a difficult, circuitous, and often lonely road, and I came
 close to quitting a few times (but that, at least, is a common
