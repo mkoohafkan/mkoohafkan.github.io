@@ -16,7 +16,7 @@ Davis. My PhD experience was in some ways quite different from other
 students. My research was very self-driven and was not funded by any
 particular grant or project, and the dissertation ended up being much
 more about the *methods* I used to answer questions rather than the
-answers themselves. I'm a proud that my research really was of my own
+answers themselves. I'm proud that my research really was of my own
 making, rather than an incremental extension of someone else's research.
 But it
 was also a difficult, circuitous, and often lonely road, and I came
@@ -141,7 +141,7 @@ classes from outside the program anyway (primarily the civil engineering and
 statistics departments) and many of the classes that my program
 advertised on its web page turned out to be on a six-year rotation
 or longer (i.e., you could finish a PhD before that class was ever
-offered), and in some cases *had only ever been offerred once*.
+offered), and in some cases *had only ever been offered once*.
 The small number of classes also meant that few TA positions
 were available for students in the group. Furthermore, there was
 limited internal funding and scholarships. contrast that with e.g.,
