@@ -37,9 +37,10 @@ water resources management, ecosystem function, and habitat
 restoration, with special focus on the Suisun Marsh and Bay-Delta.
 Before that I worked with the 
 [USACE Hydrologic Engineering Center](https://www.hec.usace.army.mil), 
-[HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras) 
-software development team, where I designed and implemented sediment 
-transport modeling features and provided
+where I designed and implemented sediment 
+transport modeling features in
+[HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras)
+and provided
 support for USACE regional office projects involving bed, bank 
 and floodplain geomorphic processes in large sand-bed rivers. I also
 taught HEC modeling courses in the
