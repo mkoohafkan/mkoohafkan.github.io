@@ -10,24 +10,39 @@ shorttitle: About
 <div class="clearfix"></div>
 {% include social_links.html %}
 
-Hi there! My name is Michael. I'm a Water Resources Engineer with the 
+Hi there! My name is Michael. I'm a Professional Water Resources
+Engineer. I do all kinds of work involving hydrodynamics, sediment
+and contaminant transport, and water quality as well as remote sensing, 
+statistics, and GIS analysis. More recently, my work has involved 
+the management and analysis of "big" environmental data and
+large spatial and longitudinal datasets from long-term environmental 
+sensor networks.
+
+I currently work as a research GIS analyst with the
+Washington State Department of Ecology's
+[Spills Response Program](https://ecology.wa.gov/About-us/Get-to-know-us/Our-Programs/Spills-Prevention-Preparedness-Response).
+I am the technical lead for complex spatial and geostatistical 
+analysis projects and program-critical geographic information 
+systems. I provide modeling expertise and application 
+architecture, development, and implementation support for program- 
+and agency-wide geographic and environmental data systems used to 
+accurately identify and analyze oil movement, resources at risk, 
+and spill response equipment capability in Washington State.
+I previously worked  with the 
 California Department of Water Resources
-[Division of Environmental Services](https://water.ca.gov/Programs/Environmental-Services). 
-I provide modeling and data analysis support for special studies relating to
-water resources management, ecosystem function, and habitat restoration, with special
-focus on the Suisun Marsh and Bay-Delta.
-I do all kinds of work involving hydrodynamics, sediment transport, and
-water quality as well as remote sensing, statistics, and GIS analysis. More recently,
-my work has involved the management and analysis of "big" environmental data and
-large longitudinal datasets from long-term environmental sensor networks.
-Prior to joining DWR, I worked with the 
+[Division of Environmental Services](https://water.ca.gov/Programs/Environmental-Services/)
+where I provided modeling and data 
+analysis support for special studies relating to
+water resources management, ecosystem function, and habitat 
+restoration, with special focus on the Suisun Marsh and Bay-Delta.
+Before that I worked with the 
 [USACE Hydrologic Engineering Center](https://www.hec.usace.army.mil), 
-where I worked with the [HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras) 
-software development team to design and implement sediment transport 
-modeling features. During that time I also provided support to
-USACE regional offices on projects involving bed, bank and floodplain 
-geomorphic processes in large sand-bed rivers, and helped teach
-HEC modeling courses in the
+[HEC-RAS](https://www.hec.usace.army.mil/software/hec-ras) 
+software development team, where I designed and implemented sediment 
+transport modeling features and provided
+support for USACE regional office projects involving bed, bank 
+and floodplain geomorphic processes in large sand-bed rivers. I also
+taught HEC modeling courses in the
 [PROSPECT](https://ulc.usace.army.mil/)
 program. 
 
