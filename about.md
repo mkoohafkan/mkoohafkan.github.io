@@ -18,7 +18,7 @@ the management and analysis of "big" environmental data and
 large spatial and longitudinal datasets from long-term environmental 
 sensor networks.
 
-I currently work as a research GIS analyst with the
+I currently work as a research GIS specialist with the
 Washington State Department of Ecology's
 [Spills Response Program](https://ecology.wa.gov/About-us/Get-to-know-us/Our-Programs/Spills-Prevention-Preparedness-Response).
 I am the technical lead for complex spatial and geostatistical 
