@@ -20,7 +20,7 @@ sensor networks.
 
 I currently work as a research GIS specialist with the
 Washington State Department of Ecology's
-[Spills Response Program](https://ecology.wa.gov/About-us/Get-to-know-us/Our-Programs/Spills-Prevention-Preparedness-Response).
+[Spills Program](https://ecology.wa.gov/About-us/Get-to-know-us/Our-Programs/Spills-Prevention-Preparedness-Response).
 I am the technical lead for complex spatial and geostatistical 
 analysis projects and program-critical geographic information 
 systems. I provide modeling expertise and application 
@@ -50,10 +50,11 @@ program.
 I have a Doctor of Philosophy degree in
 [Hydrologic Sciences](http://hsgg.ucdavis.edu)
 from the University of California Davis.
-My doctoral research focused on using graph theory to represent 
+My dissertation focused on using graph theory to represent 
 and analyze spatial and temporal interactions between landscape
 features. I developed a novel approach to automatically link
-spatial features across longitudinal datasets. I used the method to
+spatial features across repeated imagery to 
+generate longitudinal datasets. I used the method to
 study the geomorphic evolution of emergent sandbars in the 
 Missouri River in collaboration with the 
 [Missouri River Recovery Program](https://www.nwo.usace.army.mil/mrrp/efforts-actions/esh), 
